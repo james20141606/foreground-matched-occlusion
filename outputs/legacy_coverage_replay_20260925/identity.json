@@ -1,0 +1,67 @@
+{
+ "registration": "notes/PREREG_legacy_coverage_replay_20260925.md",
+ "registration_sha256": "860251fd2ba5a034278917197e5ab31847a3ed9e4065fa09b077d16786a16fbb",
+ "script_sha256": "3f382d430c2fc5ff15080c7e75e179e4b8c87dc7b5780875d76103bfddda6f8f",
+ "inputs_sha256": {
+  "outputs/image_cluster_20260922/image_mapping.json": "9d281ef8417013ab17cca538844419cf61f8bd6fe1f1b84de16e0069e917456e",
+  "results/cipe_scale/bbox_fg_medgemma4b_n400.json": "f9c76f53a163d51e2cc4e97cf8c9be9e7d659b2fadd2d8e8c0c3083907330eec",
+  "results/cipe_scale/bbox_val_medgemma4b_n400.json": "4f0bd45dc2890b7cc83ff342bcd8b197477ad1580ef1b82c8cfb027660bb45e0"
+ },
+ "function_source_sha256": {
+  "legacy": {
+   "mask_boxes": "64fbe8da8c8e8b2fe3bad40fcfcf27ea7b4642476b46bd49bdf527742e9c8f54",
+   "random_boxes": "234e2ebe45bc85a5c0332ab616d584d521b491a72fb0376ef3f4a2c0227d7ed3"
+  },
+  "matched": {
+   "foreground_mask": "e6c5f402e53db193caf8e88fd8fd8c208017f00188ea350b6c9253c1a116c14c",
+   "_ibox": "57c44774c488cf140b4f4b983a032cd44e19f237af9db7acf47f0ca7fda5c747",
+   "_coverage": "fbfc7c82d3b653a3ee9cb44a2a660f9c5f46330d8e353414b07ecdd732f9a961",
+   "_overlaps": "0e0e6d35683b581e77f9e555f1866d77b82070af220adecbc8efd7b91932b95d",
+   "place_control": "40ea7c81142530f732d0b281953f7e761fde4684144399c6fbb93ee4564aef2d",
+   "control_draw": "146e341e28407679761a1e3726bb608a52688855b2bd8c38f4535599ba726786"
+  }
+ },
+ "python": "3.9.6",
+ "numpy": "2.0.2",
+ "pillow": "11.3.0",
+ "image_sha256_mismatch": [],
+ "image_size_mismatch": [],
+ "legacy_n_boxes_mismatch": [],
+ "I1_annotated_coverage_mismatch": [],
+ "I1_matched_coverage_mismatch": [],
+ "I2_matched_box_mismatch": [],
+ "I2_partition_mismatch": [],
+ "n_admitted_replayed": 229,
+ "I3_U_size": 21,
+ "I3_U_with_cipe_random_1": 21,
+ "I3_U_ids": [
+  "slake_1",
+  "slake_26",
+  "slake_29",
+  "slake_34",
+  "slake_97",
+  "slake_112",
+  "slake_126",
+  "slake_170",
+  "slake_173",
+  "slake_175",
+  "slake_193",
+  "slake_209",
+  "slake_230",
+  "slake_236",
+  "slake_305",
+  "slake_315",
+  "slake_336",
+  "slake_341",
+  "slake_373",
+  "slake_392",
+  "slake_396"
+ ],
+ "I3_notU_with_cipe_random_1": 52,
+ "I3_notU_size": 379,
+ "model_forward_gate": "skipped (needs a VLM); I3 is the CPU-only stand-in",
+ "I1_pass": true,
+ "I2_pass": true,
+ "I3_pass": true,
+ "gate_pass": true
+}

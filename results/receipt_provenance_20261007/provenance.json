@@ -1,0 +1,170 @@
+{
+ "generator": "code/scripts/receipt_provenance_20261007.py",
+ "head_at_run": "d0f4b4690b06f05a01dc453deddf1816052048df",
+ "n_committed_py_versions": 266,
+ "rows": [
+  {
+   "label": "Matched-control runs, six models",
+   "receipts": [
+    "results/cipe_scale/bbox_fg_gemma3_4b_n400.json",
+    "results/cipe_scale/bbox_fg_internvl3_8b_n400.json",
+    "results/cipe_scale/bbox_fg_medgemma27b_n400.json",
+    "results/cipe_scale/bbox_fg_medgemma4b_n400.json",
+    "results/cipe_scale/bbox_fg_qwen25vl7b_n400.json",
+    "results/cipe_scale/bbox_fg_qwen2vl7b_n400.json"
+   ],
+   "n_files": 6,
+   "first_commit": "9e9919c 2026-07-27",
+   "first_commit_latest": "b4aec1f 2026-07-28",
+   "script_hash_recorded": null,
+   "script_hash_matches_committed_version": null,
+   "matched_script": null,
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "Corrected-TV readout",
+   "receipts": [
+    "outputs/region_tv_corrected.json"
+   ],
+   "n_files": 1,
+   "first_commit": "ce26e44 2026-08-06",
+   "first_commit_latest": "ce26e44 2026-08-06",
+   "script_hash_recorded": null,
+   "script_hash_matches_committed_version": null,
+   "matched_script": null,
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "ChestX-Det follow-up",
+   "receipts": [
+    "results/exposure_clean/expclean_gemma3_4b.json",
+    "results/exposure_clean/expclean_internvl3_8b.json",
+    "results/exposure_clean/expclean_medgemma4b.json",
+    "results/exposure_clean/expclean_qwen25vl_7b.json",
+    "results/exposure_clean/expclean_qwen2vl_7b.json"
+   ],
+   "n_files": 5,
+   "first_commit": "8cb2dd5 2026-08-11",
+   "first_commit_latest": "8cb2dd5 2026-08-11",
+   "script_hash_recorded": null,
+   "script_hash_matches_committed_version": null,
+   "matched_script": null,
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "MedTrust-IN v0.3 statistics",
+   "receipts": [
+    "data/medtrust_in_test/medtrust_in_stats.json"
+   ],
+   "n_files": 1,
+   "first_commit": "590306c 2026-07-28",
+   "first_commit_latest": "590306c 2026-07-28",
+   "script_hash_recorded": null,
+   "script_hash_matches_committed_version": null,
+   "matched_script": null,
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "Image-cluster sensitivity",
+   "receipts": [
+    "outputs/image_cluster_20260922/image_cluster_sensitivity.json"
+   ],
+   "n_files": 1,
+   "first_commit": "5d2ef28 2026-09-22",
+   "first_commit_latest": "5d2ef28 2026-09-22",
+   "script_hash_recorded": "1afa861cd077a18a2b7b7930f8022240499fcee2fe9dc58f2a5fe23735d81130",
+   "script_hash_matches_committed_version": true,
+   "matched_script": "code/scripts/image_cluster_audit_20260922.py",
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "Legacy identity mapping",
+   "receipts": [
+    "outputs/legacy_mapping_20260923/general_identity_mapping.json"
+   ],
+   "n_files": 1,
+   "first_commit": "d05b762 2026-09-23",
+   "first_commit_latest": "d05b762 2026-09-23",
+   "script_hash_recorded": null,
+   "script_hash_matches_committed_version": null,
+   "matched_script": null,
+   "commit_recorded": "783e7379856708a6740efc06e6747cf7ebba0289",
+   "timestamp_recorded": null
+  },
+  {
+   "label": "MedGemma-4B paired contrast",
+   "receipts": [
+    "outputs/medgemma4b_paired_20260924/paired_contrast.json"
+   ],
+   "n_files": 1,
+   "first_commit": "bb41a85 2026-09-24",
+   "first_commit_latest": "bb41a85 2026-09-24",
+   "script_hash_recorded": "1eee5da26b0b81c2713bafadceae36120040853d7fd08e67264eb8b16c6a943b",
+   "script_hash_matches_committed_version": true,
+   "matched_script": "code/scripts/medgemma4b_legacy_vs_matched_20260924.py",
+   "commit_recorded": "51a656b",
+   "timestamp_recorded": null
+  },
+  {
+   "label": "Legacy-coverage replay",
+   "receipts": [
+    "outputs/legacy_coverage_replay_20260925/identity.json"
+   ],
+   "n_files": 1,
+   "first_commit": "8a50411 2026-09-25",
+   "first_commit_latest": "8a50411 2026-09-25",
+   "script_hash_recorded": "3f382d430c2fc5ff15080c7e75e179e4b8c87dc7b5780875d76103bfddda6f8f",
+   "script_hash_matches_committed_version": true,
+   "matched_script": "code/scripts/legacy_coverage_replay_20260925.py",
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "Receipt-only instrument checks",
+   "receipts": [
+    "results/region_instrument_20260926/receipt_only.json"
+   ],
+   "n_files": 1,
+   "first_commit": "88820e2 2026-09-26",
+   "first_commit_latest": "88820e2 2026-09-26",
+   "script_hash_recorded": "8565f1ef5dda88bdac78ba2ec73aedad1177947f734f8f2f7e6cb1b3db1e6f38",
+   "script_hash_matches_committed_version": false,
+   "matched_script": null,
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  },
+  {
+   "label": "Corrected exposure audit",
+   "receipts": [
+    "results/exposure_audit_corrected_20261004/region_exposure_audit_corrected.json"
+   ],
+   "n_files": 1,
+   "first_commit": "2064c04 2026-10-04",
+   "first_commit_latest": "2064c04 2026-10-04",
+   "script_hash_recorded": "47186f79c25fdd9a3edc24e35d5f6f2c30dc8ac209d1debc0a26f87a3695656b",
+   "script_hash_matches_committed_version": true,
+   "matched_script": "code/scripts/region_exposure_audit.py",
+   "commit_recorded": "ada8fbdc3379c0342c3da63c68f1d05888bbaec2",
+   "timestamp_recorded": "2026-10-04T03:27:36+08:00"
+  },
+  {
+   "label": "Monte Carlo seed sensitivity",
+   "receipts": [
+    "results/seed_sensitivity_20261004/summary.json"
+   ],
+   "n_files": 1,
+   "first_commit": "2064c04 2026-10-04",
+   "first_commit_latest": "2064c04 2026-10-04",
+   "script_hash_recorded": null,
+   "script_hash_matches_committed_version": null,
+   "matched_script": null,
+   "commit_recorded": null,
+   "timestamp_recorded": null
+  }
+ ]
+}

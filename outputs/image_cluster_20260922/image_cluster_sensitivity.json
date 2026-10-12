@@ -1,0 +1,254 @@
+{
+  "analysis_status": "post-hoc sensitivity; not a new confirmatory registration",
+  "seed": 20260922,
+  "resamples": 20000,
+  "primary_estimand": "QA-weighted mean win fraction; images resampled with all QA rows and five control draws",
+  "test_assumption": "image-content-hash clusters independent; sign-flip null requires symmetry of image-level score sums about W=.5. Strict-win ties make chance .5 conservative under swap exchangeability; half-tie sensitivity explicitly restores per-comparison symmetry. These conditional post-hoc tests do not establish a general clinical null.",
+  "mapping_sha256": "9d281ef8417013ab17cca538844419cf61f8bd6fe1f1b84de16e0069e917456e",
+  "generator_sha256": "1afa861cd077a18a2b7b7930f8022240499fcee2fe9dc58f2a5fe23735d81130",
+  "receipt_sha256": {
+    "results/cipe_scale/bbox_fg_gemma3_4b_n400.json": "ac0c52100895e7262febe3d8ad830d8dcca46a90621ed8647c93567590f5dc79",
+    "results/cipe_scale/bbox_fg_internvl3_8b_n400.json": "3fae282691ba49aa78deca72d915b1abfb7011dd9e7837a29b3cb92ac94c6d6e",
+    "results/cipe_scale/bbox_fg_medgemma27b_n400.json": "84b2bcc507d5dab7031062f10ecf8fd05ad72feeefa8ded73f5ff7c733397f15",
+    "results/cipe_scale/bbox_fg_medgemma4b_n400.json": "f9c76f53a163d51e2cc4e97cf8c9be9e7d659b2fadd2d8e8c0c3083907330eec",
+    "results/cipe_scale/bbox_fg_qwen25vl7b_n400.json": "39daae21f78b6b79bf1646ebef5c890068967e1550921ae03783559fa3766254",
+    "results/cipe_scale/bbox_fg_qwen2vl7b_n400.json": "ef3c90205b225a3b66c07751d0be879219483b457dbe1f03ee771aa0c8328603"
+  },
+  "n_qa": 229,
+  "n_images": 175,
+  "qa_per_image": {
+    "min": 1,
+    "max": 4,
+    "mean": 1.3085714285714285,
+    "distribution": {
+      "1": 129,
+      "2": 39,
+      "3": 6,
+      "4": 1
+    }
+  },
+  "results": [
+    {
+      "model": "gemma3_4b",
+      "n_qa": 229,
+      "n_images": 175,
+      "W_qa_weighted": 0.5449781659388646,
+      "W_image_cluster_ci95": [
+        0.4963634523371364,
+        0.593833275369039
+      ],
+      "D_qa_weighted": 0.007366613248839034,
+      "D_image_cluster_ci95": [
+        -0.014221016523924093,
+        0.031115366895518543
+      ],
+      "W_image_equal": 0.5468571428571428,
+      "W_image_equal_ci95": [
+        0.49523809523809526,
+        0.5990476190476189
+      ],
+      "W_signflip_p": 0.07324633768311585,
+      "W_signflip_BH_q": 0.10986950652467378,
+      "W_signflip_Holm_p": 0.21973901304934756,
+      "exact_tie_fraction": 0.0445414847161572,
+      "W_half_ties": 0.5672489082969433,
+      "W_half_ties_cluster_ci95": [
+        0.5199999999999999,
+        0.6147829986352114
+      ],
+      "W_half_ties_signflip_p": 0.006899655017249137,
+      "W_half_ties_signflip_BH_q": 0.010349482525873706,
+      "W_half_ties_signflip_Holm_p": 0.02069896505174741,
+      "legacy_item_bootstrap_ci95": [
+        0.49694323144104807,
+        0.5930131004366813
+      ],
+      "legacy_item_bootstrap_q": 0.099
+    },
+    {
+      "model": "internvl3_8b",
+      "n_qa": 229,
+      "n_images": 175,
+      "W_qa_weighted": 0.5633187772925764,
+      "W_image_cluster_ci95": [
+        0.5139240506329117,
+        0.6115057030481812
+      ],
+      "D_qa_weighted": 0.010803001185833423,
+      "D_image_cluster_ci95": [
+        0.002185137361393728,
+        0.019751351716135228
+      ],
+      "W_image_equal": 0.578,
+      "W_image_equal_ci95": [
+        0.523711904761905,
+        0.6306690476190474
+      ],
+      "W_signflip_p": 0.01319934003299835,
+      "W_signflip_BH_q": 0.0263986800659967,
+      "W_signflip_Holm_p": 0.0527973601319934,
+      "exact_tie_fraction": 0.06375545851528384,
+      "W_half_ties": 0.5951965065502184,
+      "W_half_ties_cluster_ci95": [
+        0.5471615720524015,
+        0.6420567562305298
+      ],
+      "W_half_ties_signflip_p": 0.00024998750062496874,
+      "W_half_ties_signflip_BH_q": 0.0004999750012499375,
+      "W_half_ties_signflip_Holm_p": 0.000999950002499875,
+      "legacy_item_bootstrap_ci95": [
+        0.5109170305676856,
+        0.6131004366812227
+      ],
+      "legacy_item_bootstrap_q": 0.0304
+    },
+    {
+      "model": "medgemma27b",
+      "n_qa": 229,
+      "n_images": 175,
+      "W_qa_weighted": 0.6393013100436682,
+      "W_image_cluster_ci95": [
+        0.5885238647903669,
+        0.6883131984294774
+      ],
+      "D_qa_weighted": 0.05884967913925427,
+      "D_image_cluster_ci95": [
+        0.03126679209326099,
+        0.08856803274738123
+      ],
+      "W_image_equal": 0.6406666666666667,
+      "W_image_equal_ci95": [
+        0.5875238095238097,
+        0.6924761904761905
+      ],
+      "W_signflip_p": 4.999750012499375e-05,
+      "W_signflip_BH_q": 0.0002999850007499625,
+      "W_signflip_Holm_p": 0.0002999850007499625,
+      "exact_tie_fraction": 0.042794759825327516,
+      "W_half_ties": 0.6606986899563319,
+      "W_half_ties_cluster_ci95": [
+        0.611296175882996,
+        0.7080717488789238
+      ],
+      "W_half_ties_signflip_p": 4.999750012499375e-05,
+      "W_half_ties_signflip_BH_q": 0.00014999250037498125,
+      "W_half_ties_signflip_Holm_p": 0.0002999850007499625,
+      "legacy_item_bootstrap_ci95": [
+        0.5921397379912665,
+        0.6864628820960699
+      ],
+      "legacy_item_bootstrap_q": 0.00030000000000000003
+    },
+    {
+      "model": "medgemma4b",
+      "n_qa": 229,
+      "n_images": 175,
+      "W_qa_weighted": 0.6122270742358078,
+      "W_image_cluster_ci95": [
+        0.5603522330244569,
+        0.6641358122362871
+      ],
+      "D_qa_weighted": 0.051214321202499746,
+      "D_image_cluster_ci95": [
+        0.02085086993264231,
+        0.08460937016053961
+      ],
+      "W_image_equal": 0.6277142857142857,
+      "W_image_equal_ci95": [
+        0.5722833333333333,
+        0.6821904761904758
+      ],
+      "W_signflip_p": 9.99950002499875e-05,
+      "W_signflip_BH_q": 0.0002999850007499625,
+      "W_signflip_Holm_p": 0.0004999750012499375,
+      "exact_tie_fraction": 0.08995633187772926,
+      "W_half_ties": 0.6572052401746725,
+      "W_half_ties_cluster_ci95": [
+        0.6095888984018265,
+        0.7044444444444442
+      ],
+      "W_half_ties_signflip_p": 4.999750012499375e-05,
+      "W_half_ties_signflip_BH_q": 0.00014999250037498125,
+      "W_half_ties_signflip_Holm_p": 0.0002999850007499625,
+      "legacy_item_bootstrap_ci95": [
+        0.559825327510917,
+        0.6637554585152838
+      ],
+      "legacy_item_bootstrap_q": 0.00030000000000000003
+    },
+    {
+      "model": "qwen25vl7b",
+      "n_qa": 229,
+      "n_images": 175,
+      "W_qa_weighted": 0.5362445414847161,
+      "W_image_cluster_ci95": [
+        0.4853308016877636,
+        0.5884955752212389
+      ],
+      "D_qa_weighted": 0.01149328304418043,
+      "D_image_cluster_ci95": [
+        -0.0020883372171400273,
+        0.025364894041906567
+      ],
+      "W_image_equal": 0.5660952380952381,
+      "W_image_equal_ci95": [
+        0.5129523809523813,
+        0.6198095238095236
+      ],
+      "W_signflip_p": 0.17554122293885305,
+      "W_signflip_BH_q": 0.21064946752662364,
+      "W_signflip_Holm_p": 0.3510824458777061,
+      "exact_tie_fraction": 0.045414847161572056,
+      "W_half_ties": 0.5589519650655022,
+      "W_half_ties_cluster_ci95": [
+        0.5085818646698931,
+        0.6102808752155949
+      ],
+      "W_half_ties_signflip_p": 0.024998750062496876,
+      "W_half_ties_signflip_BH_q": 0.024998750062496872,
+      "W_half_ties_signflip_Holm_p": 0.03729813509324534,
+      "legacy_item_bootstrap_ci95": [
+        0.4864628820960698,
+        0.5851528384279476
+      ],
+      "legacy_item_bootstrap_q": 0.17759999999999998
+    },
+    {
+      "model": "qwen2vl7b",
+      "n_qa": 229,
+      "n_images": 175,
+      "W_qa_weighted": 0.5248908296943231,
+      "W_image_cluster_ci95": [
+        0.47368193210298504,
+        0.5748917748917749
+      ],
+      "D_qa_weighted": -0.0009110800697702112,
+      "D_image_cluster_ci95": [
+        -0.005137279235524052,
+        0.003553169684636034
+      ],
+      "W_image_equal": 0.531904761904762,
+      "W_image_equal_ci95": [
+        0.47771428571428587,
+        0.5848571428571429
+      ],
+      "W_signflip_p": 0.3416829158542073,
+      "W_signflip_BH_q": 0.34168291585420735,
+      "W_signflip_Holm_p": 0.3510824458777061,
+      "exact_tie_fraction": 0.07074235807860262,
+      "W_half_ties": 0.5602620087336245,
+      "W_half_ties_cluster_ci95": [
+        0.5109170305676852,
+        0.6091752172863352
+      ],
+      "W_half_ties_signflip_p": 0.01864906754662267,
+      "W_half_ties_signflip_BH_q": 0.0223788810559472,
+      "W_half_ties_signflip_Holm_p": 0.03729813509324534,
+      "legacy_item_bootstrap_ci95": [
+        0.4751091703056769,
+        0.5729475982532749
+      ],
+      "legacy_item_bootstrap_q": 0.3158
+    }
+  ]
+}

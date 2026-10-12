@@ -1,0 +1,480 @@
+{
+  "old_mapping_sha256": "ef926bd4901c7c95e2a20ec3242e953abfe6f9e4d712e7a93e602cbdc9050971",
+  "new_mapping_sha256": "9d281ef8417013ab17cca538844419cf61f8bd6fe1f1b84de16e0069e917456e",
+  "identity_rule": "one-to-one exact (image_ref, question, normalized answer); ordered organ boxes must also match",
+  "old_candidates": 400,
+  "new_candidates": 400,
+  "old_unique_qa_keys": 399,
+  "new_unique_qa_keys": 400,
+  "shared_one_to_one_qa": 62,
+  "shared_ordered_boxes_equal": 62,
+  "shared_foreground_included": 34,
+  "same_sample_id_same_qa": 0,
+  "shared_id_pairs": [
+    {
+      "old_sample_id": "slake_6",
+      "new_sample_id": "slake_10",
+      "image_ref": "xmlab195/source.jpg",
+      "qid": 642,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_9",
+      "new_sample_id": "slake_195",
+      "image_ref": "xmlab187/source.jpg",
+      "qid": 561,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_11",
+      "new_sample_id": "slake_49",
+      "image_ref": "xmlab362/source.jpg",
+      "qid": 2494,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_13",
+      "new_sample_id": "slake_156",
+      "image_ref": "xmlab598/source.jpg",
+      "qid": 4367,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_20",
+      "new_sample_id": "slake_74",
+      "image_ref": "xmlab574/source.jpg",
+      "qid": 4191,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_25",
+      "new_sample_id": "slake_178",
+      "image_ref": "xmlab365/source.jpg",
+      "qid": 2539,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_27",
+      "new_sample_id": "slake_114",
+      "image_ref": "xmlab585/source.jpg",
+      "qid": 4293,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_30",
+      "new_sample_id": "slake_374",
+      "image_ref": "xmlab633/source.jpg",
+      "qid": 4609,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_37",
+      "new_sample_id": "slake_211",
+      "image_ref": "xmlab593/source.jpg",
+      "qid": 4344,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_39",
+      "new_sample_id": "slake_137",
+      "image_ref": "xmlab541/source.jpg",
+      "qid": 3934,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_42",
+      "new_sample_id": "slake_86",
+      "image_ref": "xmlab109/source.jpg",
+      "qid": 57,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_52",
+      "new_sample_id": "slake_13",
+      "image_ref": "xmlab271/source.jpg",
+      "qid": 1472,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_53",
+      "new_sample_id": "slake_345",
+      "image_ref": "xmlab585/source.jpg",
+      "qid": 4292,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_55",
+      "new_sample_id": "slake_100",
+      "image_ref": "xmlab395/source.jpg",
+      "qid": 2836,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_57",
+      "new_sample_id": "slake_110",
+      "image_ref": "xmlab356/source.jpg",
+      "qid": 2457,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_64",
+      "new_sample_id": "slake_262",
+      "image_ref": "xmlab64/source.jpg",
+      "qid": 4634,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_65",
+      "new_sample_id": "slake_80",
+      "image_ref": "xmlab453/source.jpg",
+      "qid": 3382,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_74",
+      "new_sample_id": "slake_149",
+      "image_ref": "xmlab321/source.jpg",
+      "qid": 2092,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_86",
+      "new_sample_id": "slake_234",
+      "image_ref": "xmlab440/source.jpg",
+      "qid": 3288,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_95",
+      "new_sample_id": "slake_218",
+      "image_ref": "xmlab163/source.jpg",
+      "qid": 401,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_111",
+      "new_sample_id": "slake_129",
+      "image_ref": "xmlab81/source.jpg",
+      "qid": 4793,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_127",
+      "new_sample_id": "slake_257",
+      "image_ref": "xmlab610/source.jpg",
+      "qid": 4469,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_132",
+      "new_sample_id": "slake_2",
+      "image_ref": "xmlab279/source.jpg",
+      "qid": 1583,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_134",
+      "new_sample_id": "slake_72",
+      "image_ref": "xmlab276/source.jpg",
+      "qid": 1537,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_136",
+      "new_sample_id": "slake_154",
+      "image_ref": "xmlab96/source.jpg",
+      "qid": 4886,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_142",
+      "new_sample_id": "slake_57",
+      "image_ref": "xmlab297/source.jpg",
+      "qid": 1831,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_144",
+      "new_sample_id": "slake_30",
+      "image_ref": "xmlab268/source.jpg",
+      "qid": 1447,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_147",
+      "new_sample_id": "slake_312",
+      "image_ref": "xmlab559/source.jpg",
+      "qid": 4053,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_180",
+      "new_sample_id": "slake_159",
+      "image_ref": "xmlab355/source.jpg",
+      "qid": 2444,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_182",
+      "new_sample_id": "slake_255",
+      "image_ref": "xmlab340/source.jpg",
+      "qid": 2313,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_183",
+      "new_sample_id": "slake_220",
+      "image_ref": "xmlab227/source.jpg",
+      "qid": 1004,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_186",
+      "new_sample_id": "slake_368",
+      "image_ref": "xmlab216/source.jpg",
+      "qid": 877,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_199",
+      "new_sample_id": "slake_275",
+      "image_ref": "xmlab181/source.jpg",
+      "qid": 518,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_200",
+      "new_sample_id": "slake_124",
+      "image_ref": "xmlab579/source.jpg",
+      "qid": 4231,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_206",
+      "new_sample_id": "slake_12",
+      "image_ref": "xmlab241/source.jpg",
+      "qid": 1146,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_208",
+      "new_sample_id": "slake_24",
+      "image_ref": "xmlab29/source.jpg",
+      "qid": 1742,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_219",
+      "new_sample_id": "slake_19",
+      "image_ref": "xmlab398/source.jpg",
+      "qid": 2888,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_222",
+      "new_sample_id": "slake_68",
+      "image_ref": "xmlab35/source.jpg",
+      "qid": 2398,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_227",
+      "new_sample_id": "slake_39",
+      "image_ref": "xmlab590/source.jpg",
+      "qid": 4324,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_235",
+      "new_sample_id": "slake_118",
+      "image_ref": "xmlab574/source.jpg",
+      "qid": 4190,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_246",
+      "new_sample_id": "slake_98",
+      "image_ref": "xmlab89/source.jpg",
+      "qid": 4839,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_250",
+      "new_sample_id": "slake_263",
+      "image_ref": "xmlab591/source.jpg",
+      "qid": 4337,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_270",
+      "new_sample_id": "slake_308",
+      "image_ref": "xmlab489/source.jpg",
+      "qid": 3583,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_274",
+      "new_sample_id": "slake_385",
+      "image_ref": "xmlab456/source.jpg",
+      "qid": 3401,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_283",
+      "new_sample_id": "slake_205",
+      "image_ref": "xmlab271/source.jpg",
+      "qid": 1473,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_287",
+      "new_sample_id": "slake_261",
+      "image_ref": "xmlab237/source.jpg",
+      "qid": 1105,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_308",
+      "new_sample_id": "slake_169",
+      "image_ref": "xmlab333/source.jpg",
+      "qid": 2221,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_318",
+      "new_sample_id": "slake_307",
+      "image_ref": "xmlab50/source.jpg",
+      "qid": 3659,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_322",
+      "new_sample_id": "slake_71",
+      "image_ref": "xmlab334/source.jpg",
+      "qid": 2234,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_335",
+      "new_sample_id": "slake_167",
+      "image_ref": "xmlab157/source.jpg",
+      "qid": 363,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_337",
+      "new_sample_id": "slake_283",
+      "image_ref": "xmlab113/source.jpg",
+      "qid": 96,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_342",
+      "new_sample_id": "slake_394",
+      "image_ref": "xmlab425/source.jpg",
+      "qid": 3170,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_346",
+      "new_sample_id": "slake_164",
+      "image_ref": "xmlab434/source.jpg",
+      "qid": 3228,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_352",
+      "new_sample_id": "slake_268",
+      "image_ref": "xmlab584/source.jpg",
+      "qid": 4281,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_353",
+      "new_sample_id": "slake_371",
+      "image_ref": "xmlab73/source.jpg",
+      "qid": 4724,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_354",
+      "new_sample_id": "slake_41",
+      "image_ref": "xmlab125/source.jpg",
+      "qid": 179,
+      "foreground_included": true
+    },
+    {
+      "old_sample_id": "slake_359",
+      "new_sample_id": "slake_207",
+      "image_ref": "xmlab201/source.jpg",
+      "qid": 707,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_360",
+      "new_sample_id": "slake_31",
+      "image_ref": "xmlab409/source.jpg",
+      "qid": 2986,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_365",
+      "new_sample_id": "slake_109",
+      "image_ref": "xmlab280/source.jpg",
+      "qid": 1608,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_371",
+      "new_sample_id": "slake_264",
+      "image_ref": "xmlab5/source.jpg",
+      "qid": 3650,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_389",
+      "new_sample_id": "slake_254",
+      "image_ref": "xmlab542/source.jpg",
+      "qid": 3946,
+      "foreground_included": false
+    },
+    {
+      "old_sample_id": "slake_390",
+      "new_sample_id": "slake_350",
+      "image_ref": "xmlab313/source.jpg",
+      "qid": 1991,
+      "foreground_included": true
+    }
+  ],
+  "model_checks": {
+    "gemma3_4b": {
+      "n_shared_included": 34,
+      "exact_cipe_relevant_vs_organ": 34,
+      "max_absolute_difference": 0.0,
+      "old_receipt_sha256": "e655469c14e6adc96ae7a18ec81970a13435885c7c9e95dba8e88846030a1fed",
+      "foreground_receipt_sha256": "ac0c52100895e7262febe3d8ad830d8dcca46a90621ed8647c93567590f5dc79"
+    },
+    "internvl3_8b": {
+      "n_shared_included": 34,
+      "exact_cipe_relevant_vs_organ": 34,
+      "max_absolute_difference": 0.0,
+      "old_receipt_sha256": "787bb6c30b20e7cc675bb3118ae15501a303a1a72dc8fa785c1758dd153800b8",
+      "foreground_receipt_sha256": "3fae282691ba49aa78deca72d915b1abfb7011dd9e7837a29b3cb92ac94c6d6e"
+    },
+    "qwen25vl7b": {
+      "n_shared_included": 34,
+      "exact_cipe_relevant_vs_organ": 34,
+      "max_absolute_difference": 0.0,
+      "old_receipt_sha256": "9c55cc6fbb71f13466d04d94ff2a4ccb58b4bc7c4afd0c55c19757d20fde6d1b",
+      "foreground_receipt_sha256": "39daae21f78b6b79bf1646ebef5c890068967e1550921ae03783559fa3766254"
+    },
+    "qwen2vl7b": {
+      "n_shared_included": 34,
+      "exact_cipe_relevant_vs_organ": 34,
+      "max_absolute_difference": 0.0,
+      "old_receipt_sha256": "2cabfc4d337207a6a7daee1397584c604efce0e8002f1c720e2be30a680b6abc",
+      "foreground_receipt_sha256": "ef3c90205b225a3b66c07751d0be879219483b457dbe1f03ee771aa0c8328603"
+    }
+  },
+  "limit": "Historical receipts omit QA text and image bytes. Source-revision loader replay and cross-run exact CIPE equality corroborate shared cases, not independently prove every historical QA/pixel."
+}

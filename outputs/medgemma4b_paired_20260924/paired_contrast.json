@@ -1,0 +1,6776 @@
+{
+  "scope": "MedGemma-4B only; SLAKE 229 admitted QA shared by legacy and matched runs; CIPE readout (legacy stores no probability vectors, so TV is not computable); one legacy draw vs five matched draws; post-hoc",
+  "registration": "notes/PREREG_medgemma4b_legacy_vs_matched_20260924.md",
+  "registration_sha256": "59506219c05f9c779f34ba6a8b25376d6fbc03566da0aa86a03ec1bdb9d0fc41",
+  "registration_commit": "51a656b",
+  "inputs": {
+    "results/cipe_scale/bbox_val_medgemma4b_n400.json": "4f0bd45dc2890b7cc83ff342bcd8b197477ad1580ef1b82c8cfb027660bb45e0",
+    "results/cipe_scale/bbox_fg_medgemma4b_n400.json": "f9c76f53a163d51e2cc4e97cf8c9be9e7d659b2fadd2d8e8c0c3083907330eec",
+    "outputs/image_cluster_20260922/image_mapping.json": "9d281ef8417013ab17cca538844419cf61f8bd6fe1f1b84de16e0069e917456e",
+    "outputs/region_tv_corrected.json": "c0dd7e566af21eae9c263087a9305d768e94df131a76bea5304c0620a2366110"
+  },
+  "script_sha256": "1eee5da26b0b81c2713bafadceae36120040853d7fd08e67264eb8b16c6a943b",
+  "seed": 20260924,
+  "bootstrap_replicates": 20000,
+  "signflip_replicates": 20000,
+  "signflip_seed": 20260925,
+  "resampling_unit": "source image (image_sha256), all QA rows, QA-weighted mean",
+  "n_qa": 229,
+  "n_images": 175,
+  "pipeline_checks": {
+    "matched_TV_W_recomputed": 0.6122270742358078,
+    "region_tv_corrected_W": 0.6122270742358078,
+    "stored_vs_recomputed_CIPE_maxabsdiff": 0.0
+  },
+  "estimates": {
+    "dW_strict": {
+      "estimate": 0.05414847161572052,
+      "ci95": [
+        0.005216826651609256,
+        0.10540663390663381
+      ]
+    },
+    "dW_half": {
+      "estimate": 0.06244541484716157,
+      "ci95": [
+        0.019066765411729414,
+        0.10759099501286987
+      ]
+    },
+    "dD_cipe": {
+      "estimate": 0.023497280533823554,
+      "ci95": [
+        0.0020841574325140846,
+        0.047181899369485865
+      ]
+    },
+    "W_L": {
+      "estimate": 0.6419213973799127,
+      "ci95": [
+        0.5811965811965812,
+        0.7031963470319634
+      ]
+    },
+    "W_F": {
+      "estimate": 0.587772925764192,
+      "ci95": [
+        0.5358620195887508,
+        0.64
+      ]
+    },
+    "W_L_half": {
+      "estimate": 0.7096069868995634,
+      "ci95": [
+        0.657563025210084,
+        0.7618025751072961
+      ]
+    },
+    "W_F_half": {
+      "estimate": 0.6471615720524017,
+      "ci95": [
+        0.5999897119341563,
+        0.6941970734126984
+      ]
+    },
+    "dW_draw1": {
+      "estimate": 0.039301310043668124,
+      "ci95": [
+        -0.01809954751131222,
+        0.10169679016049182
+      ]
+    },
+    "dW_draw2": {
+      "estimate": 0.034934497816593885,
+      "ci95": [
+        -0.0215540565756083,
+        0.09210526315789473
+      ]
+    },
+    "dW_draw3": {
+      "estimate": 0.06550218340611354,
+      "ci95": [
+        -0.004545454545454545,
+        0.1391304347826087
+      ]
+    },
+    "dW_draw4": {
+      "estimate": 0.07423580786026202,
+      "ci95": [
+        0.008695652173913044,
+        0.1415929203539823
+      ]
+    },
+    "dW_draw5": {
+      "estimate": 0.056768558951965066,
+      "ci95": [
+        -0.004291845493562232,
+        0.11818181818181818
+      ]
+    }
+  },
+  "primary": {
+    "dW_strict": 0.05414847161572052,
+    "ci95": [
+      0.005216826651609256,
+      0.10540663390663381
+    ],
+    "signflip_p_two_sided": 0.040547972601369935,
+    "verdict": "A"
+  },
+  "half_tie_verdict_by_ci": "A",
+  "ties": {
+    "legacy_tie_fraction": 0.13537117903930132,
+    "matched_tie_fraction": 0.11877729257641921
+  },
+  "discordance": {
+    "L=0,F=0": 39,
+    "L=0,F=1": 6,
+    "L=0,F=mixed": 37,
+    "L=1,F=0": 9,
+    "L=1,F=1": 78,
+    "L=1,F=mixed": 60
+  },
+  "rows": [
+    {
+      "sample_id": "slake_1",
+      "image_sha256": "774644ad36dd4450af05c16fb09a6ccc3bb2cb60d2ced6ed0fd40d17c592c5d1",
+      "cipe_annotation": 0.9999999720619773,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999997019019767,
+        0.9999998926704942,
+        1.0,
+        0.9999998926704942,
+        0.9999998926704942
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.8,
+      "d_half": 0.8,
+      "dD_cipe": 1.2401730808964118e-07
+    },
+    {
+      "sample_id": "slake_2",
+      "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+      "cipe_annotation": 0.9999999990441354,
+      "cipe_legacy_control": 0.9999999989607996,
+      "cipe_matched_draws": [
+        0.9999999920573865,
+        0.9999999990441354,
+        0.9999999963276361,
+        0.9999999989607996,
+        0.9999999963276361
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": 2.4172807089328785e-09
+    },
+    {
+      "sample_id": "slake_5",
+      "image_sha256": "19e8abaf5547de3d5e7e53e41db3fd00204ba97d1dfd85e8a927e39303970348",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999998155077048,
+        0.9999995662717647,
+        0.9999996622557833,
+        0.9999998438368508,
+        0.9999996622557833
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.5,
+      "dD_cipe": 2.8997442258482664e-07
+    },
+    {
+      "sample_id": "slake_6",
+      "image_sha256": "50d561874c8ab45272dc80ed706a766b77074a585dfa7d40bd72855e08fcc80d",
+      "cipe_annotation": 0.9999999922252905,
+      "cipe_legacy_control": 0.9999999831849833,
+      "cipe_matched_draws": [
+        0.9999999784053903,
+        0.9999999784053903,
+        0.9999999978001448,
+        1.0,
+        0.9999999978001448
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.6,
+      "d_half": -0.6,
+      "dD_cipe": -7.297230708580571e-09
+    },
+    {
+      "sample_id": "slake_7",
+      "image_sha256": "4e591a1ace76cbf3e539069b73e848f9fde485879a24b95f212bbe0ac1d84609",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.0,
+      "cipe_matched_draws": [
+        0.9937027996070659,
+        0.0,
+        0.0,
+        0.9953485611564723,
+        0.0
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.5,
+      "wF_half": 0.7,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 3,
+      "d": -0.4,
+      "d_half": -0.19999999999999996,
+      "dD_cipe": -0.3978102721527076
+    },
+    {
+      "sample_id": "slake_8",
+      "image_sha256": "991d65991a9a8d1317f27af78f97589c79a2ad353c6e31701d314740b8d5ee57",
+      "cipe_annotation": 0.9999872698205943,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9997476745838881,
+        0.9993776370074705,
+        0.9997476745838881,
+        0.9999872698205943,
+        0.9997476745838881
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 1.0,
+      "d_half": 0.9,
+      "dD_cipe": 0.0002784138840541406
+    },
+    {
+      "sample_id": "slake_9",
+      "image_sha256": "cd6f7c9fa49e01f14c93d9996df1997177f5eabc5dbc25468a5eccc1983cb594",
+      "cipe_annotation": 0.9999999807984951,
+      "cipe_legacy_control": 0.9999999128513489,
+      "cipe_matched_draws": [
+        1.0,
+        1.0,
+        0.9999999262335111,
+        1.0,
+        0.9999999807984951
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.6,
+      "d_half": -0.7,
+      "dD_cipe": -6.855505219061087e-08
+    },
+    {
+      "sample_id": "slake_10",
+      "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+      "cipe_annotation": 0.9999757615828421,
+      "cipe_legacy_control": 0.9999994618157537,
+      "cipe_matched_draws": [
+        0.9999977527240027,
+        0.9999994618157537,
+        0.9999947168467689,
+        0.9999947168467689,
+        0.9999994618157537
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.239805944159734e-06
+    },
+    {
+      "sample_id": "slake_12",
+      "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+      "cipe_annotation": 0.9999969049937492,
+      "cipe_legacy_control": 0.9999969049937492,
+      "cipe_matched_draws": [
+        0.9999971522900547,
+        0.9999971522900547,
+        0.9999971522900547,
+        1.0,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 1.0,
+      "wL_half": 0.5,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": -1.0,
+      "d_half": -0.5,
+      "dD_cipe": -1.3863802836855399e-06
+    },
+    {
+      "sample_id": "slake_13",
+      "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+      "cipe_annotation": 0.9999773436875303,
+      "cipe_legacy_control": 0.9999999755301452,
+      "cipe_matched_draws": [
+        0.9999999755301452,
+        0.9999999911900626,
+        0.9999999975072535,
+        0.9999999975072535,
+        0.999999989591332
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.4735064279847165e-08
+    },
+    {
+      "sample_id": "slake_15",
+      "image_sha256": "d199d7fde7a6c54d0a4802803529c91bf64b8c939ef9a7a8bd3b4522a145f163",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.0,
+      "cipe_matched_draws": [
+        0.33238729017674307,
+        0.0,
+        0.18855781324768284,
+        0.9655210064250459,
+        0.0
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.5,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": -0.6,
+      "d_half": -0.30000000000000004,
+      "dD_cipe": -0.2972932219698944
+    },
+    {
+      "sample_id": "slake_17",
+      "image_sha256": "d7ae249694efb9d6ff04c2cd275af86a2570874b271d5ccf894276ad634e8e45",
+      "cipe_annotation": 0.9999748889360643,
+      "cipe_legacy_control": 0.9999999610089676,
+      "cipe_matched_draws": [
+        0.9999992883590908,
+        1.0,
+        0.9999992883590908,
+        0.9999986034179483,
+        0.9999998371858683
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 5.575445680694457e-07
+    },
+    {
+      "sample_id": "slake_18",
+      "image_sha256": "d442ef27a3cce4c2feaaaef2089a798ab43e7b77fa43c52a41150159ed1ceaed",
+      "cipe_annotation": 0.9999987092122948,
+      "cipe_legacy_control": 0.9999988123925265,
+      "cipe_matched_draws": [
+        0.9999954375272311,
+        0.9999954375272311,
+        0.9999647725796068,
+        0.9999954375272311,
+        0.9999954375272311
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 1.0,
+      "d_half": 1.0,
+      "dD_cipe": 9.50785482034533e-06
+    },
+    {
+      "sample_id": "slake_25",
+      "image_sha256": "197cc0aa1c3a5e82736ab07335c383fb62d773a7b38c14f2c0ff897a9a3ec6c1",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999875757371092,
+      "cipe_matched_draws": [
+        0.9999980655985328,
+        0.9999989595585933,
+        1.0,
+        0.9999980655985328,
+        0.9999952149803683
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.0485410096294778e-05
+    },
+    {
+      "sample_id": "slake_26",
+      "image_sha256": "872b48920806f5ed12e9a64de92ef9c13540bc4d675a5110f870f19a44bc1db3",
+      "cipe_annotation": 0.9999998862576458,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999334940689,
+        0.9999999919956768,
+        0.9999998862576458,
+        0.9999999919956768,
+        0.9999999919956768
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 4.085225102645751e-08
+    },
+    {
+      "sample_id": "slake_28",
+      "image_sha256": "3bbd75db6d2c2f34f8148fe1cbbb43ea9f27c6f0106fde77247e107abcf42e57",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999990750281326,
+      "cipe_matched_draws": [
+        0.9999989946599392,
+        0.9999989946599392,
+        0.9999901310689839,
+        0.9999958020620526,
+        0.9999958020620526
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.130125539096973e-06
+    },
+    {
+      "sample_id": "slake_29",
+      "image_sha256": "f33906dc3953742108f4dd14ab958ddfab43b9b2da30659efc57ad7989134a16",
+      "cipe_annotation": 0.8149339376283694,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9103500501843279,
+        0.9649609348216139,
+        0.887392337263581,
+        0.7901359040748386,
+        0.9108838186160932
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 0.10725539100790904
+    },
+    {
+      "sample_id": "slake_34",
+      "image_sha256": "dbf33c79bbb69505be36bfc5786b2a9b4b8edff68321678ec44af5d4eff02a92",
+      "cipe_annotation": 0.9999998880991576,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999732017609,
+        0.9999999732017609,
+        1.0,
+        0.9999997369291167,
+        0.9999999753447765
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 6.826451703911829e-08
+    },
+    {
+      "sample_id": "slake_35",
+      "image_sha256": "54f22eda51e7a6f6f1e5161d6788c2591e9866e6a677afaa773b0a8c86dbb5a8",
+      "cipe_annotation": 0.9999837339795999,
+      "cipe_legacy_control": 0.9999978723075348,
+      "cipe_matched_draws": [
+        0.9999791140774148,
+        1.0,
+        0.9999911156418849,
+        1.0,
+        0.9999978723075348
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 4.251902167795585e-06
+    },
+    {
+      "sample_id": "slake_36",
+      "image_sha256": "ea74c92c4b01657ddb80783021ea297fc4cd27362e010776fb40c7bad53bc89c",
+      "cipe_annotation": 0.9999855810897909,
+      "cipe_legacy_control": 0.9999843329941118,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999445993789162,
+        0.9999843329941118,
+        0.9999445993789162,
+        0.9999855810897909
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.2,
+      "d_half": -0.3,
+      "dD_cipe": 1.2510425764666877e-05
+    },
+    {
+      "sample_id": "slake_37",
+      "image_sha256": "1e5692d0dce9f869d49b672cc582304dffe1fe4b4692e17ea27290c50e1ed011",
+      "cipe_annotation": 0.9999999032343182,
+      "cipe_legacy_control": 0.9999999883537284,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999552583912,
+        0.9999999883537284,
+        0.9999999471414678,
+        0.9999999883537284
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.2532265225573269e-08
+    },
+    {
+      "sample_id": "slake_38",
+      "image_sha256": "f955a67f1a6c35434790120b9145e4f3918a00e46e1c61e9f3ade290d4547c9c",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999999228401902,
+      "cipe_matched_draws": [
+        0.9999999982867247,
+        0.9999998489854617,
+        0.9999999982867247,
+        0.9999999228401902,
+        0.999999968731959
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -2.4586021996064744e-08
+    },
+    {
+      "sample_id": "slake_40",
+      "image_sha256": "f0f112ee3aa770a9ad2cbab6aa1358329b79d1064d55097c6c683a8714b67c68",
+      "cipe_annotation": 0.9999999830547374,
+      "cipe_legacy_control": 0.9999998191936781,
+      "cipe_matched_draws": [
+        0.9999999815817815,
+        0.9999999230915089,
+        0.9999999815817815,
+        0.9999999815817815,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": -1.543736927178685e-07
+    },
+    {
+      "sample_id": "slake_41",
+      "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+      "cipe_annotation": 0.9923575788341382,
+      "cipe_legacy_control": 0.585460111244954,
+      "cipe_matched_draws": [
+        0.9827261085971187,
+        0.9925892358519172,
+        0.9827261085971187,
+        0.7279732279613785,
+        0.9827261085971187
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": -0.34828804667597635
+    },
+    {
+      "sample_id": "slake_42",
+      "image_sha256": "7d00acda543ec09f7b3578d6a9df4e2ae3623e414fe0e7f6537e901238ec0199",
+      "cipe_annotation": 0.7589800207710709,
+      "cipe_legacy_control": 0.7717965949134302,
+      "cipe_matched_draws": [
+        0.9980683219509421,
+        0.9538551519276963,
+        0.6407172653475617,
+        0.9980882183497516,
+        0.7941874732124913
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": -0.10518669124425828
+    },
+    {
+      "sample_id": "slake_44",
+      "image_sha256": "c5296cd67f91f3baedb1f84989f6c88b48dfa9be611f6758846bcf40cd550a80",
+      "cipe_annotation": 0.9579759661841695,
+      "cipe_legacy_control": 0.8559112841067443,
+      "cipe_matched_draws": [
+        0.4905602018314579,
+        0.9442441811026158,
+        0.9124519596934284,
+        0.6719332699181635,
+        0.8136164868308523
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.08935006423144076
+    },
+    {
+      "sample_id": "slake_45",
+      "image_sha256": "612f1dcde2cbff65d98a6983d05f0851bf7182df84a9cfa2d0fa5aa61cb07799",
+      "cipe_annotation": 0.999999771681412,
+      "cipe_legacy_control": 0.9999999989168459,
+      "cipe_matched_draws": [
+        0.9999999988224474,
+        0.9999999988224474,
+        0.9999999988224474,
+        1.0,
+        0.9999999958386289
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.556516275400213e-10
+    },
+    {
+      "sample_id": "slake_46",
+      "image_sha256": "64fd87a1324cbc1632c7fd892fc410d716756f59f58b7c8a4c2467c17c7777c5",
+      "cipe_annotation": 0.999880166670297,
+      "cipe_legacy_control": 0.999880166670297,
+      "cipe_matched_draws": [
+        0.9999855810897909,
+        0.9999855810897909,
+        0.999880166670297,
+        0.9999445993789162,
+        0.9999445993789162
+      ],
+      "wL": 0.0,
+      "wF": 0.8,
+      "wL_half": 0.5,
+      "wF_half": 0.9,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": -0.8,
+      "d_half": -0.4,
+      "dD_cipe": -6.793885124523058e-05
+    },
+    {
+      "sample_id": "slake_47",
+      "image_sha256": "791c9631b6ab0a24ba89fdd773d716e0f5c4924e9916b97a815c1c19fb8a8fed",
+      "cipe_annotation": 0.9999912417387457,
+      "cipe_legacy_control": 0.9998755172096351,
+      "cipe_matched_draws": [
+        0.9999904824232412,
+        0.9999912417387457,
+        0.9999663506561,
+        0.9999663506561,
+        0.9999663506561
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": -0.00010063801642223869
+    },
+    {
+      "sample_id": "slake_49",
+      "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999900785577547,
+        1.0,
+        0.9999900785577547,
+        0.9999900785577547,
+        0.9999892186779082
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": 0.4,
+      "dD_cipe": 8.109129765565548e-06
+    },
+    {
+      "sample_id": "slake_51",
+      "image_sha256": "613b5da0ce1cc5a1eeee6ac4a158b6e580aed935ad907c5b4d46a0711b17c38e",
+      "cipe_annotation": 0.9999795732594869,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999795732594869,
+        0.9999946831472953,
+        0.9999942217479847,
+        0.9999795732594869
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.4,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 1.0389717149172917e-05
+    },
+    {
+      "sample_id": "slake_52",
+      "image_sha256": "33ce8b09ee8e13191e62ad8c595622b5418dfbf2e91922f65d49325d279daa1e",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999923135874673,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999647361726002,
+        0.9999992169957269,
+        0.9999967304475629,
+        0.9999992169957269
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": 3.334651439423908e-07
+    },
+    {
+      "sample_id": "slake_54",
+      "image_sha256": "208dad665d01dbcf4d0b9b47d1083c3d41643df36b5036a3ff99866d7a2e9444",
+      "cipe_annotation": 0.9999953598165491,
+      "cipe_legacy_control": 0.9999989383810107,
+      "cipe_matched_draws": [
+        0.9999989383810107,
+        0.9999991013846204,
+        0.9999975042154269,
+        0.9999997660891639,
+        0.9999930618751608
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 1.2639919341195238e-06
+    },
+    {
+      "sample_id": "slake_55",
+      "image_sha256": "bbe1705b021741d3fb012747205528c26d769e1bccf4879d66652790ebe2a5b8",
+      "cipe_annotation": 0.9979608816896658,
+      "cipe_legacy_control": 0.9999649208774497,
+      "cipe_matched_draws": [
+        0.9999357551814417,
+        0.9999915983577323,
+        0.9999922688208741,
+        0.9999922688208741,
+        0.9999922688208741
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.5911122909662012e-05
+    },
+    {
+      "sample_id": "slake_56",
+      "image_sha256": "d199d7fde7a6c54d0a4802803529c91bf64b8c939ef9a7a8bd3b4522a145f163",
+      "cipe_annotation": 0.9999999651552408,
+      "cipe_legacy_control": 0.9999998711129725,
+      "cipe_matched_draws": [
+        0.9999999651552408,
+        0.9999998711129725,
+        1.0,
+        0.9999999901413616,
+        0.9999999246388656
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.0,
+      "wF_half": 0.5,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.4,
+      "d_half": -0.5,
+      "dD_cipe": -7.909671551065145e-08
+    },
+    {
+      "sample_id": "slake_58",
+      "image_sha256": "cced9d6f243be65283fcc092a60c3f1d1ea11e047417f6b126d880274539d248",
+      "cipe_annotation": 0.9999462684558003,
+      "cipe_legacy_control": 0.9999642836361814,
+      "cipe_matched_draws": [
+        0.9999903444053352,
+        0.9999903444053352,
+        0.9999462684558003,
+        0.9999462684558003,
+        0.9999903444053352
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.4,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": -8.43038933984186e-06
+    },
+    {
+      "sample_id": "slake_59",
+      "image_sha256": "ddd24320a1d5239a7b92090565fe9988d7b40fb8eb0287a9bdd680510f8d8021",
+      "cipe_annotation": 0.9999598029252728,
+      "cipe_legacy_control": 0.9999992940270527,
+      "cipe_matched_draws": [
+        0.999999901247744,
+        0.9999989348561804,
+        0.999999901247744,
+        0.9999992940270527,
+        0.9999995683658526
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -2.259218619959924e-07
+    },
+    {
+      "sample_id": "slake_60",
+      "image_sha256": "f2811d0aa43ffc8d81692da4b823ffb5f2d25c4db3272218e62aed56e06a5349",
+      "cipe_annotation": 0.9997950311973478,
+      "cipe_legacy_control": 0.9999445993789162,
+      "cipe_matched_draws": [
+        0.9986215297151763,
+        0.9998462617995728,
+        0.9999345917321008,
+        0.9999843329941118,
+        0.9997142340640818
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.4,
+      "d_half": 0.4,
+      "dD_cipe": 0.0003244093179075591
+    },
+    {
+      "sample_id": "slake_62",
+      "image_sha256": "a69f191026b5a418b733f6cdbff283cd0d5839cdf0810a2add8f476ca55d8f45",
+      "cipe_annotation": 0.9999953381568295,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999953381568295,
+        0.9999920270163057,
+        0.9999920270163057,
+        0.9999953381568295,
+        0.9999920270163057
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 1.0,
+      "d_half": 0.8,
+      "dD_cipe": 6.648527484776068e-06
+    },
+    {
+      "sample_id": "slake_63",
+      "image_sha256": "50d561874c8ab45272dc80ed706a766b77074a585dfa7d40bd72855e08fcc80d",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999990750281326,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999989946599392,
+        0.9999964465123782,
+        0.9999990750281326,
+        0.9999989946599392
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": 3.7285605469783434e-07
+    },
+    {
+      "sample_id": "slake_65",
+      "image_sha256": "9e092db045abb4850be1e0931e2fbd6e095d21f3b1b9587d3a00b0e1670c3655",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999974866892579,
+        1.0,
+        0.9999974866892579,
+        0.9999974866892579,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": 0.0,
+      "d_half": 0.3,
+      "dD_cipe": 1.5079864453815262e-06
+    },
+    {
+      "sample_id": "slake_66",
+      "image_sha256": "66593dd2be10b8f0664c7f7fb4311c8384a1c50fadb9dd50fa0253367de57423",
+      "cipe_annotation": 0.9997799310199792,
+      "cipe_legacy_control": 0.9999981221976548,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999921590555656,
+        0.9999657299261929,
+        0.9999982722805054,
+        0.9999982722805054
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 7.235489100976267e-06
+    },
+    {
+      "sample_id": "slake_70",
+      "image_sha256": "a56597841c770fa5d5a18b846f492dad5d488e33370ada21b337ad939a981c72",
+      "cipe_annotation": 0.999973939530742,
+      "cipe_legacy_control": 0.9999998200671527,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999901413616,
+        0.9999999588336538,
+        0.9999999032209714,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.5037204459389386e-07
+    },
+    {
+      "sample_id": "slake_71",
+      "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+      "cipe_annotation": 0.9999958579820918,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999954984175696,
+        1.0,
+        0.9999954984175696,
+        0.9999812038000315,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.6,
+      "d_half": 0.6,
+      "dD_cipe": 5.559872965910095e-06
+    },
+    {
+      "sample_id": "slake_72",
+      "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999982722805054,
+        1.0,
+        0.9999981221976548,
+        0.9999982722805054
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": 0.0,
+      "d_half": 0.3,
+      "dD_cipe": 1.0666482669341448e-06
+    },
+    {
+      "sample_id": "slake_75",
+      "image_sha256": "22ab5bf7c80bd74207fc94543a924ce466857bce22861326112da0b694fde841",
+      "cipe_annotation": 0.9999954692390071,
+      "cipe_legacy_control": 0.9999999338060336,
+      "cipe_matched_draws": [
+        0.9999999643967247,
+        0.9999998366533746,
+        0.9999999338060336,
+        0.9999996803031553,
+        0.9999999966633752
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 5.144150083680188e-08
+    },
+    {
+      "sample_id": "slake_79",
+      "image_sha256": "5993aafea51417d422e92eb1df4e965ef743d2c87891b926537e22eac0fa9111",
+      "cipe_annotation": 0.9999998751930413,
+      "cipe_legacy_control": 0.9999999645687226,
+      "cipe_matched_draws": [
+        0.9999998751930413,
+        0.999999704503989,
+        0.999999991893671,
+        0.9999999420493915,
+        0.9999998751930413
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.6,
+      "d_half": 0.4,
+      "dD_cipe": 8.680209573341813e-08
+    },
+    {
+      "sample_id": "slake_80",
+      "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+      "cipe_annotation": 0.9999960268286562,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999834100569719,
+        0.99992749533866,
+        0.9999834100569719,
+        0.9999960268286562,
+        0.9999960268286562
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 1.0,
+      "d_half": 0.8,
+      "dD_cipe": 2.272617801679644e-05
+    },
+    {
+      "sample_id": "slake_83",
+      "image_sha256": "d199d7fde7a6c54d0a4802803529c91bf64b8c939ef9a7a8bd3b4522a145f163",
+      "cipe_annotation": 0.9999614704904581,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.999990132350012,
+        1.0,
+        0.9999946101538711,
+        0.9999954375272311,
+        0.9999988123925265
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.2015152719177e-06
+    },
+    {
+      "sample_id": "slake_84",
+      "image_sha256": "19e8abaf5547de3d5e7e53e41db3fd00204ba97d1dfd85e8a927e39303970348",
+      "cipe_annotation": 0.9999975534335959,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999995895268305,
+        0.9999999791294527,
+        0.9999997271460728,
+        0.9999949243740215,
+        0.9999986258639677
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 1.4307919309342054e-06
+    },
+    {
+      "sample_id": "slake_86",
+      "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+      "cipe_annotation": 0.9999988123925265,
+      "cipe_legacy_control": 0.9999954375272311,
+      "cipe_matched_draws": [
+        0.9999954375272311,
+        0.9999988123925265,
+        0.9999988123925265,
+        1.0,
+        0.9999988123925265
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.5,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 3,
+      "d": -0.2,
+      "d_half": -0.5,
+      "dD_cipe": -2.9374137310300696e-06
+    },
+    {
+      "sample_id": "slake_87",
+      "image_sha256": "7e834a7357e96c39a20f83fef94f7fb08effd3e7143e7c0970451699d755bcbf",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999988608395572,
+      "cipe_matched_draws": [
+        1.0,
+        1.0,
+        0.9999989519026188,
+        1.0,
+        0.9999988608395572
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 3,
+      "d": 0.0,
+      "d_half": -0.3,
+      "dD_cipe": -7.017088780036929e-07
+    },
+    {
+      "sample_id": "slake_89",
+      "image_sha256": "537658afcee89d5810e0d2b5339daa596d029171ab11d9eea8a02bee77d8e024",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9994744389025828,
+      "cipe_matched_draws": [
+        0.9992661171468915,
+        0.9957569320176605,
+        1.0,
+        0.999658897031541,
+        0.9993729004741261
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": 0.0006634695685391323
+    },
+    {
+      "sample_id": "slake_91",
+      "image_sha256": "97ed12a1fef4bb268cf29305211e557b94cbc36b47b9ded946e814431a7a0a45",
+      "cipe_annotation": 0.9999993901685672,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        1.0,
+        0.9999978445073725,
+        0.9999974535516531,
+        0.9999953381568295
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.6,
+      "d_half": 0.6,
+      "dD_cipe": 1.87275682894672e-06
+    },
+    {
+      "sample_id": "slake_92",
+      "image_sha256": "97ed12a1fef4bb268cf29305211e557b94cbc36b47b9ded946e814431a7a0a45",
+      "cipe_annotation": 0.9999942217479847,
+      "cipe_legacy_control": 0.9999946831472953,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999795732594869,
+        0.9999795732594869,
+        0.9999942217479847,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.5,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.6,
+      "d_half": 0.5,
+      "dD_cipe": 4.009493903556205e-06
+    },
+    {
+      "sample_id": "slake_94",
+      "image_sha256": "63f260654a9efe3c9f3d972403b84e3303ba2d3f235db01767e434a8c70f20dd",
+      "cipe_annotation": 0.9999999674126899,
+      "cipe_legacy_control": 0.9999999755301452,
+      "cipe_matched_draws": [
+        0.9999999674126899,
+        0.9999999975072535,
+        0.999999989591332,
+        0.9999999975072535,
+        0.9999999975072535
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": -1.4375011292422357e-08
+    },
+    {
+      "sample_id": "slake_95",
+      "image_sha256": "22ab5bf7c80bd74207fc94543a924ce466857bce22861326112da0b694fde841",
+      "cipe_annotation": 0.999828581575901,
+      "cipe_legacy_control": 0.9999986543189403,
+      "cipe_matched_draws": [
+        0.999994830242704,
+        0.9999985374103431,
+        0.999994830242704,
+        0.999994830242704,
+        0.999994830242704
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.082642708429617e-06
+    },
+    {
+      "sample_id": "slake_96",
+      "image_sha256": "175979f531de721b806c573d9ba070ee45914726bd86d1057dfbd115cab26cda",
+      "cipe_annotation": 0.999969034576299,
+      "cipe_legacy_control": 0.9999737813211184,
+      "cipe_matched_draws": [
+        0.9999737813211184,
+        0.999943291869039,
+        0.9999030093818608,
+        0.999943291869039,
+        0.9999030093818608
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.8,
+      "d_half": 0.8,
+      "dD_cipe": 4.0504556534814995e-05
+    },
+    {
+      "sample_id": "slake_97",
+      "image_sha256": "9d0b80bc706bfc20487f7e2f4a53972cf1ddfd04cec29d4ef58d623019f8e59e",
+      "cipe_annotation": 0.9999933023397726,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999997935729737,
+        0.9999992069693672,
+        0.999998284859187,
+        0.9999997756333169,
+        0.9999997935729737
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 6.290784362317225e-07
+    },
+    {
+      "sample_id": "slake_98",
+      "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999987092122948,
+      "cipe_matched_draws": [
+        0.9999988123925265,
+        0.9999988123925265,
+        0.999990132350012,
+        0.9999988123925265,
+        0.9999954375272311
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.3078013304811407e-06
+    },
+    {
+      "sample_id": "slake_101",
+      "image_sha256": "75670393fbb28d704e62a611e88880aab29b42e7b153ac75d5c2d6ed5fd53e7f",
+      "cipe_annotation": 0.7574544356615418,
+      "cipe_legacy_control": 0.9999568199199987,
+      "cipe_matched_draws": [
+        0.9999887613421669,
+        1.0,
+        0.9999568199199987,
+        1.0,
+        0.999987787660084
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -2.9853864451201417e-05
+    },
+    {
+      "sample_id": "slake_103",
+      "image_sha256": "be666c935aac33b2a437035c53d9f76b9ad6aff0bfb830ce240367a9b08e5fb1",
+      "cipe_annotation": 0.9999345917321008,
+      "cipe_legacy_control": 0.9999855810897909,
+      "cipe_matched_draws": [
+        0.9999445993789162,
+        0.9999445993789162,
+        1.0,
+        0.9999855810897909,
+        0.9999445993789162
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.1705244482972397e-05
+    },
+    {
+      "sample_id": "slake_105",
+      "image_sha256": "46c5db962c04a9c5b06f0c7a148b6fd9981fa94a739dbf424d7bba82cb401346",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999969049937492,
+        1.0,
+        0.9999969049937492,
+        0.9999890596812947,
+        0.9999870766918417
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": 0.4,
+      "dD_cipe": 6.010727873095867e-06
+    },
+    {
+      "sample_id": "slake_106",
+      "image_sha256": "03fa02172c8a59c782676178ef734c90d6cf3ee2c7c5a59504cfa66897657ebe",
+      "cipe_annotation": 0.9999933625261149,
+      "cipe_legacy_control": 0.9999982722805054,
+      "cipe_matched_draws": [
+        0.9999933625261149,
+        0.9999982722805054,
+        0.9999981221976548,
+        0.9999856445010121,
+        0.9999981221976548
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.4,
+      "d_half": 0.30000000000000004,
+      "dD_cipe": 3.567539917037621e-06
+    },
+    {
+      "sample_id": "slake_107",
+      "image_sha256": "f9213552e18437e65bdb890fb5ccbd8caee1e0d1093d28273b6d90d740bc0abc",
+      "cipe_annotation": 0.9999175406328267,
+      "cipe_legacy_control": 0.9999915983577323,
+      "cipe_matched_draws": [
+        0.9999922688208741,
+        0.9999915983577323,
+        0.9999649208774497,
+        0.9999915983577323,
+        0.9999649208774497
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.0536899484714368e-05
+    },
+    {
+      "sample_id": "slake_108",
+      "image_sha256": "86eb634110a3f86f90061cffd72ab19bb5ad656aedc7e8281ee4fd0e88928f20",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999995574336371,
+      "cipe_matched_draws": [
+        0.9999931860517013,
+        0.9999995574336371,
+        0.9999999024881262,
+        1.0,
+        0.9999991898040758
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.1902781290595854e-06
+    },
+    {
+      "sample_id": "slake_110",
+      "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+      "cipe_annotation": 0.9999998757334541,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999032343182,
+        1.0,
+        0.9999999883537284,
+        0.9999999552583912
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.063071241093951e-08
+    },
+    {
+      "sample_id": "slake_112",
+      "image_sha256": "8565c05734c92ba4855596a5befb65b1d5ab784971022bd27c729e9ee14208e5",
+      "cipe_annotation": 0.9999910821790905,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999991731977798,
+        1.0,
+        0.999999817827672,
+        0.9999984863848568,
+        0.9999984863848568
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 8.072409670711878e-07
+    },
+    {
+      "sample_id": "slake_115",
+      "image_sha256": "d1035339306844fcb38053faaabded970ef5820c314d482bb77f67bf6c29fb38",
+      "cipe_annotation": 0.9999816518051937,
+      "cipe_legacy_control": 0.9999958020620526,
+      "cipe_matched_draws": [
+        1.0,
+        1.0,
+        0.9999989946599392,
+        0.9999958020620526,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -3.1572823456782473e-06
+    },
+    {
+      "sample_id": "slake_123",
+      "image_sha256": "f0f112ee3aa770a9ad2cbab6aa1358329b79d1064d55097c6c683a8714b67c68",
+      "cipe_annotation": 0.9633020281874831,
+      "cipe_legacy_control": 0.9970623775890153,
+      "cipe_matched_draws": [
+        0.89342462852116,
+        0.8959608382249452,
+        0.906097564590647,
+        0.8756571829897173,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 1.0,
+      "d_half": 1.0,
+      "dD_cipe": 0.28283433472372144
+    },
+    {
+      "sample_id": "slake_129",
+      "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999559266174747,
+      "cipe_matched_draws": [
+        0.9999559266174747,
+        0.9995307754347242,
+        0.9999559266174747,
+        1.0,
+        0.9995307754347242
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.00016124579659504423
+    },
+    {
+      "sample_id": "slake_130",
+      "image_sha256": "07c391bc46d203a0a9b56dcacdd53126b217a49764f43386c43fe742bf47d6da",
+      "cipe_annotation": 0.9986030899942374,
+      "cipe_legacy_control": 0.9996222190880583,
+      "cipe_matched_draws": [
+        0.9999872698205943,
+        0.9998642560478918,
+        0.0,
+        0.9997476745838881,
+        0.9966471594936946
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.4,
+      "d_half": 0.4,
+      "dD_cipe": 0.20037294709884457
+    },
+    {
+      "sample_id": "slake_131",
+      "image_sha256": "fd2301826680d53236aa1943b5c812d2656d90eaaeb6468eca45b5c7253c4b98",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.39885873771418134,
+      "cipe_matched_draws": [
+        0.03113167685021878,
+        0.5753880037857131,
+        0.0,
+        0.0,
+        0.03113167685021878
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.4,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 0.2713284662169512
+    },
+    {
+      "sample_id": "slake_132",
+      "image_sha256": "119e929c7ceec29395b0130c1be21f45cd68b61ff50919f273b5f2bc810c8540",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999986543189403,
+        0.9999888189086481,
+        0.9999986543189403,
+        1.0,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": 0.0,
+      "d_half": 0.3,
+      "dD_cipe": 2.77449069430169e-06
+    },
+    {
+      "sample_id": "slake_133",
+      "image_sha256": "17cd9580f16823fb7fe783b4c4f23ac03c8a0dbc85e2eda5dae9f521b115294c",
+      "cipe_annotation": 0.9999999919956768,
+      "cipe_legacy_control": 0.9999999692496332,
+      "cipe_matched_draws": [
+        0.9999998862576458,
+        0.9999999919956768,
+        0.9999998862576458,
+        0.9999999919956768,
+        0.9999999334940689
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.0,
+      "d_half": -0.2,
+      "dD_cipe": 3.1249490550777637e-08
+    },
+    {
+      "sample_id": "slake_134",
+      "image_sha256": "e95d4f53c38cfbea87b02a889d791dff1413f3dfd0c3758924daf399de924651",
+      "cipe_annotation": 0.9999995748470123,
+      "cipe_legacy_control": 0.9999999338060336,
+      "cipe_matched_draws": [
+        0.9999995748470123,
+        0.9999998366533746,
+        0.9999997668305481,
+        0.9999998917344702,
+        0.9999997668305481
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 1.6642684297352162e-07
+    },
+    {
+      "sample_id": "slake_135",
+      "image_sha256": "5d087d11c072a28deb9d12beef6b142d6834a39c78369cb65fb4f3f4ae786c0b",
+      "cipe_annotation": 0.9984330874211954,
+      "cipe_legacy_control": 0.9999876041546958,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999876041546958,
+        0.9999876041546958,
+        1.0,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -7.4375071825727446e-06
+    },
+    {
+      "sample_id": "slake_136",
+      "image_sha256": "1f204247c64e46a2a6ad847e431c8654e36a002b5bb3ea56e732a81349abde48",
+      "cipe_annotation": 0.9997973207766722,
+      "cipe_legacy_control": 0.9999411357846515,
+      "cipe_matched_draws": [
+        0.9999958579820918,
+        0.9999655827598077,
+        0.9997967051680248,
+        0.9999114439106885,
+        0.9999411357846515
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 1.8990663598561497e-05
+    },
+    {
+      "sample_id": "slake_138",
+      "image_sha256": "4a420dba8364cf07cc4985718b3974ea9ab34d65e42100b9e0f2780984e60473",
+      "cipe_annotation": 0.9999976756748783,
+      "cipe_legacy_control": 0.999999565840321,
+      "cipe_matched_draws": [
+        0.999999964850988,
+        0.9999998619724421,
+        0.9999989341809048,
+        0.9999998619724421,
+        0.9999990986594813
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.1513069214940117e-08
+    },
+    {
+      "sample_id": "slake_139",
+      "image_sha256": "cb71bf306fce61ae2ecc51f38d1299b24fc2b28ff914c442ee9d28d641bc3027",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.0,
+      "cipe_matched_draws": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.5,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 5,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.0
+    },
+    {
+      "sample_id": "slake_141",
+      "image_sha256": "a56597841c770fa5d5a18b846f492dad5d488e33370ada21b337ad939a981c72",
+      "cipe_annotation": 0.9999999779651129,
+      "cipe_legacy_control": 0.9999999779651129,
+      "cipe_matched_draws": [
+        0.9999999779651129,
+        0.9999999947229904,
+        0.9999999779651129,
+        0.9999999779651129,
+        0.9999999947229904
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.5,
+      "wF_half": 0.7,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 3,
+      "d": -0.4,
+      "d_half": -0.19999999999999996,
+      "dD_cipe": -6.703150923215162e-09
+    },
+    {
+      "sample_id": "slake_144",
+      "image_sha256": "aecc1f0f155ab4eaaaa013eff67abcbe7126ddce50aceba46fc9aefcfa105ab3",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999999692496332,
+      "cipe_matched_draws": [
+        0.9999997402855582,
+        0.9999999145927423,
+        0.999998675685086,
+        0.9999999636707897,
+        0.9999994406573776
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.222713224644181e-07
+    },
+    {
+      "sample_id": "slake_145",
+      "image_sha256": "11eca0eac545529d7709098528e4d5542f40bb900d7f9ad1641e97c22eb1fe01",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999994549499569,
+        1.0,
+        0.9999998581226129,
+        0.9999998581226129,
+        0.9999998581226129
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": 0.4,
+      "dD_cipe": 1.9413644081200943e-07
+    },
+    {
+      "sample_id": "slake_146",
+      "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+      "cipe_annotation": 0.9952582714949767,
+      "cipe_legacy_control": 0.9983888100401669,
+      "cipe_matched_draws": [
+        0.9870042066021762,
+        0.9983888100401669,
+        0.9990140291022801,
+        0.9964206916320114,
+        0.9838964433549345
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.4,
+      "d_half": 0.4,
+      "dD_cipe": 0.0054439738938530935
+    },
+    {
+      "sample_id": "slake_149",
+      "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999997689619544,
+      "cipe_matched_draws": [
+        0.9999998757334541,
+        0.9999996545555125,
+        0.9999999471414678,
+        0.9999998757334541,
+        0.9999999873413006
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -9.913908338710087e-08
+    },
+    {
+      "sample_id": "slake_153",
+      "image_sha256": "dbf33c79bbb69505be36bfc5786b2a9b4b8edff68321678ec44af5d4eff02a92",
+      "cipe_annotation": 0.9999999950831749,
+      "cipe_legacy_control": 0.9999999950831749,
+      "cipe_matched_draws": [
+        0.9999999884410898,
+        0.9999999988224474,
+        0.9999999950831749,
+        0.9999999884410898,
+        0.9999999950831749
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.5,
+      "wF_half": 0.4,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": -0.2,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 1.9089795300075707e-09
+    },
+    {
+      "sample_id": "slake_154",
+      "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+      "cipe_annotation": 0.9999999331953566,
+      "cipe_legacy_control": 0.9999999531999917,
+      "cipe_matched_draws": [
+        0.9999999689810496,
+        0.9999999689810496,
+        0.9999999989607996,
+        0.9999999956608907,
+        0.9999999897992603
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -3.127661829527284e-08
+    },
+    {
+      "sample_id": "slake_155",
+      "image_sha256": "83500f6045962a50506b6f4afc043cfa79b6d0834a498170d87d0066b088e9ca",
+      "cipe_annotation": 0.17406451103048393,
+      "cipe_legacy_control": 0.9999999809427859,
+      "cipe_matched_draws": [
+        0.9999998751930413,
+        0.9999998751930413,
+        0.9999997724315369,
+        0.9999998288782083,
+        0.999999912566558
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.2809030869309623e-07
+    },
+    {
+      "sample_id": "slake_157",
+      "image_sha256": "175979f531de721b806c573d9ba070ee45914726bd86d1057dfbd115cab26cda",
+      "cipe_annotation": 0.9999939763099648,
+      "cipe_legacy_control": 0.9999768575152117,
+      "cipe_matched_draws": [
+        0.9999939763099648,
+        0.9998212882083571,
+        0.9999939763099648,
+        0.9999939763099648,
+        0.9999499456853573
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 3,
+      "d": 0.0,
+      "d_half": -0.3,
+      "dD_cipe": 2.622495048987261e-05
+    },
+    {
+      "sample_id": "slake_158",
+      "image_sha256": "23aa973b6ce184c14c43dd3023e6a7081fb8eec678e4cbf147eed12e868c30ac",
+      "cipe_annotation": 0.9999997300441738,
+      "cipe_legacy_control": 0.9999999944987524,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999998215007513,
+        0.9999999413003647,
+        0.9999997306874964,
+        0.9999999413003647
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.0754095702836253e-07
+    },
+    {
+      "sample_id": "slake_159",
+      "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+      "cipe_annotation": 0.9999941421564534,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.999998342751518,
+        0.9999930799811945,
+        0.999998342751518,
+        1.0,
+        0.999998342751518
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 2.3783528503296125e-06
+    },
+    {
+      "sample_id": "slake_162",
+      "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+      "cipe_annotation": 0.9999357551814417,
+      "cipe_legacy_control": 0.9999357551814417,
+      "cipe_matched_draws": [
+        0.9999915983577323,
+        0.9997706147138724,
+        0.9999702970090798,
+        0.9999702970090798,
+        0.9999702970090798
+      ],
+      "wL": 0.0,
+      "wF": 0.8,
+      "wL_half": 0.5,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": -0.8,
+      "d_half": -0.30000000000000004,
+      "dD_cipe": 1.1343616728165529e-06
+    },
+    {
+      "sample_id": "slake_164",
+      "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+      "cipe_annotation": 0.9999610002501783,
+      "cipe_legacy_control": 0.9999960268286562,
+      "cipe_matched_draws": [
+        0.9999960268286562,
+        1.0,
+        0.9999834100569719,
+        0.9999960268286562,
+        0.9999960268286562
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.7287200682059023e-06
+    },
+    {
+      "sample_id": "slake_166",
+      "image_sha256": "0c66d0c4fa098d7b3a0ebc8da1feae16f7a2de8f73c8e41f9eb6c89487c42594",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999981604113196,
+      "cipe_matched_draws": [
+        0.9999987771701071,
+        0.9999987771701071,
+        0.99999744752536,
+        1.0,
+        0.9999996694059966
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -7.738429945725045e-07
+    },
+    {
+      "sample_id": "slake_167",
+      "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999993901685672,
+      "cipe_matched_draws": [
+        0.9999993901685672,
+        0.9999978445073725,
+        0.9999953381568295,
+        0.9999953381568295,
+        0.99999943892393
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.9201858615369716e-06
+    },
+    {
+      "sample_id": "slake_168",
+      "image_sha256": "0743f5e3086a4cff4a04e4756c20adc0577b2e3bbd4f3a1f78c1c195a3d31f32",
+      "cipe_annotation": 0.9999390923867241,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999993089848488,
+        0.9999932165889936,
+        0.9999993642296718,
+        1.0,
+        0.9999971145588674
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.199127523638822e-06
+    },
+    {
+      "sample_id": "slake_169",
+      "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+      "cipe_annotation": 0.9999505328057882,
+      "cipe_legacy_control": 0.9999873307041487,
+      "cipe_matched_draws": [
+        0.9999873307041487,
+        0.9999873307041487,
+        0.9999941421564534,
+        0.9999941421564534,
+        0.9999941421564534
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -4.086871382757984e-06
+    },
+    {
+      "sample_id": "slake_170",
+      "image_sha256": "f0f112ee3aa770a9ad2cbab6aa1358329b79d1064d55097c6c683a8714b67c68",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.0,
+        0.3105264094086081,
+        0.0,
+        0.3767820195222502,
+        0.6499570045247381
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.4,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 0.7325469133088807
+    },
+    {
+      "sample_id": "slake_171",
+      "image_sha256": "49c2cc62d6531d1a8a3b021357b0ef0328ec9632800bff307c98d1ab30d8bb1f",
+      "cipe_annotation": 0.9999998598679799,
+      "cipe_legacy_control": 0.9999999923220543,
+      "cipe_matched_draws": [
+        0.9999999679395496,
+        0.999999924628301,
+        0.9999999923220543,
+        0.999999924628301,
+        0.9999999679395496
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.683050331382276e-08
+    },
+    {
+      "sample_id": "slake_172",
+      "image_sha256": "cd4006b612dc8e7c5af4d9928fd76d53ca0d221e373b9ff56ad117924190dce0",
+      "cipe_annotation": 0.99949099952859,
+      "cipe_legacy_control": 0.9997929598190612,
+      "cipe_matched_draws": [
+        0.9999946831472953,
+        0.9998863216086074,
+        0.9997929598190612,
+        0.9997929598190612,
+        0.9999946831472953
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -9.936168920288146e-05
+    },
+    {
+      "sample_id": "slake_173",
+      "image_sha256": "cd420f4db5365e1b8b530422231f91eebe3e377c39ad0486c8eedb3f7b8387ee",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999978001448,
+        0.9999999978001448,
+        0.999999990814356,
+        0.9999999978001448,
+        0.9999999979762864
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.5,
+      "dD_cipe": 3.5617846450008983e-09
+    },
+    {
+      "sample_id": "slake_174",
+      "image_sha256": "4fcb2b7684f4d753d89d26d438165d350afa9880ca135faba3c82401bd7ef892",
+      "cipe_annotation": 0.9999859551562135,
+      "cipe_legacy_control": 0.9999963442259331,
+      "cipe_matched_draws": [
+        0.9999963442259331,
+        0.9999859551562135,
+        0.9999859551562135,
+        0.9999963442259331,
+        0.9999963442259331
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.4,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 4.155627887914015e-06
+    },
+    {
+      "sample_id": "slake_176",
+      "image_sha256": "3351d9c8b1fe7b662ee43fef8cc9484f4230e4ba769aab9c324e6c502f0fe68e",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999999032209714,
+      "cipe_matched_draws": [
+        0.9999999032209714,
+        0.9999999588336538,
+        0.9999999901413616,
+        0.9999998200671527,
+        0.9999999032209714
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.1875850747244954e-08
+    },
+    {
+      "sample_id": "slake_181",
+      "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+      "cipe_annotation": 0.9999982722805054,
+      "cipe_legacy_control": 0.9999982722805054,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999982722805054,
+        1.0,
+        0.9999982722805054,
+        0.9999982722805054
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.5,
+      "wF_half": 0.7,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 3,
+      "d": -0.4,
+      "d_half": -0.19999999999999996,
+      "dD_cipe": -6.910877978771879e-07
+    },
+    {
+      "sample_id": "slake_182",
+      "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+      "cipe_annotation": 0.9999995348731131,
+      "cipe_legacy_control": 0.999999901247744,
+      "cipe_matched_draws": [
+        1.0,
+        1.0,
+        0.9999999164116321,
+        0.9999996908160904,
+        0.9999998192179465
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.5958610211086466e-08
+    },
+    {
+      "sample_id": "slake_183",
+      "image_sha256": "f94ff49b74867862f0dd07c1a60d46d3f1813debaa1ad8d55e244166ec3d8b68",
+      "cipe_annotation": 0.9999999581568875,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.999999996799284,
+        0.999999996799284,
+        0.9999999755340934,
+        1.0,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 6.1734677370139934e-09
+    },
+    {
+      "sample_id": "slake_184",
+      "image_sha256": "765b32fa8c5c539acb9f8ccb2d97341584da891cdb7da96a785d94e460a2961e",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999684782749327,
+        0.9999975891836386,
+        0.9999914783466173,
+        1.0,
+        0.9999815693282205
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": 0.4,
+      "dD_cipe": 1.2176973318234197e-05
+    },
+    {
+      "sample_id": "slake_188",
+      "image_sha256": "091c0e8074b3b63ece930257551aebf883f7d7fb673543a84c0822ec243929f1",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.07198491519698114,
+      "cipe_matched_draws": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.5,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 5,
+      "d": 1.0,
+      "d_half": 0.5,
+      "dD_cipe": 0.07198491519698114
+    },
+    {
+      "sample_id": "slake_191",
+      "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999999970554544,
+      "cipe_matched_draws": [
+        0.999999996799284,
+        0.9999999685801795,
+        0.9999999685801795,
+        0.999999941583976,
+        0.9999999685801795
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.8230694781861132e-08
+    },
+    {
+      "sample_id": "slake_194",
+      "image_sha256": "9e092db045abb4850be1e0931e2fbd6e095d21f3b1b9587d3a00b0e1670c3655",
+      "cipe_annotation": 0.9999999980586208,
+      "cipe_legacy_control": 0.9999999980586208,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999980586208,
+        0.9999999980586208,
+        0.9999999980586208,
+        0.9999999851608524
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.5,
+      "wF_half": 0.5,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 3,
+      "d": -0.2,
+      "d_half": 0.0,
+      "dD_cipe": 2.1912777148358487e-09
+    },
+    {
+      "sample_id": "slake_195",
+      "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+      "cipe_annotation": 0.9999996081532125,
+      "cipe_legacy_control": 0.9999999919956768,
+      "cipe_matched_draws": [
+        0.9999999692496332,
+        0.9999999912997659,
+        0.9999999334940689,
+        0.9999999636707897,
+        0.9999999912997659
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.2192872095594396e-08
+    },
+    {
+      "sample_id": "slake_198",
+      "image_sha256": "f2899b9d3dd9dad0f5b175d5f0ffef153ce59ab1744cc100e9f20382838c48be",
+      "cipe_annotation": 0.999998978647638,
+      "cipe_legacy_control": 0.9999496616914608,
+      "cipe_matched_draws": [
+        0.9982995080286542,
+        0.957003131228734,
+        0.42406326132556116,
+        0.9999263176014012,
+        0.9995134974744041
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.12418851855970992
+    },
+    {
+      "sample_id": "slake_199",
+      "image_sha256": "11eca0eac545529d7709098528e4d5542f40bb900d7f9ad1641e97c22eb1fe01",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999937662533,
+        0.9999999937662533,
+        1.0,
+        0.9999999760516426,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": 0.0,
+      "d_half": 0.3,
+      "dD_cipe": 7.283170289085206e-09
+    },
+    {
+      "sample_id": "slake_200",
+      "image_sha256": "99db92edd4e60c813c0fbce6473080eb5a84c20ea3c2271b516ed09843bd8a4d",
+      "cipe_annotation": 0.9999999831849833,
+      "cipe_legacy_control": 0.9999999598511582,
+      "cipe_matched_draws": [
+        0.9999998060937093,
+        0.9999999922252905,
+        0.9999999831849833,
+        0.9999998585752781,
+        0.9999999784053903
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.2,
+      "d_half": -0.3,
+      "dD_cipe": 3.615422783376232e-08
+    },
+    {
+      "sample_id": "slake_201",
+      "image_sha256": "c1a74486f74e7eb972b1c3e962f06fa5bc624878b0838d44b15bcc14af7398cc",
+      "cipe_annotation": 0.99833516885272,
+      "cipe_legacy_control": 0.9993107987902317,
+      "cipe_matched_draws": [
+        0.9992211778746548,
+        0.999084601805027,
+        0.999609292802857,
+        0.9992211778746548,
+        0.9991303679884039
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 5.747512111198283e-05
+    },
+    {
+      "sample_id": "slake_203",
+      "image_sha256": "5cf62f9e3332815b853b92d8a93128276822768c1191718fe5124d763bc68b85",
+      "cipe_annotation": 0.9999872698205943,
+      "cipe_legacy_control": 0.9999872698205943,
+      "cipe_matched_draws": [
+        0.9997277523215901,
+        0.9998942047019562,
+        0.9996222190880583,
+        0.9996222190880583,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.5,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": 0.3,
+      "dD_cipe": 0.0002139907806617547
+    },
+    {
+      "sample_id": "slake_204",
+      "image_sha256": "8c538341a4983594ae4586c4602247519b2a93e604b38e4960cb39df61225b3d",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999999978001448,
+      "cipe_matched_draws": [
+        0.999999956737057,
+        0.9999999831849833,
+        0.9999999979762864,
+        0.999999956737057,
+        0.9999999831849833
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.223607131757177e-08
+    },
+    {
+      "sample_id": "slake_205",
+      "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+      "cipe_annotation": 0.9999999462722062,
+      "cipe_legacy_control": 0.9999999249924725,
+      "cipe_matched_draws": [
+        0.9999998773191631,
+        0.9999998149041237,
+        0.9999999828391581,
+        0.999999735784519,
+        0.999999735784519
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": 9.56661758699795e-08
+    },
+    {
+      "sample_id": "slake_206",
+      "image_sha256": "922d2bd7551212fcef9ce41edc31e129204278eafa6bea91d84e9a26e9bcd09f",
+      "cipe_annotation": 0.9999999947229904,
+      "cipe_legacy_control": 0.9999999596622627,
+      "cipe_matched_draws": [
+        0.9999999813490571,
+        0.9999999596622627,
+        0.9999999596622627,
+        0.9999999310119803,
+        0.9999998962164462
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.408186078855067e-08
+    },
+    {
+      "sample_id": "slake_208",
+      "image_sha256": "b0025a026023138b72765b8518f5535f04795470ec58fdbfd1db645d10dc629e",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.8731910812413627,
+      "cipe_matched_draws": [
+        0.02607080502605974,
+        0.981946206830155,
+        0.0,
+        0.9620633721362971,
+        0.9620633721362971
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 0.2867623300156009
+    },
+    {
+      "sample_id": "slake_212",
+      "image_sha256": "61f3416b8f585bb02f1adc214f384a76eeb665e894e2ce520583fe1af3562c39",
+      "cipe_annotation": 0.9999933496397257,
+      "cipe_legacy_control": 0.9999995663289044,
+      "cipe_matched_draws": [
+        1.0,
+        0.999999799483038,
+        0.9999999478051108,
+        0.9999999432686939,
+        0.999999799483038
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -3.3167907165232435e-07
+    },
+    {
+      "sample_id": "slake_216",
+      "image_sha256": "7a18692fb4b9cc3d9ebe7fc6051d123132f08da95f51c02e1eeda28bd2a584c4",
+      "cipe_annotation": 0.999892621423521,
+      "cipe_legacy_control": 0.9999999831820294,
+      "cipe_matched_draws": [
+        0.9999999928461633,
+        0.9999999984239595,
+        0.9999998489854617,
+        0.9999999984239595,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.5446120604778457e-08
+    },
+    {
+      "sample_id": "slake_218",
+      "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+      "cipe_annotation": 0.9999972236832624,
+      "cipe_legacy_control": 0.9999997668305481,
+      "cipe_matched_draws": [
+        0.9999998366533746,
+        0.9999997668305481,
+        0.9999999643967247,
+        0.9999996803031553,
+        0.9999998917344702
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -6.115310646759298e-08
+    },
+    {
+      "sample_id": "slake_219",
+      "image_sha256": "aaffd29e99fcb4040807f6853eb15ad51bcd48ee2c624087b1c0b81a52b04a4e",
+      "cipe_annotation": 0.9998953385868777,
+      "cipe_legacy_control": 0.9999655783155338,
+      "cipe_matched_draws": [
+        0.9999853575923882,
+        0.9999655783155338,
+        0.9999360060035688,
+        0.9999360060035688,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 9.887325219670728e-07
+    },
+    {
+      "sample_id": "slake_220",
+      "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.999999964850988,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999469687156,
+        0.9999999785096841,
+        0.9999999884410898,
+        0.9999999785096841
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.3634846807164536e-08
+    },
+    {
+      "sample_id": "slake_221",
+      "image_sha256": "a09d27b71c369fd997025fe3e67e73d8dfce2a5834f6bdcfa71c4f26088e83fd",
+      "cipe_annotation": 0.9999609997991781,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999898013541,
+        0.9999999737600358,
+        0.9999999635913361,
+        0.9999999737600358,
+        0.9999999987726079
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.0062926098241007e-08
+    },
+    {
+      "sample_id": "slake_222",
+      "image_sha256": "23aa973b6ce184c14c43dd3023e6a7081fb8eec678e4cbf147eed12e868c30ac",
+      "cipe_annotation": 0.8350450154015118,
+      "cipe_legacy_control": 0.6959314622750358,
+      "cipe_matched_draws": [
+        0.9974655903047737,
+        0.8679852748892702,
+        0.9087688716793886,
+        0.9628535141929758,
+        0.96981662943126
+      ],
+      "wL": 0.0,
+      "wF": 1.0,
+      "wL_half": 0.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -1.0,
+      "d_half": -1.0,
+      "dD_cipe": -0.24544651382449778
+    },
+    {
+      "sample_id": "slake_224",
+      "image_sha256": "91b76bddeb3dc76676a42f4117216732adf86252ce582a4619dd5b008ad49e19",
+      "cipe_annotation": 0.999999660740912,
+      "cipe_legacy_control": 0.9999999947229904,
+      "cipe_matched_draws": [
+        0.9999999813490571,
+        0.9999999951451811,
+        0.9999999947229904,
+        0.9999999779651129,
+        0.9999999779651129
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 9.293499414475548e-09
+    },
+    {
+      "sample_id": "slake_225",
+      "image_sha256": "385016dd071b6a3216b4260a479f37ccf9a70a2dfb91795b77f493912b0073fc",
+      "cipe_annotation": 0.9999982771156158,
+      "cipe_legacy_control": 0.9999998880991576,
+      "cipe_matched_draws": [
+        0.9999995108949424,
+        1.0,
+        0.9999976377666425,
+        0.9999999052820002,
+        0.9999968585542072
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.4,
+      "d_half": 0.4,
+      "dD_cipe": 1.1055995990938428e-06
+    },
+    {
+      "sample_id": "slake_226",
+      "image_sha256": "f64cb8765f0ec6bf687cb213946604a54b3831a7d96c29286ac4d8ea3e0258d7",
+      "cipe_annotation": 0.9998477945597892,
+      "cipe_legacy_control": 0.9999953071422978,
+      "cipe_matched_draws": [
+        0.9999948998225964,
+        0.9999953071422978,
+        0.9999953071422978,
+        1.0,
+        0.9999948998225964
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -7.756436598560512e-07
+    },
+    {
+      "sample_id": "slake_227",
+      "image_sha256": "4a420dba8364cf07cc4985718b3974ea9ab34d65e42100b9e0f2780984e60473",
+      "cipe_annotation": 0.9999113903921821,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999989946599392,
+        0.9999816518051937,
+        0.9999901310689839,
+        0.9999989946599392
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 6.045561188772197e-06
+    },
+    {
+      "sample_id": "slake_228",
+      "image_sha256": "eed3f4880d9460d5d6bd2b9507c5102b031b089faa7efa954c4e83ce365cbb66",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999995189930803,
+      "cipe_matched_draws": [
+        0.9999998747931259,
+        0.9999989596945716,
+        0.9999989596945716,
+        0.9999880040833174,
+        0.9999982208087533
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.715178212264746e-06
+    },
+    {
+      "sample_id": "slake_229",
+      "image_sha256": "be9556a6f4705a77e44ac5ff87c9854e465cb5357a90c1160189679defa0505b",
+      "cipe_annotation": 0.9999999871814909,
+      "cipe_legacy_control": 0.9999999963731296,
+      "cipe_matched_draws": [
+        0.9999999963731296,
+        0.9999998366533746,
+        0.9999998366533746,
+        0.9999999848555825,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.6,
+      "d_half": 0.6,
+      "dD_cipe": 6.546603736889978e-08
+    },
+    {
+      "sample_id": "slake_230",
+      "image_sha256": "f2811d0aa43ffc8d81692da4b823ffb5f2d25c4db3272218e62aed56e06a5349",
+      "cipe_annotation": 0.9140755575024961,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9249460655889855,
+        0.9977359255510949,
+        1.0,
+        0.9983477295536737,
+        0.888147276086915
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 0.038164600643866065
+    },
+    {
+      "sample_id": "slake_231",
+      "image_sha256": "36ddf45ed6b61cdbfb0e5d804cb071815410f7ae1a3710fc7a0870d604d33c4d",
+      "cipe_annotation": 0.9999999756483355,
+      "cipe_legacy_control": 0.999999986902081,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999944285372,
+        0.9999999952845112,
+        0.9999999944285372,
+        0.9999996755222025
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 5.496932353743489e-08
+    },
+    {
+      "sample_id": "slake_233",
+      "image_sha256": "b68d3e3aa4125a1f5987556b85568e7f84e16f1780da76068b9def2f6c9ef485",
+      "cipe_annotation": 0.9999999032343182,
+      "cipe_legacy_control": 0.9999999552583912,
+      "cipe_matched_draws": [
+        0.9999999883537284,
+        0.9999998345056951,
+        0.9999999032343182,
+        0.9999999032343182,
+        0.9999999552583912
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.6,
+      "d_half": 0.4,
+      "dD_cipe": 3.8341101071814876e-08
+    },
+    {
+      "sample_id": "slake_234",
+      "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+      "cipe_annotation": 0.9999768575152117,
+      "cipe_legacy_control": 0.9999143902551715,
+      "cipe_matched_draws": [
+        0.9999499456853573,
+        0.9999934536741869,
+        0.9999768575152117,
+        0.9998712058795849,
+        0.9998712058795849
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.2,
+      "d_half": -0.3,
+      "dD_cipe": -1.814347161366303e-05
+    },
+    {
+      "sample_id": "slake_235",
+      "image_sha256": "3351d9c8b1fe7b662ee43fef8cc9484f4230e4ba769aab9c324e6c502f0fe68e",
+      "cipe_annotation": 0.9999980809917639,
+      "cipe_legacy_control": 0.9999999357151482,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999988267115463,
+        0.9999997315668424,
+        0.9999999357151482,
+        0.9999987356630976
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.89783821278067e-07
+    },
+    {
+      "sample_id": "slake_236",
+      "image_sha256": "872b48920806f5ed12e9a64de92ef9c13540bc4d675a5110f870f19a44bc1db3",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.0,
+        0.9943424285333686,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 4,
+      "d": 0.8,
+      "d_half": 0.4,
+      "dD_cipe": 0.8011315142933263
+    },
+    {
+      "sample_id": "slake_238",
+      "image_sha256": "ff9081765c646401be7b9f61de367406797d3a3cab1e1ab08100f70a07547224",
+      "cipe_annotation": 0.9996287136513252,
+      "cipe_legacy_control": 0.9998275652976852,
+      "cipe_matched_draws": [
+        0.9998275652976852,
+        0.99994328457958,
+        1.0,
+        0.9998945628576422,
+        0.99949099952859
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": -3.7171550142378607e-06
+    },
+    {
+      "sample_id": "slake_240",
+      "image_sha256": "47ca6a015f5a65c2a17ce340abe9bd4a79e5891df39cd6eb6d933030a6fe5bcb",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.999999998665674,
+      "cipe_matched_draws": [
+        0.999999882389603,
+        0.999999986902081,
+        0.9999999952845112,
+        0.9999999952845112,
+        0.9999999399077557
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.8711981620309643e-08
+    },
+    {
+      "sample_id": "slake_241",
+      "image_sha256": "091c0e8074b3b63ece930257551aebf883f7d7fb673543a84c0822ec243929f1",
+      "cipe_annotation": 0.9996763851829615,
+      "cipe_legacy_control": 0.9984392101115082,
+      "cipe_matched_draws": [
+        0.9999259242509396,
+        0.99982589423819,
+        0.9946842714172062,
+        0.9988611807802618,
+        0.9979253095541326
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.4,
+      "d_half": -0.4,
+      "dD_cipe": 0.0001946940633620331
+    },
+    {
+      "sample_id": "slake_242",
+      "image_sha256": "765b32fa8c5c539acb9f8ccb2d97341584da891cdb7da96a785d94e460a2961e",
+      "cipe_annotation": 0.9999996688902644,
+      "cipe_legacy_control": 0.9999999974014628,
+      "cipe_matched_draws": [
+        0.9999999722720659,
+        0.9999999882054642,
+        0.9999999156825966,
+        0.9999999971753639,
+        0.9999999882054642
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 2.5093271904808034e-08
+    },
+    {
+      "sample_id": "slake_245",
+      "image_sha256": "5d087d11c072a28deb9d12beef6b142d6834a39c78369cb65fb4f3f4ae786c0b",
+      "cipe_annotation": 0.9999988123925265,
+      "cipe_legacy_control": 0.9999954375272311,
+      "cipe_matched_draws": [
+        0.9999988123925265,
+        0.9999988123925265,
+        1.0,
+        1.0,
+        0.9999988123925265
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 3,
+      "d": -0.4,
+      "d_half": -0.7,
+      "dD_cipe": -3.849908284836445e-06
+    },
+    {
+      "sample_id": "slake_248",
+      "image_sha256": "ebfa51679f539ad67bc0a43db173d80eeacf553f85cce32dc30948725a422d8f",
+      "cipe_annotation": 0.999999989591332,
+      "cipe_legacy_control": 0.9999998397448893,
+      "cipe_matched_draws": [
+        0.9999999255900907,
+        0.9999999255900907,
+        0.9999999545054584,
+        0.9999999255900907,
+        0.9999999255900907
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -9.162827496744796e-08
+    },
+    {
+      "sample_id": "slake_251",
+      "image_sha256": "11e0128f69457726d5b01ab94c174d83148dc83933a5439c9ec8bd9cb1868651",
+      "cipe_annotation": 0.9999470455492757,
+      "cipe_legacy_control": 0.9999997402855582,
+      "cipe_matched_draws": [
+        0.9999996883796767,
+        0.9999999334940689,
+        0.9999999334940689,
+        1.0,
+        0.9999998288894043
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.3656588560007066e-07
+    },
+    {
+      "sample_id": "slake_253",
+      "image_sha256": "ac284b474d4e235941da5e698fc064cb52e3984431de06a954044904a7456da7",
+      "cipe_annotation": 0.9999992524615151,
+      "cipe_legacy_control": 0.9999999262335111,
+      "cipe_matched_draws": [
+        0.9999999262335111,
+        0.9999999791294527,
+        0.9999999262335111,
+        0.9999998404603541,
+        0.9999999807984951
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -4.337553760613844e-09
+    },
+    {
+      "sample_id": "slake_255",
+      "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+      "cipe_annotation": 0.9979253095541326,
+      "cipe_legacy_control": 0.9965718533923416,
+      "cipe_matched_draws": [
+        0.9992019103575875,
+        0.9988611807802618,
+        0.9984392101115082,
+        0.9992019103575875,
+        0.9994708565502148
+      ],
+      "wL": 0.0,
+      "wF": 1.0,
+      "wL_half": 0.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -1.0,
+      "d_half": -1.0,
+      "dD_cipe": -0.002463160239090323
+    },
+    {
+      "sample_id": "slake_256",
+      "image_sha256": "92f4ab8ec242e6504cceb5ac83e73fe100b8c13e4a7ff47cac4e1b42f09f2263",
+      "cipe_annotation": 0.14965252167779575,
+      "cipe_legacy_control": 0.9930948134380844,
+      "cipe_matched_draws": [
+        0.0,
+        0.9982043360131252,
+        0.0,
+        0.0,
+        0.9930948134380844
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.6,
+      "d_half": 0.6,
+      "dD_cipe": 0.5948349835478425
+    },
+    {
+      "sample_id": "slake_258",
+      "image_sha256": "99db92edd4e60c813c0fbce6473080eb5a84c20ea3c2271b516ed09843bd8a4d",
+      "cipe_annotation": 0.9999990750281326,
+      "cipe_legacy_control": 0.9999547236859578,
+      "cipe_matched_draws": [
+        0.9999964465123782,
+        0.9999107742589963,
+        0.9998860165081344,
+        0.9998985854718248,
+        0.9998731120379404
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.1736728103036747e-05
+    },
+    {
+      "sample_id": "slake_261",
+      "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+      "cipe_annotation": 0.9027722153161737,
+      "cipe_legacy_control": 0.9415528895896462,
+      "cipe_matched_draws": [
+        0.7140565910151564,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 1.0,
+      "d_half": 1.0,
+      "dD_cipe": 0.798741571386615
+    },
+    {
+      "sample_id": "slake_265",
+      "image_sha256": "874fd5518bcc7b545d7405afbb1a1cdb55b3b156da9537be3a791ca9604c3ba2",
+      "cipe_annotation": 0.9999184698166836,
+      "cipe_legacy_control": 0.9996193072191325,
+      "cipe_matched_draws": [
+        0.9997244080885709,
+        0.9999642836361814,
+        0.9997894853080748,
+        0.9996193072191325,
+        0.9998766540544234
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": -0.0001755204421440837
+    },
+    {
+      "sample_id": "slake_266",
+      "image_sha256": "a5a7073618562d150bded5d8425b13534dd16e3204eda89ea907c35c1bc931be",
+      "cipe_annotation": 0.9999999401034922,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999401034922,
+        0.9999999401034922,
+        0.9999999856558358,
+        0.9999999401034922,
+        0.9999999401034922
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 4,
+      "d": 0.8,
+      "d_half": 0.4,
+      "dD_cipe": 5.0786039040850994e-08
+    },
+    {
+      "sample_id": "slake_271",
+      "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+      "cipe_annotation": 0.9999998591876641,
+      "cipe_legacy_control": 0.9999998903500972,
+      "cipe_matched_draws": [
+        0.9999998903500972,
+        0.9999999493010966,
+        0.9999993539554168,
+        0.9999999868030327,
+        0.9999999856558358
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 5.713700124143628e-08
+    },
+    {
+      "sample_id": "slake_272",
+      "image_sha256": "d0475f46181376ce0442f406f8f1eb342cffa5f687af6d934b0e181aa363b7d7",
+      "cipe_annotation": 0.9999999722764377,
+      "cipe_legacy_control": 0.9999999966633752,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999966633752,
+        0.9999999871814909,
+        0.9999999643967247,
+        0.9999999966633752
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 7.68238206383387e-09
+    },
+    {
+      "sample_id": "slake_274",
+      "image_sha256": "92a15f266e6179176a332745fe87773e90cb59b343566f051a78fe58f43ce868",
+      "cipe_annotation": 0.9999997381997789,
+      "cipe_legacy_control": 0.9999999493010966,
+      "cipe_matched_draws": [
+        0.9999999856558358,
+        0.9999999868030327,
+        0.9999999856558358,
+        0.9999999856558358,
+        0.9999998591876641
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.1290544388309343e-08
+    },
+    {
+      "sample_id": "slake_275",
+      "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+      "cipe_annotation": 0.9970953384275774,
+      "cipe_legacy_control": 0.9996902506846691,
+      "cipe_matched_draws": [
+        0.9999184698166836,
+        0.999470611765913,
+        0.9995077474246015,
+        0.9985304214952361,
+        0.998243168496176
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.0005561668849469736
+    },
+    {
+      "sample_id": "slake_277",
+      "image_sha256": "d199d7fde7a6c54d0a4802803529c91bf64b8c939ef9a7a8bd3b4522a145f163",
+      "cipe_annotation": 0.9999996081532125,
+      "cipe_legacy_control": 0.9999999912997659,
+      "cipe_matched_draws": [
+        0.9999999919956768,
+        0.9999999912997659,
+        0.9999999919956768,
+        0.9999999334940689,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 9.542728274247736e-09
+    },
+    {
+      "sample_id": "slake_278",
+      "image_sha256": "ab54d04b80c944c418f08ed6decd7b5865ee19ac0eb619a8ddf6144f8dd95fb7",
+      "cipe_annotation": 0.9999954984175696,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999812038000315,
+        0.9999954984175696,
+        1.0,
+        0.9999954984175696
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.6,
+      "d_half": 0.4,
+      "dD_cipe": 5.559872965910095e-06
+    },
+    {
+      "sample_id": "slake_279",
+      "image_sha256": "ebfa51679f539ad67bc0a43db173d80eeacf553f85cce32dc30948725a422d8f",
+      "cipe_annotation": 0.9835875563623477,
+      "cipe_legacy_control": 0.9999702970090798,
+      "cipe_matched_draws": [
+        0.9969105600914938,
+        0.9999702970090798,
+        0.9999175406328267,
+        0.9997706147138724,
+        0.9996204763919095
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.0007323992412434643
+    },
+    {
+      "sample_id": "slake_280",
+      "image_sha256": "cb6af7cc2e9ff7e47f4e1c312b84b8cf1b0d0decb169c89074c4c8b412ac6807",
+      "cipe_annotation": 0.9965014891497641,
+      "cipe_legacy_control": 0.9998755172096351,
+      "cipe_matched_draws": [
+        0.9999663506561,
+        0.9999912417387457,
+        1.0,
+        0.9999663506561,
+        0.9999272189407881
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -9.471518871162488e-05
+    },
+    {
+      "sample_id": "slake_281",
+      "image_sha256": "92f0b178a6eaa0ce02689615126b6bc2d2075195a5e0371236df67b3c4d9b579",
+      "cipe_annotation": 0.9999375883935661,
+      "cipe_legacy_control": 0.9999993814067697,
+      "cipe_matched_draws": [
+        0.9999993814067697,
+        0.9999993814067697,
+        0.9999998424748767,
+        0.999999660740912,
+        0.9999991967609398
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.1115128384364681e-07
+    },
+    {
+      "sample_id": "slake_283",
+      "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+      "cipe_annotation": 0.9999903444053352,
+      "cipe_legacy_control": 0.9999791167816746,
+      "cipe_matched_draws": [
+        0.9999791167816746,
+        0.9999462684558003,
+        0.9999903444053352,
+        0.9999642836361814,
+        0.9999974866892579
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.2,
+      "d_half": -0.3,
+      "dD_cipe": 3.616788024740636e-06
+    },
+    {
+      "sample_id": "slake_286",
+      "image_sha256": "62b6403ef411aacbd736fff7c2d18f176632cb0bde9afe25b61c7cd7439e3723",
+      "cipe_annotation": 0.9999999164116321,
+      "cipe_legacy_control": 0.9999999782418412,
+      "cipe_matched_draws": [
+        0.9999993546251782,
+        0.9999995348731131,
+        0.9999996908160904,
+        0.9999998192179465,
+        0.9999999763506042
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.8,
+      "d_half": 0.8,
+      "dD_cipe": 3.0306525489187663e-07
+    },
+    {
+      "sample_id": "slake_287",
+      "image_sha256": "c75971a31d8c5b9d48c34caec337661ed98b8a65123c59bc1fb23d35b0d7c323",
+      "cipe_annotation": 0.9999964285357508,
+      "cipe_legacy_control": 0.9999999815817815,
+      "cipe_matched_draws": [
+        0.9999900794132653,
+        0.9999999830547374,
+        0.9999978409105256,
+        1.0,
+        0.9999983764570406
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 2.7256146677423487e-06
+    },
+    {
+      "sample_id": "slake_288",
+      "image_sha256": "197cc0aa1c3a5e82736ab07335c383fb62d773a7b38c14f2c0ff897a9a3ec6c1",
+      "cipe_annotation": 0.9998646818908277,
+      "cipe_legacy_control": 0.9997975282614504,
+      "cipe_matched_draws": [
+        0.9999737813211184,
+        0.9999931756684823,
+        0.9999925836988472,
+        0.9999931756684823,
+        0.9999737813211184
+      ],
+      "wL": 0.0,
+      "wF": 1.0,
+      "wL_half": 0.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -1.0,
+      "d_half": -1.0,
+      "dD_cipe": -0.0001877712741592541
+    },
+    {
+      "sample_id": "slake_289",
+      "image_sha256": "9226a632b66d4d948a31ba3ef8481698d9d2f5f42c187862ad45d819fe0ba54a",
+      "cipe_annotation": 0.9999934536741869,
+      "cipe_legacy_control": 0.9999934536741869,
+      "cipe_matched_draws": [
+        0.9999357469358191,
+        0.9999726667157015,
+        0.9999357469358191,
+        0.9999726667157015,
+        0.9999357469358191
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.5,
+      "dD_cipe": 4.2938826414928855e-05
+    },
+    {
+      "sample_id": "slake_291",
+      "image_sha256": "e21ff3f3bd6d7c369a53b2035ecabb4f06696a51b643dc53e1a8bd7f2a41fcc1",
+      "cipe_annotation": 0.9999558140777701,
+      "cipe_legacy_control": 0.9999812038000315,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999954984175696,
+        0.9999954984175696,
+        0.9999954984175696,
+        0.9999954984175696
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.5194934024131967e-05
+    },
+    {
+      "sample_id": "slake_293",
+      "image_sha256": "208dad665d01dbcf4d0b9b47d1083c3d41643df36b5036a3ff99866d7a2e9444",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999980423527229,
+        0.9999980423527229,
+        0.9999978723075348,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": 0.0,
+      "d_half": 0.3,
+      "dD_cipe": 1.208597403823397e-06
+    },
+    {
+      "sample_id": "slake_295",
+      "image_sha256": "8fb57eb60b1f8e4819e98804a9647be579c74df8cd7fde98052c0ba421f3f15d",
+      "cipe_annotation": 0.9981225400809317,
+      "cipe_legacy_control": 0.9997696629381458,
+      "cipe_matched_draws": [
+        0.9999953071422978,
+        0.9997703799697166,
+        0.9990120547162146,
+        0.9999069333118414,
+        0.9999948998225964
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.37479456125056e-05
+    },
+    {
+      "sample_id": "slake_296",
+      "image_sha256": "66593dd2be10b8f0664c7f7fb4311c8384a1c50fadb9dd50fa0253367de57423",
+      "cipe_annotation": 0.9991307282060361,
+      "cipe_legacy_control": 0.9989533626651212,
+      "cipe_matched_draws": [
+        0.9998782467085583,
+        0.9033554053447764,
+        0.9999708321342167,
+        0.0,
+        0.9033554053447764
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.4,
+      "d_half": -0.4,
+      "dD_cipe": 0.23764138475865582
+    },
+    {
+      "sample_id": "slake_298",
+      "image_sha256": "a56597841c770fa5d5a18b846f492dad5d488e33370ada21b337ad939a981c72",
+      "cipe_annotation": 0.9999074012131209,
+      "cipe_legacy_control": 0.9999997019019767,
+      "cipe_matched_draws": [
+        0.9999998731998845,
+        0.9999997019019767,
+        1.0,
+        0.999998632331457,
+        0.9999999696336602
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 6.648858097424437e-08
+    },
+    {
+      "sample_id": "slake_299",
+      "image_sha256": "eb87ebb4dfc32f80e4897f4e29b1ef0ca9b50a14c0aa49c3aed3bed9a8087184",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 0.9999890596812947,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999870766918417,
+        0.9999971522900547,
+        0.9999971522900547,
+        0.9999971522900547
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": -6.647031106421508e-06
+    },
+    {
+      "sample_id": "slake_300",
+      "image_sha256": "ddffdece0b87cc9524f5ac5c9e7e7b9033e39c66e34ee8857412638a083e9493",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.0,
+      "cipe_matched_draws": [
+        0.26865190037813025,
+        0.0,
+        0.927194336798286,
+        0.0,
+        0.8156829239675327
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.5,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": -0.6,
+      "d_half": -0.30000000000000004,
+      "dD_cipe": -0.40230583222878985
+    },
+    {
+      "sample_id": "slake_301",
+      "image_sha256": "32b566b2afc7c06f6c751d7ac7ec7b4d7f66e951e926ccf6eae3d727da017057",
+      "cipe_annotation": 0.9999999413003647,
+      "cipe_legacy_control": 0.9999999944987524,
+      "cipe_matched_draws": [
+        0.9999999944987524,
+        0.9999999944987524,
+        0.9999999413003647,
+        0.9999999940203814,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 9.635102160565623e-09
+    },
+    {
+      "sample_id": "slake_302",
+      "image_sha256": "ab54d04b80c944c418f08ed6decd7b5865ee19ac0eb619a8ddf6144f8dd95fb7",
+      "cipe_annotation": 0.9998450410568647,
+      "cipe_legacy_control": 0.9999914783466173,
+      "cipe_matched_draws": [
+        0.9999914783466173,
+        0.9999977818431788,
+        0.9999899334684584,
+        0.9999975891836386,
+        0.9999899334684584
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.8649154529537526e-06
+    },
+    {
+      "sample_id": "slake_304",
+      "image_sha256": "25562091a8b42a5d1c578057aafb38c11ab12e1c67dc68160819fcfdebdcd14b",
+      "cipe_annotation": 0.9999873290605461,
+      "cipe_legacy_control": 0.9999647725796068,
+      "cipe_matched_draws": [
+        0.999990132350012,
+        0.9999954375272311,
+        0.9999954375272311,
+        0.9999746114969917,
+        0.9999831236289108
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.6,
+      "d_half": -0.6,
+      "dD_cipe": -2.297592646860469e-05
+    },
+    {
+      "sample_id": "slake_305",
+      "image_sha256": "0cd913b091f9bbbf9a8aba2d1787c028f3e9b6daf52adcfdeccb4b9ff6a86b65",
+      "cipe_annotation": 0.999633470096642,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9988867278682786,
+        0.9998677608920156,
+        0.999633470096642,
+        0.999633470096642,
+        0.9999626273893663
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 2,
+      "d": 0.6,
+      "d_half": 0.4,
+      "dD_cipe": 0.0004031887314110971
+    },
+    {
+      "sample_id": "slake_307",
+      "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999596562508,
+        0.9999999249924725,
+        0.9999999958902336,
+        0.999999735784519,
+        0.9999981612436057
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.444865837616163e-07
+    },
+    {
+      "sample_id": "slake_308",
+      "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+      "cipe_annotation": 0.9989482692920464,
+      "cipe_legacy_control": 0.9999980562501761,
+      "cipe_matched_draws": [
+        0.9998207891716296,
+        0.9996635139295539,
+        0.9915525806872015,
+        0.9516222382969747,
+        0.9992009224539465
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.4,
+      "d_half": 0.4,
+      "dD_cipe": 0.011626047342314982
+    },
+    {
+      "sample_id": "slake_309",
+      "image_sha256": "04517c8981daa5c31b4ace2ffb77e89d037b3fb30812f122cbf4806eb1453d68",
+      "cipe_annotation": 0.9999861673787382,
+      "cipe_legacy_control": 0.9999861673787382,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999872698205943,
+        1.0,
+        0.9999861673787382,
+        0.9999861673787382
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.5,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": -0.6,
+      "d_half": -0.30000000000000004,
+      "dD_cipe": -5.753536875929832e-06
+    },
+    {
+      "sample_id": "slake_315",
+      "image_sha256": "bdb74cfd5074150c22cf0befb84de4c1b64418a8496a81fff23db3bc4bd55885",
+      "cipe_annotation": 0.9915926460903512,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9801729147308642,
+        0.995819182074194,
+        0.9661841477944493,
+        0.9997861942419515,
+        0.9572324567835275
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.6,
+      "d_half": 0.6,
+      "dD_cipe": 0.0201610208750026
+    },
+    {
+      "sample_id": "slake_318",
+      "image_sha256": "f487b133954868c8e36567d7c298bdd76dfca2ad629a60aabd4972a47a92876e",
+      "cipe_annotation": 0.9999989519026188,
+      "cipe_legacy_control": 0.9999988608395572,
+      "cipe_matched_draws": [
+        0.9999486974904105,
+        0.999995243283934,
+        0.9999988608395572,
+        1.0,
+        0.9999792095963443
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": 1.4458597508038018e-05
+    },
+    {
+      "sample_id": "slake_319",
+      "image_sha256": "275cae8278311f2eb2aa19ea814434727b6cacd4ddc58917dab3e96561a108a8",
+      "cipe_annotation": 0.9999999815817815,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999815817815,
+        1.0,
+        0.9999999230915089,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.4,
+      "d_half": 0.30000000000000004,
+      "dD_cipe": 1.9065341971824523e-08
+    },
+    {
+      "sample_id": "slake_321",
+      "image_sha256": "91b76bddeb3dc76676a42f4117216732adf86252ce582a4619dd5b008ad49e19",
+      "cipe_annotation": 0.9999997689619544,
+      "cipe_legacy_control": 0.9999999873413006,
+      "cipe_matched_draws": [
+        0.9999999471414678,
+        0.9999999873413006,
+        1.0,
+        0.9999999873413006,
+        0.9999999873413006
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 5.508226652573001e-09
+    },
+    {
+      "sample_id": "slake_325",
+      "image_sha256": "3351d9c8b1fe7b662ee43fef8cc9484f4230e4ba769aab9c324e6c502f0fe68e",
+      "cipe_annotation": 0.9951529268129153,
+      "cipe_legacy_control": 0.9996335142849049,
+      "cipe_matched_draws": [
+        0.9973500627106868,
+        0.9968376020266378,
+        1.0,
+        0.9990564638704146,
+        0.9990564638704146
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 0.001173395789274112
+    },
+    {
+      "sample_id": "slake_327",
+      "image_sha256": "69bf3cbe9ed0677eb0ceb4e2c5aef175a2fc952f0177cfd5da1366294e0fbf55",
+      "cipe_annotation": 0.9909135632395271,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999708321342167,
+        0.9263398179960343,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.8,
+      "d_half": 0.8,
+      "dD_cipe": 0.6147378699739497
+    },
+    {
+      "sample_id": "slake_328",
+      "image_sha256": "9226a632b66d4d948a31ba3ef8481698d9d2f5f42c187862ad45d819fe0ba54a",
+      "cipe_annotation": 0.9999861673787382,
+      "cipe_legacy_control": 0.9999510886434415,
+      "cipe_matched_draws": [
+        0.9999861673787382,
+        0.9999872698205943,
+        1.0,
+        0.9999422488413773,
+        0.9999872698205943
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.6,
+      "d_half": -0.7,
+      "dD_cipe": -2.9502528819169704e-05
+    },
+    {
+      "sample_id": "slake_330",
+      "image_sha256": "98575f575bc5c692b47d43ccd17f36ed2eff2a38075072ecc864f4a79e15a4de",
+      "cipe_annotation": 0.9999975258626627,
+      "cipe_legacy_control": 0.9999998404388469,
+      "cipe_matched_draws": [
+        0.9999999321284294,
+        0.9999999837459562,
+        1.0,
+        0.9999998757503736,
+        0.9999999837459562
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -1.1463529625554969e-07
+    },
+    {
+      "sample_id": "slake_332",
+      "image_sha256": "5b20ff9d45281584dc029aab8ca40e16fb627ceed983b0b9796ce61063094d32",
+      "cipe_annotation": 0.9999999128513489,
+      "cipe_legacy_control": 0.9999999807984951,
+      "cipe_matched_draws": [
+        0.9999999791294527,
+        0.9999996190838417,
+        0.9999996190838417,
+        0.9999996190838417,
+        0.9999996190838417
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.8,
+      "d_half": 0.8,
+      "dD_cipe": 2.8970553123119913e-07
+    },
+    {
+      "sample_id": "slake_333",
+      "image_sha256": "f731881fb6bfbb8f505063e25d065316710ea8379aa520a7582cefc81a2f1762",
+      "cipe_annotation": 0.9999999982140948,
+      "cipe_legacy_control": 0.9999999980586208,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999999980586208,
+        1.0,
+        1.0,
+        0.9999999980586208
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.6,
+      "d_half": -0.6,
+      "dD_cipe": -1.1648275677345055e-09
+    },
+    {
+      "sample_id": "slake_334",
+      "image_sha256": "ea74c92c4b01657ddb80783021ea297fc4cd27362e010776fb40c7bad53bc89c",
+      "cipe_annotation": 0.9999985054681308,
+      "cipe_legacy_control": 0.999999617286096,
+      "cipe_matched_draws": [
+        0.9999990153307462,
+        0.9999990862380959,
+        0.9999999499346988,
+        0.9999985054681308,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 3.058917615872403e-07
+    },
+    {
+      "sample_id": "slake_335",
+      "image_sha256": "f74794231849bd1131dbecffef31af5e0ed5541f857099ffc75bcd3c951bd9d5",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999647725796068,
+      "cipe_matched_draws": [
+        0.0,
+        0.10348091513137136,
+        0.9897840578530633,
+        0.9999954375272311,
+        0.9981184632353142
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 0.3816889978302107
+    },
+    {
+      "sample_id": "slake_336",
+      "image_sha256": "b7d1fb363b5d6b9f8073719618b35a6d8f69ea021899c6babe873ba5758721aa",
+      "cipe_annotation": 0.9999984502306526,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999655904805,
+        0.9999996622111123,
+        0.9999999655904805,
+        0.9999999655904805,
+        0.9999999683420854
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 9.45350722147964e-08
+    },
+    {
+      "sample_id": "slake_337",
+      "image_sha256": "208dad665d01dbcf4d0b9b47d1083c3d41643df36b5036a3ff99866d7a2e9444",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999900785577547,
+        0.9999892186779082,
+        0.9999175511758529,
+        0.9999900785577547,
+        0.9999900785577547
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.5,
+      "dD_cipe": 2.459889459505149e-05
+    },
+    {
+      "sample_id": "slake_338",
+      "image_sha256": "119e929c7ceec29395b0130c1be21f45cd68b61ff50919f273b5f2bc810c8540",
+      "cipe_annotation": 0.9887986602040185,
+      "cipe_legacy_control": 0.9994899184960567,
+      "cipe_matched_draws": [
+        0.9934483694682763,
+        0.9887986602040185,
+        0.9870921697075069,
+        0.9981090780888001,
+        0.9985945614664198
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.4,
+      "d_half": 0.30000000000000004,
+      "dD_cipe": 0.006281350709052336
+    },
+    {
+      "sample_id": "slake_341",
+      "image_sha256": "fbaf38b928296033ab98206ff609ed2518a13f61c68414eb3a698a3aba140ebe",
+      "cipe_annotation": 0.9927737076091354,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999389842436436,
+        0.999932076518022,
+        0.9999839347267397,
+        0.999910474728471,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.6905956624598844e-05
+    },
+    {
+      "sample_id": "slake_344",
+      "image_sha256": "fd2301826680d53236aa1943b5c812d2656d90eaaeb6468eca45b5c7253c4b98",
+      "cipe_annotation": 0.9999853575923882,
+      "cipe_legacy_control": 0.9999731899751342,
+      "cipe_matched_draws": [
+        1.0,
+        0.9999731899751342,
+        0.9999731899751342,
+        0.9999967734354449,
+        0.9999876041546958
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.6,
+      "d_half": -0.6,
+      "dD_cipe": -1.296153294760849e-05
+    },
+    {
+      "sample_id": "slake_347",
+      "image_sha256": "7e8f62ce07f14eecd054598f3065dcad13317feadb3db2fa43bca327f4643811",
+      "cipe_annotation": 0.9663591607453008,
+      "cipe_legacy_control": 0.9999982760416164,
+      "cipe_matched_draws": [
+        0.9990919704245566,
+        0.999515215223169,
+        0.9999777124923709,
+        0.9995724924910419,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 0.2003667979153888
+    },
+    {
+      "sample_id": "slake_349",
+      "image_sha256": "17cd9580f16823fb7fe783b4c4f23ac03c8a0dbc85e2eda5dae9f521b115294c",
+      "cipe_annotation": 0.9999997678714607,
+      "cipe_legacy_control": 0.9999996030003823,
+      "cipe_matched_draws": [
+        0.9999999720619773,
+        0.9999997678714607,
+        0.9999994027658328,
+        0.9999996030003823,
+        0.9999994027658328
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.3,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": -0.2,
+      "d_half": -0.3,
+      "dD_cipe": -2.669271492727887e-08
+    },
+    {
+      "sample_id": "slake_350",
+      "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+      "cipe_annotation": 0.9999999974014628,
+      "cipe_legacy_control": 0.9999999974014628,
+      "cipe_matched_draws": [
+        0.999999990016996,
+        0.9999999974014628,
+        1.0,
+        0.9999999971753639,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.4,
+      "wL_half": 0.5,
+      "wF_half": 0.5,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": -0.4,
+      "d_half": 0.0,
+      "dD_cipe": 4.826983257544271e-10
+    },
+    {
+      "sample_id": "slake_352",
+      "image_sha256": "35841dfff25ac68c7492ff7a6d1d91d94d891dcdc29abc535a0880e947c462c9",
+      "cipe_annotation": 0.9998805513179186,
+      "cipe_legacy_control": 0.9999939763099648,
+      "cipe_matched_draws": [
+        0.9999357469358191,
+        0.9999939763099648,
+        0.9999726667157015,
+        0.9998805513179186,
+        0.9999357469358191
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 5.0238666920110475e-05
+    },
+    {
+      "sample_id": "slake_353",
+      "image_sha256": "5de5e4c8b4099e0b059ec10d7fae34af60fe672298b3762e68937acdc20ef426",
+      "cipe_annotation": 0.9999669814661374,
+      "cipe_legacy_control": 0.9999696009739893,
+      "cipe_matched_draws": [
+        0.9950026584832352,
+        0.9996761365376056,
+        0.9999696009739893,
+        0.9993981636390116,
+        0.9996761365376056
+      ],
+      "wL": 1.0,
+      "wF": 0.2,
+      "wL_half": 1.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.8,
+      "d_half": 0.8,
+      "dD_cipe": 0.0012250617397000507
+    },
+    {
+      "sample_id": "slake_354",
+      "image_sha256": "b6a62558b9d6a63f6d87d6e5183722300c5cfd5596da6062d65413cdce237f18",
+      "cipe_annotation": 0.9999993719782031,
+      "cipe_legacy_control": 0.9999984502306526,
+      "cipe_matched_draws": [
+        0.9999989728190924,
+        0.9999984502306526,
+        0.9999984502306526,
+        0.9999989728190924,
+        0.9999996622111123
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": -4.514314678738529e-07
+    },
+    {
+      "sample_id": "slake_355",
+      "image_sha256": "695c7fac56a9f8e9bceb1b3318103becae78e5b03533b4f2a166dac2698a9139",
+      "cipe_annotation": 0.9999817960686938,
+      "cipe_legacy_control": 0.9999888699522678,
+      "cipe_matched_draws": [
+        0.9999817960686938,
+        0.9999940135239075,
+        0.9999993901685672,
+        0.9999888699522678,
+        0.9986065732070002
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.7,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.4,
+      "d_half": 0.30000000000000004,
+      "dD_cipe": 0.0002747413681806199
+    },
+    {
+      "sample_id": "slake_360",
+      "image_sha256": "275cae8278311f2eb2aa19ea814434727b6cacd4ddc58917dab3e96561a108a8",
+      "cipe_annotation": 0.9999999410450382,
+      "cipe_legacy_control": 0.9999999929907216,
+      "cipe_matched_draws": [
+        0.9999999929907216,
+        0.9999999991564681,
+        0.9999999929907216,
+        0.9999998925038692,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 1.7462365553555514e-08
+    },
+    {
+      "sample_id": "slake_363",
+      "image_sha256": "07c391bc46d203a0a9b56dcacdd53126b217a49764f43386c43fe742bf47d6da",
+      "cipe_annotation": 0.9999999984239595,
+      "cipe_legacy_control": 0.999999993945112,
+      "cipe_matched_draws": [
+        0.9999999984239595,
+        0.9999999984239595,
+        0.9999999984239595,
+        0.9999999984239595,
+        0.9999999928461633
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.4,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 4,
+      "d": 0.0,
+      "d_half": -0.4,
+      "dD_cipe": -3.363288203495074e-09
+    },
+    {
+      "sample_id": "slake_364",
+      "image_sha256": "8a604c116cced4141ed8065ac2fc8bc7300d336077a57a317f61e4b3c9935e90",
+      "cipe_annotation": 0.9999989728190924,
+      "cipe_legacy_control": 0.9999989728190924,
+      "cipe_matched_draws": [
+        0.9999993719782031,
+        0.9999998563168306,
+        0.9999999655904805,
+        0.9999998563168306,
+        0.9999998563168306
+      ],
+      "wL": 0.0,
+      "wF": 1.0,
+      "wL_half": 0.5,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 0,
+      "d": -1.0,
+      "d_half": -0.5,
+      "dD_cipe": -8.084847427092257e-07
+    },
+    {
+      "sample_id": "slake_366",
+      "image_sha256": "991d65991a9a8d1317f27af78f97589c79a2ad353c6e31701d314740b8d5ee57",
+      "cipe_annotation": 0.9998606357265735,
+      "cipe_legacy_control": 0.9999435185968549,
+      "cipe_matched_draws": [
+        0.9999076247140778,
+        0.9999076247140778,
+        0.9999870766918417,
+        0.9999696194445201,
+        0.9999076247140778
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 7.604541135797227e-06
+    },
+    {
+      "sample_id": "slake_368",
+      "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+      "cipe_annotation": 0.9822767990386262,
+      "cipe_legacy_control": 0.9999953071422978,
+      "cipe_matched_draws": [
+        0.9999948998225964,
+        1.0,
+        0.9999953071422978,
+        1.0,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -2.7342506810912326e-06
+    },
+    {
+      "sample_id": "slake_369",
+      "image_sha256": "be9556a6f4705a77e44ac5ff87c9854e465cb5357a90c1160189679defa0505b",
+      "cipe_annotation": 0.9999684782749327,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999684782749327,
+        0.9999763350370786,
+        1.0,
+        0.9999899334684584,
+        0.9999975891836386
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.9,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.19999999999999996,
+      "d_half": 0.09999999999999998,
+      "dD_cipe": 1.353280717830696e-05
+    },
+    {
+      "sample_id": "slake_373",
+      "image_sha256": "04afffc62567242146072389b0eb7f8c1eef0772f13373f80ec500f2eb95d1c2",
+      "cipe_annotation": 0.9763741982113484,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9988867278682786,
+        0.9719926871924566,
+        0.9763741982113484,
+        0.999633470096642,
+        0.9188185831617497
+      ],
+      "wL": 1.0,
+      "wF": 0.4,
+      "wL_half": 1.0,
+      "wF_half": 0.5,
+      "wF_draw": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.6,
+      "d_half": 0.5,
+      "dD_cipe": 0.026858866693904915
+    },
+    {
+      "sample_id": "slake_374",
+      "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+      "cipe_annotation": 0.999514585766412,
+      "cipe_legacy_control": 0.9999999911900626,
+      "cipe_matched_draws": [
+        0.9999999975072535,
+        0.9999999977068147,
+        1.0,
+        0.999999989591332,
+        0.999999989591332
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": -3.6892838783941784e-09
+    },
+    {
+      "sample_id": "slake_375",
+      "image_sha256": "5993aafea51417d422e92eb1df4e965ef743d2c87891b926537e22eac0fa9111",
+      "cipe_annotation": 0.9999999975072535,
+      "cipe_legacy_control": 0.9999998877334083,
+      "cipe_matched_draws": [
+        0.9999997802754951,
+        0.9999998397448893,
+        1.0,
+        0.9999995166506732,
+        0.9999997802754951
+      ],
+      "wL": 0.0,
+      "wF": 0.2,
+      "wL_half": 0.0,
+      "wF_half": 0.2,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -0.2,
+      "d_half": -0.2,
+      "dD_cipe": 1.0434409791759691e-07
+    },
+    {
+      "sample_id": "slake_377",
+      "image_sha256": "60637c67f04c05bc5279d8743dcc26d3d542438073fd9a173dcad0fb774d830d",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999933625261149,
+        0.9999754480807379,
+        0.9999981221976548,
+        1.0,
+        0.9999981221976548
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 6.988999567525411e-06
+    },
+    {
+      "sample_id": "slake_378",
+      "image_sha256": "fd2301826680d53236aa1943b5c812d2656d90eaaeb6468eca45b5c7253c4b98",
+      "cipe_annotation": 0.9999999338060336,
+      "cipe_legacy_control": 0.9999999848555825,
+      "cipe_matched_draws": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.0,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 1.0,
+      "d_half": 1.0,
+      "dD_cipe": 0.9999999848555825
+    },
+    {
+      "sample_id": "slake_380",
+      "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+      "cipe_annotation": 0.9998914383647809,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999899334684584,
+        0.9999899334684584,
+        1.0,
+        0.9999975891836386,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.508775888978356e-06
+    },
+    {
+      "sample_id": "slake_382",
+      "image_sha256": "aaffd29e99fcb4040807f6853eb15ad51bcd48ee2c624087b1c0b81a52b04a4e",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.0,
+      "cipe_matched_draws": [
+        0.0,
+        0.9983504464104855,
+        0.9563895187280075,
+        0.9631469454209114,
+        0.8436924353660649
+      ],
+      "wL": 0.0,
+      "wF": 0.8,
+      "wL_half": 0.5,
+      "wF_half": 0.9,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 1,
+      "d": -0.8,
+      "d_half": -0.4,
+      "dD_cipe": -0.7523158691850939
+    },
+    {
+      "sample_id": "slake_383",
+      "image_sha256": "31e6645e8ddbaaba8a3ad2159895b6f7a4232564edfa58f8fa86b9f850429510",
+      "cipe_annotation": 0.9999143902551715,
+      "cipe_legacy_control": 0.9999939763099648,
+      "cipe_matched_draws": [
+        0.9999939763099648,
+        0.9999726667157015,
+        0.9999939763099648,
+        0.9998212882083571,
+        0.9999939763099648
+      ],
+      "wL": 1.0,
+      "wF": 0.8,
+      "wL_half": 1.0,
+      "wF_half": 0.8,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.19999999999999996,
+      "d_half": 0.19999999999999996,
+      "dD_cipe": 3.879953917418355e-05
+    },
+    {
+      "sample_id": "slake_386",
+      "image_sha256": "1dc1cfa75840fe46b64d4c4aeb8b99f14ab6190148ee0b343c77e55ae9ebdc39",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9936090273501844,
+      "cipe_matched_draws": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wL": 1.0,
+      "wF": 0.0,
+      "wL_half": 1.0,
+      "wF_half": 0.5,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 5,
+      "d": 1.0,
+      "d_half": 0.5,
+      "dD_cipe": 0.9936090273501844
+    },
+    {
+      "sample_id": "slake_387",
+      "image_sha256": "cd420f4db5365e1b8b530422231f91eebe3e377c39ad0486c8eedb3f7b8387ee",
+      "cipe_annotation": 0.9999921590555656,
+      "cipe_legacy_control": 0.9999921590555656,
+      "cipe_matched_draws": [
+        0.9999921590555656,
+        0.9999921590555656,
+        0.9999981221976548,
+        0.9999981221976548,
+        0.9999981221976548
+      ],
+      "wL": 0.0,
+      "wF": 0.6,
+      "wL_half": 0.5,
+      "wF_half": 0.8,
+      "wF_draw": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 2,
+      "d": -0.6,
+      "d_half": -0.30000000000000004,
+      "dD_cipe": -3.5778852535139904e-06
+    },
+    {
+      "sample_id": "slake_388",
+      "image_sha256": "70f64768e27f91b27c236ac1625057c6d4b99c59e6413e45cceefb86bf564c80",
+      "cipe_annotation": 0.9987229778671167,
+      "cipe_legacy_control": 0.9999649208774497,
+      "cipe_matched_draws": [
+        0.9999175406328267,
+        1.0,
+        0.9999915983577323,
+        0.9997493153473989,
+        1.0
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.3230009858220555e-05
+    },
+    {
+      "sample_id": "slake_390",
+      "image_sha256": "e0b01f962a379198f0ecc537d9b40842368553efb8df9bd3b9d452a5f3064c59",
+      "cipe_annotation": 0.8998268176743999,
+      "cipe_legacy_control": 0.999999901247744,
+      "cipe_matched_draws": [
+        0.9999984429003322,
+        0.9999984429003322,
+        0.9999970154015945,
+        0.999998694972256,
+        0.9999995348731131
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 1.4750382184569588e-06
+    },
+    {
+      "sample_id": "slake_391",
+      "image_sha256": "ac7886353a4393a613b9e3987b4f6326648fa0e9ba0f59ec835d69890f7852cd",
+      "cipe_annotation": 0.9999976974358692,
+      "cipe_legacy_control": 0.9999970977166417,
+      "cipe_matched_draws": [
+        1.0,
+        1.0,
+        0.9999991595571187,
+        1.0,
+        0.9999999408555298
+      ],
+      "wL": 0.0,
+      "wF": 1.0,
+      "wL_half": 0.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": -1.0,
+      "d_half": -1.0,
+      "dD_cipe": -2.722365887830591e-06
+    },
+    {
+      "sample_id": "slake_394",
+      "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+      "cipe_annotation": 0.9895092276263108,
+      "cipe_legacy_control": 0.9954610995080138,
+      "cipe_matched_draws": [
+        0.9846641251662852,
+        0.9989559270855933,
+        0.9954610995080138,
+        0.9954610995080138,
+        0.8622669498663362
+      ],
+      "wL": 1.0,
+      "wF": 0.6,
+      "wL_half": 1.0,
+      "wF_half": 0.6,
+      "wF_draw": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.4,
+      "d_half": 0.4,
+      "dD_cipe": 0.0280992592811653
+    },
+    {
+      "sample_id": "slake_395",
+      "image_sha256": "a2bc3c720064044d421ea57e2903245ccf982b20e402a1abf5daf7bfba07ae8e",
+      "cipe_annotation": 0.0,
+      "cipe_legacy_control": 0.9999999986192093,
+      "cipe_matched_draws": [
+        0.9999999958016386,
+        0.9999999936658497,
+        0.9999999974330005,
+        0.9999999876033845,
+        0.9999999958016386
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 4.558107002949896e-09
+    },
+    {
+      "sample_id": "slake_396",
+      "image_sha256": "3c7283da5a75c25a0c73c55dbd9e6e256f4c969d02c7f801fbc14adeb4e41e35",
+      "cipe_annotation": 0.9999999150054026,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.999999980554251,
+        0.9999999542845918,
+        0.9999999542845918,
+        0.999999980554251,
+        0.9999999542845918
+      ],
+      "wL": 1.0,
+      "wF": 1.0,
+      "wL_half": 1.0,
+      "wF_half": 1.0,
+      "wF_draw": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 0,
+      "d": 0.0,
+      "d_half": 0.0,
+      "dD_cipe": 3.520754465746734e-08
+    },
+    {
+      "sample_id": "slake_397",
+      "image_sha256": "5d087d11c072a28deb9d12beef6b142d6834a39c78369cb65fb4f3f4ae786c0b",
+      "cipe_annotation": 1.0,
+      "cipe_legacy_control": 1.0,
+      "cipe_matched_draws": [
+        0.9999999962190915,
+        1.0,
+        1.0,
+        0.9999999962190915,
+        1.0
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.5,
+      "wF_half": 0.3,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": true,
+      "matched_ties": 3,
+      "d": 0.0,
+      "d_half": 0.2,
+      "dD_cipe": 1.5123633456681773e-09
+    },
+    {
+      "sample_id": "slake_398",
+      "image_sha256": "23b8834b225a67f417464ef76c403a919e7aac7d2f93833e3fa7a1b19c15dab6",
+      "cipe_annotation": 0.9999999533524646,
+      "cipe_legacy_control": 0.9999998903350756,
+      "cipe_matched_draws": [
+        0.9999998903350756,
+        0.9999998903350756,
+        0.9999998903350756,
+        0.9999997961095042,
+        0.9999999533524646
+      ],
+      "wL": 0.0,
+      "wF": 0.0,
+      "wL_half": 0.0,
+      "wF_half": 0.1,
+      "wF_draw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "legacy_tie": false,
+      "matched_ties": 1,
+      "d": 0.0,
+      "d_half": -0.1,
+      "dD_cipe": 6.241636651971305e-09
+    }
+  ]
+}

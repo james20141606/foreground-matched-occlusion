@@ -1,0 +1,33 @@
+{
+  "scope": "outcome-blind identity gate; reads no control value",
+  "legacy_receipt": "results/cipe_scale/bbox_val_medgemma4b_n400.json",
+  "legacy_sha256": "4f0bd45dc2890b7cc83ff342bcd8b197477ad1580ef1b82c8cfb027660bb45e0",
+  "matched_receipt": "results/cipe_scale/bbox_fg_medgemma4b_n400.json",
+  "matched_sha256": "f9c76f53a163d51e2cc4e97cf8c9be9e7d659b2fadd2d8e8c0c3083907330eec",
+  "mapping": "outputs/image_cluster_20260922/image_mapping.json",
+  "mapping_sha256": "9d281ef8417013ab17cca538844419cf61f8bd6fe1f1b84de16e0069e917456e",
+  "script_sha256": "2ee36243de9a21bc5d62b3480e34d7bb8dd7caf990b5bb4722395bed02a118b0",
+  "legacy_model_path": "google/medgemma-4b-it",
+  "matched_model_path": "google/medgemma-4b-it",
+  "legacy_image_sensitivity": 0.34034104670975074,
+  "matched_image_sensitivity": 0.34034104670975074,
+  "n_legacy": 400,
+  "n_matched_admitted": 229,
+  "missing_in_legacy": [],
+  "missing_in_mapping": [],
+  "matched_rows_at_different_list_position_in_legacy": 229,
+  "n_boxes_mismatch": [],
+  "ordered_boxes_mismatch_vs_mapping": [],
+  "annotated_cipe_mismatch": [],
+  "annotated_cipe_at_clip_boundary": 49,
+  "n_distinct_annotated_cipe_values": 177,
+  "legacy_vs_mapping_n_boxes_mismatch_all400": 0,
+  "n_images_229": 175,
+  "qa_per_image_histogram": {
+    "1": 129,
+    "2": 39,
+    "3": 6,
+    "4": 1
+  },
+  "gate_pass": true
+}

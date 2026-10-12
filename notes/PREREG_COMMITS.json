@@ -1,0 +1,89 @@
+{
+  "files": {
+    "PREREG_contamination_specificity_control.md": {
+      "first_commit": "130066cefab730d37713eb183fa883804fd07643",
+      "first_commit_utc": "2026-08-01T01:47:34Z",
+      "last_commit": "130066cefab730d37713eb183fa883804fd07643",
+      "last_commit_utc": "2026-08-01T01:47:34Z",
+      "n_commits": 1
+    },
+    "PREREG_exposure_clean_region.md": {
+      "first_commit": "415ae352ec6e013da425b8b4a4eb7b16fa807d6a",
+      "first_commit_utc": "2026-08-11T05:38:26Z",
+      "last_commit": "90f0f5b040f3e99226b6c6c2f7f5cc07334c1941",
+      "last_commit_utc": "2026-08-12T11:06:06Z",
+      "n_commits": 3
+    },
+    "PREREG_region_exposure_consequence.md": {
+      "first_commit": "748779e62f2511bebde4a8c238ef4d3f4144cdb2",
+      "first_commit_utc": "2026-08-07T09:11:51Z",
+      "last_commit": "748779e62f2511bebde4a8c238ef4d3f4144cdb2",
+      "last_commit_utc": "2026-08-07T09:11:51Z",
+      "n_commits": 1
+    },
+    "PREREG_region_metric_comparison.md": {
+      "first_commit": "b56d5d0800f381d6e5b77ae9750f3ee679bc1e8e",
+      "first_commit_utc": "2026-07-28T21:37:06Z",
+      "last_commit": "b56d5d0800f381d6e5b77ae9750f3ee679bc1e8e",
+      "last_commit_utc": "2026-07-28T21:37:06Z",
+      "n_commits": 1
+    },
+    "PREREG_region_tv_correction.md": {
+      "first_commit": "2ce56dc3092b77ca9bcfc403fd644c75ea38e06a",
+      "first_commit_utc": "2026-08-06T23:27:03Z",
+      "last_commit": "2ce56dc3092b77ca9bcfc403fd644c75ea38e06a",
+      "last_commit_utc": "2026-08-06T23:27:03Z",
+      "n_commits": 1
+    },
+    "notes/PREREG_legacy_coverage_replay_20260925.md": {
+      "first_commit": "47a932fc25ed357a5d77627a4c233b2bfb7565c7",
+      "first_commit_utc": "2026-09-24T18:53:17Z",
+      "last_commit": "47a932fc25ed357a5d77627a4c233b2bfb7565c7",
+      "last_commit_utc": "2026-09-24T18:53:17Z",
+      "n_commits": 1
+    },
+    "notes/PREREG_medgemma4b_legacy_vs_matched_20260924.md": {
+      "first_commit": "51a656b0cef9e71fe65f779df1fd0e8491717b32",
+      "first_commit_utc": "2026-09-24T03:35:22Z",
+      "last_commit": "51a656b0cef9e71fe65f779df1fd0e8491717b32",
+      "last_commit_utc": "2026-09-24T03:35:22Z",
+      "n_commits": 1
+    },
+    "notes/PREREG_region_instrument_20260926.md": {
+      "first_commit": "7b1614f8780348bbad9edfb947a9d6ead43b80e5",
+      "first_commit_utc": "2026-09-25T19:02:36Z",
+      "last_commit": "7b1614f8780348bbad9edfb947a9d6ead43b80e5",
+      "last_commit_utc": "2026-09-25T19:02:36Z",
+      "n_commits": 1
+    },
+    "outputs/legacy_coverage_replay_20260925/coverage.json": {
+      "first_commit": "8a5041101a058cef4b828754eebc0197466a459d",
+      "first_commit_utc": "2026-09-24T19:04:38Z",
+      "last_commit": "8a5041101a058cef4b828754eebc0197466a459d",
+      "last_commit_utc": "2026-09-24T19:04:38Z",
+      "n_commits": 1
+    },
+    "outputs/medgemma4b_paired_20260924/paired_contrast.json": {
+      "first_commit": "bb41a85303a3fa2c153d0d0fe8a365bab20c120b",
+      "first_commit_utc": "2026-09-24T03:37:47Z",
+      "last_commit": "bb41a85303a3fa2c153d0d0fe8a365bab20c120b",
+      "last_commit_utc": "2026-09-24T03:37:47Z",
+      "n_commits": 1
+    },
+    "results/exposure_clean/expclean_medgemma4b.json": {
+      "first_commit": "8cb2dd56a977d4fb23954b72877f12600bcf78f0",
+      "first_commit_utc": "2026-08-11T23:22:51Z",
+      "last_commit": "90f0f5b040f3e99226b6c6c2f7f5cc07334c1941",
+      "last_commit_utc": "2026-08-12T11:06:06Z",
+      "n_commits": 2
+    },
+    "results/region_instrument_20260926/receipt_only.json": {
+      "first_commit": "88820e2e07fb84ad1a740752a17f2ba3acb099c8",
+      "first_commit_utc": "2026-09-25T19:07:54Z",
+      "last_commit": "88820e2e07fb84ad1a740752a17f2ba3acb099c8",
+      "last_commit_utc": "2026-09-25T19:07:54Z",
+      "n_commits": 1
+    }
+  },
+  "note": "Commits of the private project repository; hashes identify the committed bytes, they are not an external registration. Receipt rows show when the governed results were first committed."
+}

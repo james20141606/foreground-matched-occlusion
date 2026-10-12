@@ -1,0 +1,76 @@
+{
+ "registered_in": "notes/PREREG_exposure_recompute_20261004.md",
+ "n_items": 229,
+ "route_A_mapping": {
+  "membership_counts": {
+   "test": 3,
+   "test,train": 62,
+   "test,validation": 8,
+   "train": 101,
+   "train,validation": 48,
+   "validation": 7
+  },
+  "n_on_train_images": 211,
+  "pct_on_train_images_1dp": "92.1",
+  "n_test_and_train": 62,
+  "n_test_only": 3
+ },
+ "route_B_fingerprint": {
+  "membership_counts": {
+   "test": 3,
+   "test,train": 62,
+   "test,validation": 8,
+   "train": 101,
+   "train,validation": 48,
+   "validation": 7
+  },
+  "n_on_train_images": 211,
+  "pct_on_train_images_1dp": "92.1",
+  "n_test_and_train": 62,
+  "n_test_only": 3,
+  "problems": []
+ },
+ "generator_G_repaired": {
+  "membership_counts": {
+   "test": 3,
+   "test,train": 62,
+   "test,validation": 8,
+   "train": 101,
+   "train,validation": 48,
+   "validation": 7
+  },
+  "n_on_train_images": 211,
+  "n_test_and_train": 62,
+  "n_test_only": 3,
+  "generator_sha256": "47186f79c25fdd9a3edc24e35d5f6f2c30dc8ac209d1debc0a26f87a3695656b",
+  "git_head_at_run": "ada8fbdc3379c0342c3da63c68f1d05888bbaec2",
+  "generated_at": "2026-10-04T03:27:36+08:00"
+ },
+ "per_item_disagreements": {
+  "A_vs_B": [],
+  "A_vs_G": [],
+  "B_vs_G": []
+ },
+ "decision": "ALL AGREE",
+ "published_receipt_outputs/region_exposure_audit.json": {
+  "membership_counts": {
+   "test,train": 52,
+   "train": 106,
+   "train,validation": 55,
+   "test,validation": 6,
+   "validation": 6,
+   "test": 4
+  },
+  "n_on_train_images": 213,
+  "n_test_only": 4
+ },
+ "published_receipt_reproduced_by_legacy_filter": "yes, all six cells identical (legacy pool first diverges at pool index 32, xmlab272; 211/229 retained items mis-assigned)",
+ "corrected_numbers_for_revision": {
+  "on_train": "211 of 229 (92.1%)",
+  "both_train_and_test": 62,
+  "test_only": 3,
+  "distinct_images": 175,
+  "splits_image_disjoint": false,
+  "slots": "586+174+180=940 cover 642 distinct images (unchanged)"
+ }
+}

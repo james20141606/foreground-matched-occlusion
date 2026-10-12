@@ -1,0 +1,23 @@
+{
+ "post_hoc": true,
+ "registered_seed_42": {
+  "U": 21,
+  "U_ok": 21,
+  "I3_pass": true,
+  "phi_legacy_229": 0.6591646967085218,
+  "phi_legacy_400": 0.5166509541218914
+ },
+ "wrong_seeds_1000_1199": {
+  "n": 200,
+  "I3_pass": 0,
+  "phi_legacy_229_min": 0.6116673125085716,
+  "phi_legacy_229_max": 0.6831646522998425,
+  "phi_legacy_229_mean": 0.650703844104182
+ },
+ "one_item_offsets_every_20th": {
+  "n": 20,
+  "I3_pass": 13,
+  "phi_legacy_229_min": 0.6532911723280483,
+  "phi_legacy_229_max": 0.6666327830606777
+ }
+}

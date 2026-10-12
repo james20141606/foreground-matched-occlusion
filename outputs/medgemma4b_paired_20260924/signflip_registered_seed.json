@@ -1,0 +1,17 @@
+{
+  "deviation": "sign-flip seed 20260925 used by the analysis script; registered seed is 20260924",
+  "source_sha256": "2ca89858cdbf86fe287821875e175e2b5cb333d3e0356da73dae2f5ae127e922",
+  "legacy_receipt_sha256": "4f0bd45dc2890b7cc83ff342bcd8b197477ad1580ef1b82c8cfb027660bb45e0",
+  "script_sha256": "a2cad9a2a5699d06297ced67728fb8e6b9622947967ccf4ebe9df318ea3fd1d1",
+  "B": 20000,
+  "signflip_p_registered_seed_20260924": 0.04024798760061997,
+  "signflip_p_script_seed_20260925": 0.040547972601369935,
+  "verdict_at_registered_seed": "A",
+  "descriptive_split": {
+    "legacy_strict_rate_all400": 0.7,
+    "legacy_strict_rate_229": 0.6419213973799127,
+    "matched_W_F_229": 0.587772925764192,
+    "item_pool_step": -0.05807860262008724,
+    "control_step": -0.05414847161572067
+  }
+}

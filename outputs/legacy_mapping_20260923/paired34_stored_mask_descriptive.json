@@ -1,0 +1,5635 @@
+{
+  "scope": "34 true shared included SLAKE QA, four models, stored masks only; no extrapolation to 229/400 or MedTrust-TV",
+  "protocol_sha256": "120900f0bd0b8033d027c2ef04794d3ba634609f9049618bfd55100ce222e36e",
+  "source_train_sha256": "7a9fb81f9d7bb145c3d7e9bc8d3b9016ba18b6539ea5031a53bae8fd3cd991c3",
+  "old_mapping_sha256": "ef926bd4901c7c95e2a20ec3242e953abfe6f9e4d712e7a93e602cbdc9050971",
+  "new_mapping_sha256": "9d281ef8417013ab17cca538844419cf61f8bd6fe1f1b84de16e0069e917456e",
+  "foreground_selection_receipt_sha256": "ac0c52100895e7262febe3d8ad830d8dcca46a90621ed8647c93567590f5dc79",
+  "n_shared_candidate_qa": 62,
+  "n_selected_shared_qa": 34,
+  "n_images": 33,
+  "qa_counts_by_image": {
+    "xmlab109/source.jpg": 1,
+    "xmlab113/source.jpg": 1,
+    "xmlab125/source.jpg": 1,
+    "xmlab157/source.jpg": 1,
+    "xmlab163/source.jpg": 1,
+    "xmlab181/source.jpg": 1,
+    "xmlab187/source.jpg": 1,
+    "xmlab195/source.jpg": 1,
+    "xmlab216/source.jpg": 1,
+    "xmlab227/source.jpg": 1,
+    "xmlab237/source.jpg": 1,
+    "xmlab241/source.jpg": 1,
+    "xmlab271/source.jpg": 2,
+    "xmlab276/source.jpg": 1,
+    "xmlab279/source.jpg": 1,
+    "xmlab313/source.jpg": 1,
+    "xmlab321/source.jpg": 1,
+    "xmlab333/source.jpg": 1,
+    "xmlab334/source.jpg": 1,
+    "xmlab340/source.jpg": 1,
+    "xmlab355/source.jpg": 1,
+    "xmlab356/source.jpg": 1,
+    "xmlab362/source.jpg": 1,
+    "xmlab425/source.jpg": 1,
+    "xmlab434/source.jpg": 1,
+    "xmlab440/source.jpg": 1,
+    "xmlab453/source.jpg": 1,
+    "xmlab489/source.jpg": 1,
+    "xmlab50/source.jpg": 1,
+    "xmlab633/source.jpg": 1,
+    "xmlab81/source.jpg": 1,
+    "xmlab89/source.jpg": 1,
+    "xmlab96/source.jpg": 1
+  },
+  "bootstrap": {
+    "unit": "image_ref (bound to current image_sha256)",
+    "within_cluster_weight": "all QA rows, variable-cluster-size QA mean",
+    "replicates": 20000,
+    "seed": 20260923,
+    "intervals": "percentile 95%, Bonferroni 98.75% across four models"
+  },
+  "models": {
+    "gemma3_4b": {
+      "old_receipt_sha256": "e655469c14e6adc96ae7a18ec81970a13435885c7c9e95dba8e88846030a1fed",
+      "foreground_receipt_sha256": "ac0c52100895e7262febe3d8ad830d8dcca46a90621ed8647c93567590f5dc79",
+      "n_qa": 34,
+      "n_images": 33,
+      "estimates": {
+        "D_L": {
+          "qa_weighted_mean": 0.02115822716068145,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.0005124085782589476,
+            0.06467865016205102
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.0008458242639550103,
+            0.0857659243530033
+          ]
+        },
+        "D_F": {
+          "qa_weighted_mean": 0.01658855049099736,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.012477353259832796,
+            0.054070568894316065
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.018499698457047978,
+            0.06744023344935263
+          ]
+        },
+        "D_L_minus_D_F": {
+          "qa_weighted_mean": 0.0045696766696840885,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.029027431029102973,
+            0.03580475733831071
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.03849858146698171,
+            0.04517927731804233
+          ]
+        }
+      },
+      "legacy_half_tie_win_fraction": 0.6029411764705882,
+      "foreground_half_tie_win_fraction": 0.6147058823529412,
+      "image_contributions": [
+        {
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0009917074642439294
+        },
+        {
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.3307106496803804e-05
+        },
+        {
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.934317446858572e-07
+        },
+        {
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 9.536376567309546e-07
+        },
+        {
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -2.9757418751330533e-10
+        },
+        {
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.831823829931636e-11
+        },
+        {
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.111078144575231e-11
+        },
+        {
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 3.078470812711842e-07
+        },
+        {
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 2.1515233517011012e-07
+        },
+        {
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -7.098662768711961e-10
+        },
+        {
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.256615922429205e-10
+        },
+        {
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.3256887787099487
+        },
+        {
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "n_qa": 2,
+          "mean_D_L_minus_D_F": 6.251479778285329e-09
+        },
+        {
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.4021433506407034
+        },
+        {
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.8264979528836989e-09
+        },
+        {
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.152661521786058e-09
+        },
+        {
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.008598618876185293
+        },
+        {
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.010849507343117848
+        },
+        {
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -7.704591767354607e-06
+        },
+        {
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.020280138127681036
+        },
+        {
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 3.201513514405896e-06
+        },
+        {
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -9.638048137361466e-10
+        },
+        {
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.20067590636736987
+        },
+        {
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.3631576430750414e-05
+        },
+        {
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.8732245266050995e-07
+        },
+        {
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.010783123191774546
+        },
+        {
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.6547429049218465e-07
+        },
+        {
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.00041516534722807474
+        },
+        {
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 1.3209697780069973e-09
+        },
+        {
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -8.835529752282412e-09
+        },
+        {
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -1.8953619508654818e-05
+        },
+        {
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0007598473285559404
+        },
+        {
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -2.4725110847612086e-11
+        }
+      ],
+      "qa_contributions": [
+        {
+          "old_sample_id": "slake_42",
+          "new_sample_id": "slake_86",
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 57,
+          "ordered_boxes": [
+            [
+              306.0,
+              349.0,
+              46.0,
+              42.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9971137315549191,
+          "legacy_random": 0.9999980167522279,
+          "foreground_control_draws": [
+            0.9999277093738966,
+            0.9993071274905218,
+            0.9962275875721706,
+            0.9997442256974822,
+            0.9998248963058485
+          ],
+          "D_L": 0.002884285197308767,
+          "D_F": 0.0018925777330648375,
+          "D_L_minus_D_F": 0.0009917074642439294,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_337",
+          "new_sample_id": "slake_283",
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 96,
+          "ordered_boxes": [
+            [
+              111.0,
+              323.0,
+              29.0,
+              37.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9997526822941271,
+          "legacy_random": 0.9999980562501761,
+          "foreground_control_draws": [
+            0.9999114147150998,
+            0.9999518480566114,
+            0.9999616063326412,
+            0.9999872702814031,
+            0.9999616063326412
+          ],
+          "D_L": 0.0002453739560490664,
+          "D_F": 0.00020206684955226262,
+          "D_L_minus_D_F": 4.3307106496803804e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_354",
+          "new_sample_id": "slake_41",
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 179,
+          "ordered_boxes": [
+            [
+              741.0,
+              687.0,
+              52.0,
+              48.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999995683658526,
+          "legacy_random": 0.9999996908160904,
+          "foreground_control_draws": [
+            0.9999989348561804,
+            0.9999995683658526,
+            0.9999995683658526,
+            0.9999979153338434,
+            1.0
+          ],
+          "D_L": 1.2245023783830078e-07,
+          "D_F": -3.709815068475564e-07,
+          "D_L_minus_D_F": 4.934317446858572e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_335",
+          "new_sample_id": "slake_167",
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 363,
+          "ordered_boxes": [
+            [
+              113.0,
+              200.0,
+              227.0,
+              381.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999996081532125,
+          "legacy_random": 0.9999998412097191,
+          "foreground_control_draws": [
+            0.999998675685086,
+            0.9999992330894811,
+            0.9999999692496332,
+            0.9999978841510249,
+            0.999998675685086
+          ],
+          "D_L": 2.3305650653782095e-07,
+          "D_F": -7.205811501931336e-07,
+          "D_L_minus_D_F": 9.536376567309546e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_95",
+          "new_sample_id": "slake_218",
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "question": "Are there abnormalities in this image?",
+          "answer": "yes",
+          "qid": 401,
+          "ordered_boxes": [
+            [
+              540.0,
+              106.0,
+              333.0,
+              483.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999998505207,
+          "legacy_random": 0.9999999994958755,
+          "foreground_control_draws": [
+            0.9999999997078434,
+            0.9999999998505207,
+            0.9999999997078434,
+            0.9999999998505207,
+            0.9999999998505207
+          ],
+          "D_L": -3.546452020941615e-10,
+          "D_F": -5.707101458085617e-11,
+          "D_L_minus_D_F": -2.9757418751330533e-10,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_199",
+          "new_sample_id": "slake_275",
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 518,
+          "ordered_boxes": [
+            [
+              436.0,
+              273.0,
+              43.0,
+              44.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999997827482,
+          "legacy_random": 0.9999999999117825,
+          "foreground_control_draws": [
+            0.9999999997827482,
+            1.0,
+            0.9999999999796859,
+            0.9999999999796859,
+            0.9999999995752014
+          ],
+          "D_L": 1.290342277471268e-10,
+          "D_F": 8.071598944781044e-11,
+          "D_L_minus_D_F": 4.831823829931636e-11,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.7
+        },
+        {
+          "old_sample_id": "slake_9",
+          "new_sample_id": "slake_195",
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 561,
+          "ordered_boxes": [
+            [
+              325.0,
+              330.0,
+              123.0,
+              157.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999999463394,
+          "legacy_random": 0.9999999998680232,
+          "foreground_control_draws": [
+            0.9999999999875924,
+            1.0,
+            0.9999999998699444,
+            0.9999999992894335,
+            0.9999999999875924
+          ],
+          "D_L": -7.83161313577807e-11,
+          "D_F": -1.1942691280353301e-10,
+          "D_L_minus_D_F": 4.111078144575231e-11,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_6",
+          "new_sample_id": "slake_10",
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 642,
+          "ordered_boxes": [
+            [
+              620.0,
+              339.0,
+              248.0,
+              399.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999996085600961,
+          "legacy_random": 0.9999999401034922,
+          "foreground_control_draws": [
+            1.0,
+            0.9999997381997789,
+            0.9999997381997789,
+            0.9999987355814004,
+            0.9999999493010966
+          ],
+          "D_L": 3.315433961814662e-07,
+          "D_F": 2.3696314910282013e-08,
+          "D_L_minus_D_F": 3.078470812711842e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_186",
+          "new_sample_id": "slake_368",
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "question": "Does the picture contain kidney?",
+          "answer": "no",
+          "qid": 877,
+          "ordered_boxes": [
+            [
+              54.0,
+              122.0,
+              211.0,
+              233.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999993657897169,
+          "legacy_random": 0.9999999846071828,
+          "foreground_control_draws": [
+            0.9999997547361565,
+            0.9999997547361565,
+            0.9999998514102884,
+            0.9999995639130135,
+            0.9999999224786235
+          ],
+          "D_L": 6.188174658250389e-07,
+          "D_F": 4.036651306549288e-07,
+          "D_L_minus_D_F": 2.1515233517011012e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_183",
+          "new_sample_id": "slake_220",
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1004,
+          "ordered_boxes": [
+            [
+              114.0,
+              71.0,
+              19.0,
+              9.0
+            ],
+            [
+              47.0,
+              82.0,
+              117.0,
+              221.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999993657525,
+          "legacy_random": 0.9999999992684625,
+          "foreground_control_draws": [
+            0.9999999999987849,
+            1.0,
+            0.9999999999270804,
+            0.9999999999712554,
+            0.999999999994523
+          ],
+          "D_L": -9.728995387092709e-11,
+          "D_F": 6.12576323000269e-10,
+          "D_L_minus_D_F": -7.098662768711961e-10,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_287",
+          "new_sample_id": "slake_261",
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "question": "Does the picture contain spleen?",
+          "answer": "yes",
+          "qid": 1105,
+          "ordered_boxes": [
+            [
+              104.0,
+              176.0,
+              112.0,
+              111.0
+            ],
+            [
+              123.0,
+              247.0,
+              62.0,
+              49.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999934704913,
+          "legacy_random": 0.9999999998195716,
+          "foreground_control_draws": [
+            1.0,
+            0.9999999999672222,
+            0.9999999999358206,
+            0.9999999987797111,
+            0.999999999786795
+          ],
+          "D_L": 6.349080261536244e-09,
+          "D_F": 6.2234186692933235e-09,
+          "D_L_minus_D_F": 1.256615922429205e-10,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_206",
+          "new_sample_id": "slake_12",
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "question": "Does the picture contain lung?",
+          "answer": "no",
+          "qid": 1146,
+          "ordered_boxes": [
+            [
+              117.0,
+              194.0,
+              8.0,
+              16.0
+            ],
+            [
+              118.0,
+              243.0,
+              39.0,
+              41.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.0,
+          "legacy_random": 0.7074680725969625,
+          "foreground_control_draws": [
+            0.0,
+            0.9823186681083198,
+            0.0,
+            0.0,
+            0.9265778013267494
+          ],
+          "D_L": 0.7074680725969625,
+          "D_F": 0.3817792938870138,
+          "D_L_minus_D_F": 0.3256887787099487,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.7
+        },
+        {
+          "old_sample_id": "slake_283",
+          "new_sample_id": "slake_205",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1473,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999962471592,
+          "legacy_random": 0.9999999924827422,
+          "foreground_control_draws": [
+            0.9999999863096737,
+            0.9999999984035908,
+            0.9999999467459513,
+            0.9999999789081467,
+            0.9999999895695378
+          ],
+          "D_L": -3.764417000340359e-09,
+          "D_F": -1.62597789676866e-08,
+          "D_L_minus_D_F": 1.2495361967346241e-08,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_52",
+          "new_sample_id": "slake_13",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1472,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999996032753,
+          "legacy_random": 0.9999999999800125,
+          "foreground_control_draws": [
+            0.9999999999674865,
+            0.9999999999047265,
+            0.9999999999988095,
+            0.9999999999988095,
+            0.9999999999922432
+          ],
+          "D_L": 3.767371969942701e-10,
+          "D_F": 3.6913960776985277e-10,
+          "D_L_minus_D_F": 7.597589224417334e-12,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_134",
+          "new_sample_id": "slake_72",
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "question": "Does the picture contain heart?",
+          "answer": "no",
+          "qid": 1537,
+          "ordered_boxes": [
+            [
+              86.0,
+              183.0,
+              35.0,
+              93.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.0,
+          "legacy_random": 0.0,
+          "foreground_control_draws": [
+            0.11367564211265846,
+            0.292384155663338,
+            0.7342847163410683,
+            0.0,
+            0.8703722390864521
+          ],
+          "D_L": 0.0,
+          "D_F": 0.4021433506407034,
+          "D_L_minus_D_F": -0.4021433506407034,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.9
+        },
+        {
+          "old_sample_id": "slake_132",
+          "new_sample_id": "slake_2",
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1583,
+          "ordered_boxes": [
+            [
+              75.0,
+              214.0,
+              26.0,
+              78.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999999944299,
+          "legacy_random": 0.9999999997555437,
+          "foreground_control_draws": [
+            0.9999999999770105,
+            0.9999999979886186,
+            0.9999999920410075,
+            0.9999999996434752,
+            0.9999999999951164
+          ],
+          "D_L": -2.388862441193851e-10,
+          "D_F": -2.065384197003084e-09,
+          "D_L_minus_D_F": 1.8264979528836989e-09,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_390",
+          "new_sample_id": "slake_350",
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "question": "Is the lung abnormal?",
+          "answer": "yes",
+          "qid": 1991,
+          "ordered_boxes": [
+            [
+              166.0,
+              527.0,
+              109.0,
+              101.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 1.0,
+          "legacy_random": 0.9999999999883395,
+          "foreground_control_draws": [
+            0.9999999999895129,
+            0.9999999998497359,
+            0.9999999948344543,
+            0.9999999998497359,
+            0.9999999996549512
+          ],
+          "D_L": -1.1660450383033094e-11,
+          "D_F": -1.1643219721690912e-09,
+          "D_L_minus_D_F": 1.152661521786058e-09,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_74",
+          "new_sample_id": "slake_149",
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "question": "Is/Are there abnormalities in the patient's right lung?",
+          "answer": "yes",
+          "qid": 2092,
+          "ordered_boxes": [
+            [
+              351.0,
+              747.0,
+              35.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999990005410183,
+          "legacy_random": 0.9999999962190915,
+          "foreground_control_draws": [
+            0.9999999685850312,
+            0.9570071620692597,
+            1.0,
+            0.9999997732210815,
+            0.9999999828391581
+          ],
+          "D_L": 9.95678073212325e-07,
+          "D_F": -0.008597623198112081,
+          "D_L_minus_D_F": 0.008598618876185293,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_308",
+          "new_sample_id": "slake_169",
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 2221,
+          "ordered_boxes": [
+            [
+              787.0,
+              469.0,
+              69.0,
+              146.0
+            ],
+            [
+              299.0,
+              383.0,
+              98.0,
+              109.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9709790823152186,
+          "legacy_random": 0.9884036751359566,
+          "foreground_control_draws": [
+            0.973092524639286,
+            0.9844734674136157,
+            0.9638018655855984,
+            0.9912057975813037,
+            0.9751971837443896
+          ],
+          "D_L": 0.01742459282073805,
+          "D_F": 0.006575085477620202,
+          "D_L_minus_D_F": 0.010849507343117848,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_322",
+          "new_sample_id": "slake_71",
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "question": "Is this a study of the abdomen?",
+          "answer": "no",
+          "qid": 2234,
+          "ordered_boxes": [
+            [
+              543.0,
+              584.0,
+              221.0,
+              288.0
+            ],
+            [
+              270.0,
+              132.0,
+              88.0,
+              28.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999993723809292,
+          "legacy_random": 0.9999918873465202,
+          "foreground_control_draws": [
+            0.9999999462722062,
+            0.9999995854751372,
+            0.9999990005410183,
+            1.0,
+            0.9999994274030766
+          ],
+          "D_L": -7.485034408949431e-06,
+          "D_F": 2.1955735840517576e-07,
+          "D_L_minus_D_F": -7.704591767354607e-06,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_182",
+          "new_sample_id": "slake_255",
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "question": "Can pneumothorax be observed on the upper left lung in this picture?",
+          "answer": "no",
+          "qid": 2313,
+          "ordered_boxes": [
+            [
+              147.0,
+              93.0,
+              380.0,
+              568.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.999847336695373,
+          "legacy_random": 0.9999999499346988,
+          "foreground_control_draws": [
+            0.9981128799922262,
+            0.9211747795587314,
+            0.9999730336426007,
+            0.9795141647100448,
+            0.9998242011314864
+          ],
+          "D_L": 0.00015261323932580506,
+          "D_F": -0.02012752488835523,
+          "D_L_minus_D_F": 0.020280138127681036,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_180",
+          "new_sample_id": "slake_159",
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "question": "Is the lung normal appearing?",
+          "answer": "no",
+          "qid": 2444,
+          "ordered_boxes": [
+            [
+              115.0,
+              612.0,
+              222.0,
+              94.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999870250346883,
+          "legacy_random": 0.999974606092266,
+          "foreground_control_draws": [
+            0.9998937826416313,
+            0.9999962335726995,
+            0.9999810315225622,
+            0.9999869934137052,
+            0.9999989817431586
+          ],
+          "D_L": -1.2418942422320889e-05,
+          "D_F": -1.5620455936726785e-05,
+          "D_L_minus_D_F": 3.201513514405896e-06,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_57",
+          "new_sample_id": "slake_110",
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "question": "Is this a study of the chest?",
+          "answer": "yes",
+          "qid": 2457,
+          "ordered_boxes": [
+            [
+              402.0,
+              356.0,
+              372.0,
+              346.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999992430292,
+          "legacy_random": 0.9999999989196298,
+          "foreground_control_draws": [
+            0.9999999998348128,
+            0.9999999998348128,
+            0.9999999999296474,
+            0.9999999999830874,
+            0.9999999998348128
+          ],
+          "D_L": -3.233994183560185e-10,
+          "D_F": 6.404053953801281e-10,
+          "D_L_minus_D_F": -9.638048137361466e-10,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_11",
+          "new_sample_id": "slake_49",
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "question": "Is this a coronal plane?",
+          "answer": "yes",
+          "qid": 2494,
+          "ordered_boxes": [
+            [
+              644.0,
+              308.0,
+              185.0,
+              354.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9998755172096351,
+          "legacy_random": 0.9995700346148758,
+          "foreground_control_draws": [
+            0.9998755172096351,
+            0.9997401305028172,
+            0.0,
+            0.9948947314429338,
+            0.9999602620821435
+          ],
+          "D_L": -0.0003054825947592654,
+          "D_F": -0.20098138896212914,
+          "D_L_minus_D_F": 0.20067590636736987,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_342",
+          "new_sample_id": "slake_394",
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "question": "Are there organs in the picture that can perceive things?",
+          "answer": "no",
+          "qid": 3170,
+          "ordered_boxes": [
+            [
+              221.0,
+              187.0,
+              33.0,
+              31.0
+            ],
+            [
+              230.0,
+              246.0,
+              18.0,
+              10.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9998007882628617,
+          "legacy_random": 0.9999832994709144,
+          "foreground_control_draws": [
+            0.9999714979986973,
+            0.9999671720573552,
+            0.9999626876303893,
+            0.9999673945775639,
+            0.9999795872084123
+          ],
+          "D_L": 0.0001825112080526825,
+          "D_F": 0.0001688796316219321,
+          "D_L_minus_D_F": 1.3631576430750414e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_346",
+          "new_sample_id": "slake_164",
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "question": "Is this an MRI?",
+          "answer": "no",
+          "qid": 3228,
+          "ordered_boxes": [
+            [
+              228.0,
+              194.0,
+              20.0,
+              21.0
+            ],
+            [
+              228.0,
+              213.0,
+              19.0,
+              15.0
+            ],
+            [
+              232.0,
+              252.0,
+              15.0,
+              15.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.999999901247744,
+          "legacy_random": 0.9999999164116321,
+          "foreground_control_draws": [
+            0.9999996908160904,
+            0.9999999164116321,
+            0.9999999763506042,
+            0.9999997678405178,
+            0.9999992940270527
+          ],
+          "D_L": 1.5163888145153237e-08,
+          "D_F": -1.7215856451535672e-07,
+          "D_L_minus_D_F": 1.8732245266050995e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_86",
+          "new_sample_id": "slake_234",
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "question": "Do the organs in the image exist in the chest?",
+          "answer": "no",
+          "qid": 3288,
+          "ordered_boxes": [
+            [
+              121.0,
+              56.0,
+              40.0,
+              57.0
+            ],
+            [
+              131.0,
+              71.0,
+              29.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999997756333169,
+          "legacy_random": 0.9891450053673361,
+          "foreground_control_draws": [
+            0.9999802227320821,
+            0.9999324497158221,
+            0.9999933023397726,
+            0.9999736990836742,
+            0.999760968924202
+          ],
+          "D_L": -0.010854770265980807,
+          "D_F": -7.164707420626026e-05,
+          "D_L_minus_D_F": -0.010783123191774546,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_65",
+          "new_sample_id": "slake_80",
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "question": "Is this image taken via CT?",
+          "answer": "no",
+          "qid": 3382,
+          "ordered_boxes": [
+            [
+              126.0,
+              90.0,
+              35.0,
+              43.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999990086235444,
+          "legacy_random": 0.9999999533524646,
+          "foreground_control_draws": [
+            0.9999996951463506,
+            1.0,
+            0.9999996951463506,
+            0.9999996951463506,
+            0.9999998539518186
+          ],
+          "D_L": 9.44728920204696e-07,
+          "D_F": 7.792546297125114e-07,
+          "D_L_minus_D_F": 1.6547429049218465e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_270",
+          "new_sample_id": "slake_308",
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "question": "Is the brain normal appearing?",
+          "answer": "no",
+          "qid": 3583,
+          "ordered_boxes": [
+            [
+              68.0,
+              68.0,
+              58.0,
+              56.0
+            ],
+            [
+              78.0,
+              78.0,
+              32.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999964001631754,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9997850666373941,
+            0.9988501215112573,
+            0.9997203245906761,
+            0.9999818964470403,
+            0.9995867640774914
+          ],
+          "D_L": 3.599836824630387e-06,
+          "D_F": -0.00041156551040344436,
+          "D_L_minus_D_F": 0.00041516534722807474,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_318",
+          "new_sample_id": "slake_307",
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "question": "Does the brain look abnormal?",
+          "answer": "yes",
+          "qid": 3659,
+          "ordered_boxes": [
+            [
+              117.0,
+              143.0,
+              45.0,
+              59.0
+            ],
+            [
+              138.0,
+              159.0,
+              8.0,
+              7.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999999710958,
+          "legacy_random": 0.9999999999529026,
+          "foreground_control_draws": [
+            0.9999999985849872,
+            0.9999999995288368,
+            0.999999998803227,
+            0.9999999998161956,
+            0.9999999964264175
+          ],
+          "D_L": -1.819322470453244e-11,
+          "D_F": -1.3391630027115298e-09,
+          "D_L_minus_D_F": 1.3209697780069973e-09,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_30",
+          "new_sample_id": "slake_374",
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "question": "Does the picture contain colon?",
+          "answer": "yes",
+          "qid": 4609,
+          "ordered_boxes": [
+            [
+              187.0,
+              197.0,
+              142.0,
+              57.0
+            ],
+            [
+              181.0,
+              216.0,
+              35.0,
+              46.0
+            ],
+            [
+              212.0,
+              246.0,
+              29.0,
+              42.0
+            ],
+            [
+              157.0,
+              210.0,
+              46.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999990300739819,
+          "legacy_random": 0.9999999877251242,
+          "foreground_control_draws": [
+            0.9999999970912609,
+            0.9999999968668469,
+            1.0,
+            0.9999999993343887,
+            0.9999999895107736
+          ],
+          "D_L": 9.576511422748624e-07,
+          "D_F": 9.664866720271448e-07,
+          "D_L_minus_D_F": -8.835529752282412e-09,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_111",
+          "new_sample_id": "slake_129",
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 4793,
+          "ordered_boxes": [
+            [
+              118.0,
+              236.0,
+              16.0,
+              18.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9998448449411801,
+          "legacy_random": 0.9999561499987792,
+          "foreground_control_draws": [
+            1.0,
+            1.0,
+            0.9999869934137052,
+            0.9998937826416313,
+            0.9999947420361032
+          ],
+          "D_L": 0.00011130505759915366,
+          "D_F": 0.00013025867710780847,
+          "D_L_minus_D_F": -1.8953619508654818e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_246",
+          "new_sample_id": "slake_98",
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 4839,
+          "ordered_boxes": [
+            [
+              323.0,
+              175.0,
+              19.0,
+              20.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.997801200072188,
+          "legacy_random": 0.9998845054271503,
+          "foreground_control_draws": [
+            0.9997442256974822,
+            0.9971137315549191,
+            0.9990629720848428,
+            0.9997442256974822,
+            0.9999581354582461
+          ],
+          "D_L": 0.0020833053549623726,
+          "D_F": 0.0013234580264064322,
+          "D_L_minus_D_F": 0.0007598473285559404,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_136",
+          "new_sample_id": "slake_154",
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "question": "Does the picture contain heart?",
+          "answer": "yes",
+          "qid": 4886,
+          "ordered_boxes": [
+            [
+              118.0,
+              206.0,
+              33.0,
+              29.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999999999922432,
+          "legacy_random": 0.9999999999674865,
+          "foreground_control_draws": [
+            0.9999999999964866,
+            0.9999999999988095,
+            0.9999999999991441,
+            0.9999999999866052,
+            0.9999999999800125
+          ],
+          "D_L": -2.4756752203813903e-11,
+          "D_F": -3.164135620181696e-14,
+          "D_L_minus_D_F": -2.4725110847612086e-11,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.6
+        }
+      ]
+    },
+    "internvl3_8b": {
+      "old_receipt_sha256": "787bb6c30b20e7cc675bb3118ae15501a303a1a72dc8fa785c1758dd153800b8",
+      "foreground_receipt_sha256": "3fae282691ba49aa78deca72d915b1abfb7011dd9e7837a29b3cb92ac94c6d6e",
+      "n_qa": 34,
+      "n_images": 33,
+      "estimates": {
+        "D_L": {
+          "qa_weighted_mean": 0.012609207668899431,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.010019827058427392,
+            0.03216371919581875
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.01682401701708749,
+            0.03704575913809063
+          ]
+        },
+        "D_F": {
+          "qa_weighted_mean": 0.01422067106948747,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.0007812352906744672,
+            0.030347835350012686
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.004212758470967741,
+            0.035169678104553063
+          ]
+        },
+        "D_L_minus_D_F": {
+          "qa_weighted_mean": -0.0016114634005880391,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.012218237697807815,
+            0.005200715928795053
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.016474857700859106,
+            0.006317558679930623
+          ]
+        }
+      },
+      "legacy_half_tie_win_fraction": 0.7058823529411765,
+      "foreground_half_tie_win_fraction": 0.6323529411764705,
+      "image_contributions": [
+        {
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0009443706753543557
+        },
+        {
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.00047461309890362013
+        },
+        {
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.00047287382973026926
+        },
+        {
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.003623358914404351
+        },
+        {
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0002642225993655378
+        },
+        {
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0035060192164365622
+        },
+        {
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.00020331094961123508
+        },
+        {
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.033174001167224354
+        },
+        {
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.03523108688037324
+        },
+        {
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.00013401273056345975
+        },
+        {
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0020055745996554464
+        },
+        {
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0030235450328802704
+        },
+        {
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "n_qa": 2,
+          "mean_D_L_minus_D_F": 0.0011617719849582042
+        },
+        {
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.003587918585758354
+        },
+        {
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 9.631264777931747e-07
+        },
+        {
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.005875026175965137
+        },
+        {
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.000555032258139021
+        },
+        {
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0057948485006000805
+        },
+        {
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.1530253807359614
+        },
+        {
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.004736926435095379
+        },
+        {
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.008084342135563305
+        },
+        {
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -3.322856099607918e-06
+        },
+        {
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0013582263410610862
+        },
+        {
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0035500613415824223
+        },
+        {
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0016360024508926818
+        },
+        {
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.002592408175624339
+        },
+        {
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0009704917409842917
+        },
+        {
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.006483623678592343
+        },
+        {
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.00036423201103064073
+        },
+        {
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 5.596994682388612e-05
+        },
+        {
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0035867992076646926
+        },
+        {
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.002367762384391403
+        },
+        {
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 2.8254141536843136e-05
+        }
+      ],
+      "qa_contributions": [
+        {
+          "old_sample_id": "slake_42",
+          "new_sample_id": "slake_86",
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 57,
+          "ordered_boxes": [
+            [
+              306.0,
+              349.0,
+              46.0,
+              42.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 1.0,
+          "legacy_random": 0.9950905775888396,
+          "foreground_control_draws": [
+            0.9950905775888396,
+            0.9988038168568273,
+            0.9988038168568273,
+            0.9886727131616486,
+            0.9988038168568273
+          ],
+          "D_L": -0.004909422411160436,
+          "D_F": -0.00396505173580608,
+          "D_L_minus_D_F": -0.0009443706753543557,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_337",
+          "new_sample_id": "slake_283",
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 96,
+          "ordered_boxes": [
+            [
+              111.0,
+              323.0,
+              29.0,
+              37.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9869960029030753,
+          "legacy_random": 0.9940972508304993,
+          "foreground_control_draws": [
+            0.9984938735987244,
+            0.9984938735987244,
+            0.9773776988508412,
+            1.0,
+            0.9984938735987244
+          ],
+          "D_L": 0.007101247927423948,
+          "D_F": 0.007575861026327568,
+          "D_L_minus_D_F": -0.00047461309890362013,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_354",
+          "new_sample_id": "slake_41",
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 179,
+          "ordered_boxes": [
+            [
+              741.0,
+              687.0,
+              52.0,
+              48.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9983888100401669,
+          "legacy_random": 0.9999458604502038,
+          "foreground_control_draws": [
+            0.9996393333187505,
+            0.9999458604502038,
+            0.9997740774577958,
+            0.9980056618756181,
+            1.0
+          ],
+          "D_L": 0.001557050410036953,
+          "D_F": 0.0010841765803066838,
+          "D_L_minus_D_F": 0.00047287382973026926,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_335",
+          "new_sample_id": "slake_167",
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 363,
+          "ordered_boxes": [
+            [
+              113.0,
+              200.0,
+              227.0,
+              381.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.8741265653660979,
+          "legacy_random": 0.9984938735987244,
+          "foreground_control_draws": [
+            0.9936260367457362,
+            0.9984347841843664,
+            0.9940972508304993,
+            0.9940972508304993,
+            0.9940972508304993
+          ],
+          "D_L": 0.12436730823262654,
+          "D_F": 0.12074394931822219,
+          "D_L_minus_D_F": 0.003623358914404351,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_95",
+          "new_sample_id": "slake_218",
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "question": "Are there abnormalities in this image?",
+          "answer": "yes",
+          "qid": 401,
+          "ordered_boxes": [
+            [
+              540.0,
+              106.0,
+              333.0,
+              483.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9998755929273648,
+          "legacy_random": 0.999987278392933,
+          "foreground_control_draws": [
+            0.9997063558757555,
+            0.9995853003741572,
+            0.999987278392933,
+            0.9998900282675383,
+            0.9994463160574535
+          ],
+          "D_L": 0.00011168546556816761,
+          "D_F": -0.00015253713379737022,
+          "D_L_minus_D_F": 0.0002642225993655378,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_199",
+          "new_sample_id": "slake_275",
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 518,
+          "ordered_boxes": [
+            [
+              436.0,
+              273.0,
+              43.0,
+              44.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9359773061280472,
+          "legacy_random": 0.9997608191244014,
+          "foreground_control_draws": [
+            1.0,
+            0.9997678807707165,
+            0.9833353481568796,
+            0.9990853853061139,
+            0.9990853853061139
+          ],
+          "D_L": 0.06378351299635421,
+          "D_F": 0.060277493779917646,
+          "D_L_minus_D_F": 0.0035060192164365622,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_9",
+          "new_sample_id": "slake_195",
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 561,
+          "ordered_boxes": [
+            [
+              325.0,
+              330.0,
+              123.0,
+              157.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9970815543977256,
+          "legacy_random": 0.9997283049996283,
+          "foreground_control_draws": [
+            0.9998503775210497,
+            1.0,
+            1.0,
+            0.9998676932094224,
+            0.9999400090157251
+          ],
+          "D_L": 0.00264675060190267,
+          "D_F": 0.002850061551513905,
+          "D_L_minus_D_F": -0.00020331094961123508,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_6",
+          "new_sample_id": "slake_10",
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 642,
+          "ordered_boxes": [
+            [
+              620.0,
+              339.0,
+              248.0,
+              399.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9985240753715824,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9677478526030369,
+            0.9944662313637341,
+            0.9878299783411898,
+            0.9788629942968633,
+            0.9052229375590544
+          ],
+          "D_L": 0.001475924628417613,
+          "D_F": -0.03169807653880674,
+          "D_L_minus_D_F": 0.033174001167224354,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_186",
+          "new_sample_id": "slake_368",
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "question": "Does the picture contain kidney?",
+          "answer": "no",
+          "qid": 877,
+          "ordered_boxes": [
+            [
+              54.0,
+              122.0,
+              211.0,
+              233.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9974717832733733,
+          "legacy_random": 0.9942753355502564,
+          "foreground_control_draws": [
+            0.9547822118277264,
+            0.9722630435238568,
+            0.9757899645006034,
+            0.9684158498756149,
+            0.9239701736216142
+          ],
+          "D_L": -0.003196447723116891,
+          "D_F": -0.03842753460349013,
+          "D_L_minus_D_F": 0.03523108688037324,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_183",
+          "new_sample_id": "slake_220",
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1004,
+          "ordered_boxes": [
+            [
+              114.0,
+              71.0,
+              19.0,
+              9.0
+            ],
+            [
+              47.0,
+              82.0,
+              117.0,
+              221.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9361451641510525,
+          "legacy_random": 0.9994460088341971,
+          "foreground_control_draws": [
+            0.9988430187449523,
+            0.9999900635960735,
+            0.9994460088341971,
+            0.9997706931905158,
+            0.9998503234580641
+          ],
+          "D_L": 0.06330084468314456,
+          "D_F": 0.06343485741370802,
+          "D_L_minus_D_F": -0.00013401273056345975,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_287",
+          "new_sample_id": "slake_261",
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "question": "Does the picture contain spleen?",
+          "answer": "yes",
+          "qid": 1105,
+          "ordered_boxes": [
+            [
+              104.0,
+              176.0,
+              112.0,
+              111.0
+            ],
+            [
+              123.0,
+              247.0,
+              62.0,
+              49.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.8355228921009099,
+          "legacy_random": 0.9994994466209632,
+          "foreground_control_draws": [
+            0.9989792116670084,
+            0.9994372065702438,
+            0.9986611986187188,
+            0.9927835238364795,
+            0.9976082194140895
+          ],
+          "D_L": 0.16397655452005333,
+          "D_F": 0.16197097992039788,
+          "D_L_minus_D_F": 0.0020055745996554464,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_206",
+          "new_sample_id": "slake_12",
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "question": "Does the picture contain lung?",
+          "answer": "no",
+          "qid": 1146,
+          "ordered_boxes": [
+            [
+              117.0,
+              194.0,
+              8.0,
+              16.0
+            ],
+            [
+              118.0,
+              243.0,
+              39.0,
+              41.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9985854282614671,
+          "legacy_random": 0.9939768085262547,
+          "foreground_control_draws": [
+            0.9939768085262547,
+            0.9985240753715824,
+            1.0,
+            0.9939768085262547,
+            0.9985240753715824
+          ],
+          "D_L": -0.004608619735212427,
+          "D_F": -0.0015850747023321565,
+          "D_L_minus_D_F": -0.0030235450328802704,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_283",
+          "new_sample_id": "slake_205",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1473,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999658486497761,
+          "legacy_random": 0.9998791597794641,
+          "foreground_control_draws": [
+            0.9992659228786376,
+            0.9998282669391145,
+            0.9987246038647406,
+            0.9992124445343867,
+            0.9997197605313161
+          ],
+          "D_L": -8.668887031204608e-05,
+          "D_F": -0.0006156489001369891,
+          "D_L_minus_D_F": 0.0005289600298249431,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_52",
+          "new_sample_id": "slake_13",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1472,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9533754161654665,
+          "legacy_random": 0.9991179686333193,
+          "foreground_control_draws": [
+            0.993385654533976,
+            0.9973488613141298,
+            0.999850428815583,
+            0.996181549986867,
+            0.999850428815583
+          ],
+          "D_L": 0.04574255246785275,
+          "D_F": 0.04394796852776128,
+          "D_L_minus_D_F": 0.0017945839400914654,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_134",
+          "new_sample_id": "slake_72",
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "question": "Does the picture contain heart?",
+          "answer": "no",
+          "qid": 1537,
+          "ordered_boxes": [
+            [
+              86.0,
+              183.0,
+              35.0,
+              93.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9983237625068212,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            1.0,
+            1.0,
+            0.9983237625068212,
+            0.9854128820575663,
+            0.9983237625068212
+          ],
+          "D_L": 0.0016762374931788004,
+          "D_F": -0.0019116810925795535,
+          "D_L_minus_D_F": 0.003587918585758354,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_132",
+          "new_sample_id": "slake_2",
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1583,
+          "ordered_boxes": [
+            [
+              75.0,
+              214.0,
+              26.0,
+              78.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999998747931259,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9999998639116029,
+            0.9999995189930803,
+            0.9999959375513249,
+            1.0,
+            0.9999998639116029
+          ],
+          "D_L": 1.252068740908996e-07,
+          "D_F": -8.379196037022751e-07,
+          "D_L_minus_D_F": 9.631264777931747e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_390",
+          "new_sample_id": "slake_350",
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "question": "Is the lung abnormal?",
+          "answer": "yes",
+          "qid": 1991,
+          "ordered_boxes": [
+            [
+              166.0,
+              527.0,
+              109.0,
+              101.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9762615263368345,
+          "legacy_random": 0.9981078075889295,
+          "foreground_control_draws": [
+            0.9835417907828903,
+            0.9986611986187188,
+            0.9835417907828903,
+            0.9967579282616036,
+            0.9986611986187188
+          ],
+          "D_L": 0.02184628125209498,
+          "D_F": 0.015971255076129842,
+          "D_L_minus_D_F": 0.005875026175965137,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_74",
+          "new_sample_id": "slake_149",
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "question": "Is/Are there abnormalities in the patient's right lung?",
+          "answer": "yes",
+          "qid": 2092,
+          "ordered_boxes": [
+            [
+              351.0,
+              747.0,
+              35.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9997246011890353,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.999968166198425,
+            0.998220289733009,
+            0.9991000503810211,
+            0.999968166198425,
+            0.999968166198425
+          ],
+          "D_L": 0.0002753988109647221,
+          "D_F": -0.00027963344717429894,
+          "D_L_minus_D_F": 0.000555032258139021,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_308",
+          "new_sample_id": "slake_169",
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 2221,
+          "ordered_boxes": [
+            [
+              787.0,
+              469.0,
+              69.0,
+              146.0
+            ],
+            [
+              299.0,
+              383.0,
+              98.0,
+              109.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.895698807295079,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9966453686083353,
+            0.9944662313637341,
+            0.9836263026236738,
+            0.9996424862929211,
+            0.9966453686083353
+          ],
+          "D_L": 0.104301192704921,
+          "D_F": 0.09850634420432092,
+          "D_L_minus_D_F": 0.0057948485006000805,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_322",
+          "new_sample_id": "slake_71",
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "question": "Is this a study of the abdomen?",
+          "answer": "no",
+          "qid": 2234,
+          "ordered_boxes": [
+            [
+              543.0,
+              584.0,
+              221.0,
+              288.0
+            ],
+            [
+              270.0,
+              132.0,
+              88.0,
+              28.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9932976457692116,
+          "legacy_random": 0.7360663609734962,
+          "foreground_control_draws": [
+            0.9984060219665187,
+            0.8180900320691806,
+            0.7360663609734962,
+            0.9365067748100845,
+            0.9563895187280075
+          ],
+          "D_L": -0.25723128479571544,
+          "D_F": -0.10420590405975405,
+          "D_L_minus_D_F": -0.1530253807359614,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_182",
+          "new_sample_id": "slake_255",
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "question": "Can pneumothorax be observed on the upper left lung in this picture?",
+          "answer": "no",
+          "qid": 2313,
+          "ordered_boxes": [
+            [
+              147.0,
+              93.0,
+              380.0,
+              568.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9911604889611629,
+          "legacy_random": 0.9830558636567317,
+          "foreground_control_draws": [
+            0.9942806319140401,
+            0.9874111022704691,
+            0.9830558636567317,
+            0.9911604889611629,
+            0.9830558636567317
+          ],
+          "D_L": -0.008104625304431234,
+          "D_F": -0.0033676988693358556,
+          "D_L_minus_D_F": -0.004736926435095379,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_180",
+          "new_sample_id": "slake_159",
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "question": "Is the lung normal appearing?",
+          "answer": "no",
+          "qid": 2444,
+          "ordered_boxes": [
+            [
+              115.0,
+              612.0,
+              222.0,
+              94.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9764462443021726,
+          "legacy_random": 0.9981005192667224,
+          "foreground_control_draws": [
+            0.9981296049540233,
+            0.9835022330078586,
+            0.9923575788341382,
+            0.9835022330078586,
+            0.9925892358519172
+          ],
+          "D_L": 0.021654274964549747,
+          "D_F": 0.013569932828986442,
+          "D_L_minus_D_F": 0.008084342135563305,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_57",
+          "new_sample_id": "slake_110",
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "question": "Is this a study of the chest?",
+          "answer": "yes",
+          "qid": 2457,
+          "ordered_boxes": [
+            [
+              402.0,
+              356.0,
+              372.0,
+              346.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999844365104633,
+          "legacy_random": 0.9999924036714022,
+          "foreground_control_draws": [
+            0.9999924036714022,
+            0.9999997211712132,
+            0.9999988608395572,
+            0.9999924036714022,
+            0.999995243283934
+          ],
+          "D_L": 7.967160938870954e-06,
+          "D_F": 1.1290017038478872e-05,
+          "D_L_minus_D_F": -3.322856099607918e-06,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_11",
+          "new_sample_id": "slake_49",
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "question": "Is this a coronal plane?",
+          "answer": "yes",
+          "qid": 2494,
+          "ordered_boxes": [
+            [
+              644.0,
+              308.0,
+              185.0,
+              354.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999687105850207,
+          "legacy_random": 0.9985967014608064,
+          "foreground_control_draws": [
+            0.9999946831472953,
+            0.9999558197713444,
+            0.9999795732594869,
+            0.9998649895717237,
+            0.9999795732594869
+          ],
+          "D_L": -0.0013720091242143129,
+          "D_F": -1.3782783153226674e-05,
+          "D_L_minus_D_F": -0.0013582263410610862,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_342",
+          "new_sample_id": "slake_394",
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "question": "Are there organs in the picture that can perceive things?",
+          "answer": "no",
+          "qid": 3170,
+          "ordered_boxes": [
+            [
+              221.0,
+              187.0,
+              33.0,
+              31.0
+            ],
+            [
+              230.0,
+              246.0,
+              18.0,
+              10.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9981005192667224,
+          "legacy_random": 0.9923575788341382,
+          "foreground_control_draws": [
+            0.9981296049540233,
+            0.9925892358519172,
+            0.9981005192667224,
+            0.9925892358519172,
+            0.9981296049540233
+          ],
+          "D_L": -0.005742940432584165,
+          "D_F": -0.0021928790910017426,
+          "D_L_minus_D_F": -0.0035500613415824223,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.5
+        },
+        {
+          "old_sample_id": "slake_346",
+          "new_sample_id": "slake_164",
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "question": "Is this an MRI?",
+          "answer": "no",
+          "qid": 3228,
+          "ordered_boxes": [
+            [
+              228.0,
+              194.0,
+              20.0,
+              21.0
+            ],
+            [
+              228.0,
+              213.0,
+              19.0,
+              15.0
+            ],
+            [
+              232.0,
+              252.0,
+              15.0,
+              15.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9866994665899994,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            1.0,
+            0.9995422206298737,
+            0.9955606173432462,
+            0.9983585748862085,
+            0.9983585748862085
+          ],
+          "D_L": 0.013300533410000592,
+          "D_F": 0.01166453095910791,
+          "D_L_minus_D_F": 0.0016360024508926818,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_86",
+          "new_sample_id": "slake_234",
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "question": "Do the organs in the image exist in the chest?",
+          "answer": "no",
+          "qid": 3288,
+          "ordered_boxes": [
+            [
+              121.0,
+              56.0,
+              40.0,
+              57.0
+            ],
+            [
+              131.0,
+              71.0,
+              29.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 1.0,
+          "legacy_random": 0.9947158209183086,
+          "foreground_control_draws": [
+            1.0,
+            1.0,
+            0.9987102230387555,
+            0.9878309224309093,
+            1.0
+          ],
+          "D_L": -0.005284179081691431,
+          "D_F": -0.0026917709060670925,
+          "D_L_minus_D_F": -0.002592408175624339,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_65",
+          "new_sample_id": "slake_80",
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "question": "Is this image taken via CT?",
+          "answer": "no",
+          "qid": 3382,
+          "ordered_boxes": [
+            [
+              126.0,
+              90.0,
+              35.0,
+              43.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9955606173432462,
+          "legacy_random": 0.9980995172539602,
+          "foreground_control_draws": [
+            0.9918043551731244,
+            0.9995422206298737,
+            0.9980995172539602,
+            0.9980995172539602,
+            0.9980995172539602
+          ],
+          "D_L": 0.0025388999107139876,
+          "D_F": 0.0015684081697296959,
+          "D_L_minus_D_F": 0.0009704917409842917,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_270",
+          "new_sample_id": "slake_308",
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "question": "Is the brain normal appearing?",
+          "answer": "no",
+          "qid": 3583,
+          "ordered_boxes": [
+            [
+              68.0,
+              68.0,
+              58.0,
+              56.0
+            ],
+            [
+              78.0,
+              78.0,
+              32.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9932976457692116,
+          "legacy_random": 0.9962588410318296,
+          "foreground_control_draws": [
+            1.0,
+            0.9932976457692116,
+            0.9995979376426759,
+            0.9995909846262917,
+            0.9563895187280075
+          ],
+          "D_L": 0.002961195262617955,
+          "D_F": -0.003522428415974388,
+          "D_L_minus_D_F": 0.006483623678592343,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.7
+        },
+        {
+          "old_sample_id": "slake_318",
+          "new_sample_id": "slake_307",
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "question": "Does the brain look abnormal?",
+          "answer": "yes",
+          "qid": 3659,
+          "ordered_boxes": [
+            [
+              117.0,
+              143.0,
+              45.0,
+              59.0
+            ],
+            [
+              138.0,
+              159.0,
+              8.0,
+              7.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9352555436761103,
+          "legacy_random": 0.9999935612575377,
+          "foreground_control_draws": [
+            0.9995543883345454,
+            0.9999932891943144,
+            0.999625795767659,
+            0.9997902311086276,
+            0.9991829418273884
+          ],
+          "D_L": 0.06473801758142739,
+          "D_F": 0.06437378557039675,
+          "D_L_minus_D_F": 0.00036423201103064073,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_30",
+          "new_sample_id": "slake_374",
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "question": "Does the picture contain colon?",
+          "answer": "yes",
+          "qid": 4609,
+          "ordered_boxes": [
+            [
+              187.0,
+              197.0,
+              142.0,
+              57.0
+            ],
+            [
+              181.0,
+              216.0,
+              35.0,
+              46.0
+            ],
+            [
+              212.0,
+              246.0,
+              29.0,
+              42.0
+            ],
+            [
+              157.0,
+              210.0,
+              46.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9893469786978084,
+          "legacy_random": 0.9999931489182095,
+          "foreground_control_draws": [
+            0.9999928595611514,
+            0.999713877898206,
+            0.9999931489182095,
+            0.9999931489182095,
+            0.9999928595611514
+          ],
+          "D_L": 0.010646170220401041,
+          "D_F": 0.010590200273577155,
+          "D_L_minus_D_F": 5.596994682388612e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_111",
+          "new_sample_id": "slake_129",
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 4793,
+          "ordered_boxes": [
+            [
+              118.0,
+              236.0,
+              16.0,
+              18.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9945143099349896,
+          "legacy_random": 0.9993029632574729,
+          "foreground_control_draws": [
+            0.999348410329529,
+            1.0,
+            0.999348410329529,
+            0.980055339092694,
+            0.9998286604972892
+          ],
+          "D_L": 0.004788653322483349,
+          "D_F": 0.0012018541148186568,
+          "D_L_minus_D_F": 0.0035867992076646926,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_246",
+          "new_sample_id": "slake_98",
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 4839,
+          "ordered_boxes": [
+            [
+              323.0,
+              175.0,
+              19.0,
+              20.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9987727208364306,
+          "legacy_random": 0.9952147106510764,
+          "foreground_control_draws": [
+            0.9987102230387555,
+            0.9952147106510764,
+            1.0,
+            0.9952147106510764,
+            0.9987727208364306
+          ],
+          "D_L": -0.003558010185354288,
+          "D_F": -0.0011902478009628847,
+          "D_L_minus_D_F": -0.002367762384391403,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_136",
+          "new_sample_id": "slake_154",
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "question": "Does the picture contain heart?",
+          "answer": "yes",
+          "qid": 4886,
+          "ordered_boxes": [
+            [
+              118.0,
+              206.0,
+              33.0,
+              29.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999880387356934,
+          "legacy_random": 0.9999969479075195,
+          "foreground_control_draws": [
+            0.9999880387356934,
+            0.9999880387356934,
+            1.0,
+            0.9999540432742342,
+            0.9999133480842921
+          ],
+          "D_L": 8.909171826054774e-06,
+          "D_F": -1.9344969710788362e-05,
+          "D_L_minus_D_F": 2.8254141536843136e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.4
+        }
+      ]
+    },
+    "qwen25vl7b": {
+      "old_receipt_sha256": "9c55cc6fbb71f13466d04d94ff2a4ccb58b4bc7c4afd0c55c19757d20fde6d1b",
+      "foreground_receipt_sha256": "39daae21f78b6b79bf1646ebef5c890068967e1550921ae03783559fa3766254",
+      "n_qa": 34,
+      "n_images": 33,
+      "estimates": {
+        "D_L": {
+          "qa_weighted_mean": 0.0398894288991609,
+          "cluster_bootstrap_95_percentile_ci": [
+            0.0016442977414458841,
+            0.0918333173360705
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.006395544662262268,
+            0.11062451291605466
+          ]
+        },
+        "D_F": {
+          "qa_weighted_mean": 0.011701498928180816,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.03134627006014476,
+            0.059244087651090765
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.04318921297268436,
+            0.07444572679825746
+          ]
+        },
+        "D_L_minus_D_F": {
+          "qa_weighted_mean": 0.028187929970980075,
+          "cluster_bootstrap_95_percentile_ci": [
+            0.0008579469635003888,
+            0.06855026158943626
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.0037863650794905694,
+            0.08315835440056514
+          ]
+        }
+      },
+      "legacy_half_tie_win_fraction": 0.6617647058823529,
+      "foreground_half_tie_win_fraction": 0.5294117647058822,
+      "image_contributions": [
+        {
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0013411592856652499
+        },
+        {
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.12722448978859213
+        },
+        {
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.00416452793154376
+        },
+        {
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.012511992206640676
+        },
+        {
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.07159748406134114
+        },
+        {
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0003007045824876542
+        },
+        {
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.00014012464545032355
+        },
+        {
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.002791618454299094
+        },
+        {
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.03506965959896191
+        },
+        {
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.008943027929555147
+        },
+        {
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.009841607276151021
+        },
+        {
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0014539426288766588
+        },
+        {
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "n_qa": 2,
+          "mean_D_L_minus_D_F": 0.002897114357480912
+        },
+        {
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0005999043502252777
+        },
+        {
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0008083171946734469
+        },
+        {
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.011793018881058881
+        },
+        {
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.020851195479018814
+        },
+        {
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.006016329578759305
+        },
+        {
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -5.88771329013138e-06
+        },
+        {
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0018437102732271615
+        },
+        {
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.005682226236426224
+        },
+        {
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -8.145171163542742e-06
+        },
+        {
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0015027578304269706
+        },
+        {
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.004714633320254902
+        },
+        {
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.04203861676951259
+        },
+        {
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.11235633316231597
+        },
+        {
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.05562195837169526
+        },
+        {
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.5602820298111297
+        },
+        {
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.1579997092754144
+        },
+        {
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.06940592596157613
+        },
+        {
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.004966958668827903
+        },
+        {
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.01401211669315272
+        },
+        {
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.03075975939948128
+        }
+      ],
+      "qa_contributions": [
+        {
+          "old_sample_id": "slake_42",
+          "new_sample_id": "slake_86",
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 57,
+          "ordered_boxes": [
+            [
+              306.0,
+              349.0,
+              46.0,
+              42.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9968827435683644,
+          "legacy_random": 0.9993889284456341,
+          "foreground_control_draws": [
+            0.9949160929706977,
+            0.9988567392093268,
+            0.9983190057466564,
+            0.9998280021265058,
+            0.9983190057466564
+          ],
+          "D_L": 0.0025061848772697237,
+          "D_F": 0.0011650255916044738,
+          "D_L_minus_D_F": 0.0013411592856652499,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_337",
+          "new_sample_id": "slake_283",
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 96,
+          "ordered_boxes": [
+            [
+              111.0,
+              323.0,
+              29.0,
+              37.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.29776812901314775,
+          "legacy_random": 0.9955607376269017,
+          "foreground_control_draws": [
+            0.6957746408181315,
+            0.8247705432144228,
+            0.9814776742199421,
+            0.839658380939052,
+            1.0
+          ],
+          "D_L": 0.6977926086137539,
+          "D_F": 0.5705681188251618,
+          "D_L_minus_D_F": 0.12722448978859213,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_354",
+          "new_sample_id": "slake_41",
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 179,
+          "ordered_boxes": [
+            [
+              741.0,
+              687.0,
+              52.0,
+              48.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9997608191244014,
+          "legacy_random": 0.9997608191244014,
+          "foreground_control_draws": [
+            0.995998875962216,
+            0.997782365363015,
+            0.9990289069724287,
+            0.9979728961471914,
+            0.9871984115194373
+          ],
+          "D_L": 0.0,
+          "D_F": -0.00416452793154376,
+          "D_L_minus_D_F": 0.00416452793154376,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_335",
+          "new_sample_id": "slake_167",
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 363,
+          "ordered_boxes": [
+            [
+              113.0,
+              200.0,
+              227.0,
+              381.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9069163151933064,
+          "legacy_random": 0.997914008706811,
+          "foreground_control_draws": [
+            0.9480570687200864,
+            0.9967637139736849,
+            0.995195834304889,
+            0.995195834304889,
+            0.9917976311973022
+          ],
+          "D_L": 0.09099769351350462,
+          "D_F": 0.07848570130686394,
+          "D_L_minus_D_F": 0.012511992206640676,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_95",
+          "new_sample_id": "slake_218",
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "question": "Are there abnormalities in this image?",
+          "answer": "yes",
+          "qid": 401,
+          "ordered_boxes": [
+            [
+              540.0,
+              106.0,
+              333.0,
+              483.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9777945079230996,
+          "legacy_random": 0.97086047832468,
+          "foreground_control_draws": [
+            0.9334077458358632,
+            0.751452362940848,
+            0.962958572641441,
+            0.8647290644455947,
+            0.9837672254529474
+          ],
+          "D_L": -0.0069340295984196,
+          "D_F": -0.07853151365976074,
+          "D_L_minus_D_F": 0.07159748406134114,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_199",
+          "new_sample_id": "slake_275",
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 518,
+          "ordered_boxes": [
+            [
+              436.0,
+              273.0,
+              43.0,
+              44.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9989410499841986,
+          "legacy_random": 0.9989410499841986,
+          "foreground_control_draws": [
+            0.9977823523066731,
+            1.0,
+            0.9997389988877918,
+            0.9989410499841986,
+            0.9997463716547674
+          ],
+          "D_L": 0.0,
+          "D_F": 0.0003007045824876542,
+          "D_L_minus_D_F": -0.0003007045824876542,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.7
+        },
+        {
+          "old_sample_id": "slake_9",
+          "new_sample_id": "slake_195",
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 561,
+          "ordered_boxes": [
+            [
+              325.0,
+              330.0,
+              123.0,
+              157.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9915837601881076,
+          "legacy_random": 0.9998452799277332,
+          "foreground_control_draws": [
+            0.9994123505566235,
+            0.9994123505566235,
+            0.9998505376490838,
+            1.0,
+            0.9998505376490838
+          ],
+          "D_L": 0.008261519739625633,
+          "D_F": 0.00812139509417531,
+          "D_L_minus_D_F": 0.00014012464545032355,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_6",
+          "new_sample_id": "slake_10",
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 642,
+          "ordered_boxes": [
+            [
+              620.0,
+              339.0,
+              248.0,
+              399.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9966471594936946,
+          "legacy_random": 0.9996222190880583,
+          "foreground_control_draws": [
+            0.9991118591205007,
+            0.9894945396261773,
+            0.9978994649191149,
+            0.9978994649191149,
+            0.9997476745838881
+          ],
+          "D_L": 0.002975059594363616,
+          "D_F": 0.00018344114006452195,
+          "D_L_minus_D_F": 0.002791618454299094,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_186",
+          "new_sample_id": "slake_368",
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "question": "Does the picture contain kidney?",
+          "answer": "no",
+          "qid": 877,
+          "ordered_boxes": [
+            [
+              54.0,
+              122.0,
+              211.0,
+              233.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.996171482269246,
+          "legacy_random": 0.9738486263835845,
+          "foreground_control_draws": [
+            0.9271947167980555,
+            0.9457570802601598,
+            0.9738486263835845,
+            0.8932190455864977,
+            0.9538753648948155
+          ],
+          "D_L": -0.02232285588566152,
+          "D_F": -0.05739251548462343,
+          "D_L_minus_D_F": 0.03506965959896191,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_183",
+          "new_sample_id": "slake_220",
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1004,
+          "ordered_boxes": [
+            [
+              114.0,
+              71.0,
+              19.0,
+              9.0
+            ],
+            [
+              47.0,
+              82.0,
+              117.0,
+              221.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9472155836860833,
+          "legacy_random": 0.9864099998118011,
+          "foreground_control_draws": [
+            0.9883855970023071,
+            0.9973370682555233,
+            0.9979938665825102,
+            0.9935320024078818,
+            0.9995166044585596
+          ],
+          "D_L": 0.039194416125717835,
+          "D_F": 0.04813744405527298,
+          "D_L_minus_D_F": -0.008943027929555147,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_287",
+          "new_sample_id": "slake_261",
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "question": "Does the picture contain spleen?",
+          "answer": "yes",
+          "qid": 1105,
+          "ordered_boxes": [
+            [
+              104.0,
+              176.0,
+              112.0,
+              111.0
+            ],
+            [
+              123.0,
+              247.0,
+              62.0,
+              49.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.7532005787970579,
+          "legacy_random": 0.9983237625068212,
+          "foreground_control_draws": [
+            0.9547852838130733,
+            1.0,
+            0.9897812117361666,
+            0.9982729904414201,
+            0.999571290162691
+          ],
+          "D_L": 0.24512318370976327,
+          "D_F": 0.23528157643361225,
+          "D_L_minus_D_F": 0.009841607276151021,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_206",
+          "new_sample_id": "slake_12",
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "question": "Does the picture contain lung?",
+          "answer": "no",
+          "qid": 1146,
+          "ordered_boxes": [
+            [
+              117.0,
+              194.0,
+              8.0,
+              16.0
+            ],
+            [
+              118.0,
+              243.0,
+              39.0,
+              41.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9995009491305653,
+          "legacy_random": 0.9977161718921744,
+          "foreground_control_draws": [
+            0.9997875773375978,
+            0.9984848649161296,
+            0.9993056880978012,
+            0.9997875773375978,
+            0.9984848649161296
+          ],
+          "D_L": -0.0017847772383908778,
+          "D_F": -0.00033083460951421895,
+          "D_L_minus_D_F": -0.0014539426288766588,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_283",
+          "new_sample_id": "slake_205",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1473,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9979576002842857,
+          "legacy_random": 0.9994325413201677,
+          "foreground_control_draws": [
+            0.9798282790873686,
+            0.9976477203809303,
+            0.9798282790873686,
+            0.994514273028692,
+            0.9962581755733644
+          ],
+          "D_L": 0.0014749410358819715,
+          "D_F": -0.00834225485274076,
+          "D_L_minus_D_F": 0.009817195888622732,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_52",
+          "new_sample_id": "slake_13",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1472,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9870072726969493,
+          "legacy_random": 0.9927835238364795,
+          "foreground_control_draws": [
+            0.9999398994582432,
+            0.999126871936901,
+            0.9891616274008446,
+            0.999126871936901,
+            0.9966771843178125
+          ],
+          "D_L": 0.005776251139530175,
+          "D_F": 0.009799218313191083,
+          "D_L_minus_D_F": -0.004022967173660907,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_134",
+          "new_sample_id": "slake_72",
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "question": "Does the picture contain heart?",
+          "answer": "no",
+          "qid": 1537,
+          "ordered_boxes": [
+            [
+              86.0,
+              183.0,
+              35.0,
+              93.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9982670219913099,
+          "legacy_random": 0.9987536885995236,
+          "foreground_control_draws": [
+            0.9994689531069623,
+            0.9970087002764728,
+            0.9983251492248221,
+            0.9997407860110953,
+            0.9962253326271387
+          ],
+          "D_L": 0.0004866666082137261,
+          "D_F": -0.00011323774201155157,
+          "D_L_minus_D_F": 0.0005999043502252777,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_132",
+          "new_sample_id": "slake_2",
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1583,
+          "ordered_boxes": [
+            [
+              75.0,
+              214.0,
+              26.0,
+              78.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9998474051044123,
+          "legacy_random": 0.9993639952294614,
+          "foreground_control_draws": [
+            0.9998474051044123,
+            0.9993639952294614,
+            0.9984329301503828,
+            0.9996495590227414,
+            0.9954845006669416
+          ],
+          "D_L": -0.0004834098749508797,
+          "D_F": -0.0012917270696243266,
+          "D_L_minus_D_F": 0.0008083171946734469,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.1
+        },
+        {
+          "old_sample_id": "slake_390",
+          "new_sample_id": "slake_350",
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "question": "Is the lung abnormal?",
+          "answer": "yes",
+          "qid": 1991,
+          "ordered_boxes": [
+            [
+              166.0,
+              527.0,
+              109.0,
+              101.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9279913028256797,
+          "legacy_random": 0.9996123187516,
+          "foreground_control_draws": [
+            0.9736554140230006,
+            0.9899548344425222,
+            0.985414042255346,
+            0.9936260367457362,
+            0.9964461718861004
+          ],
+          "D_L": 0.0716210159259203,
+          "D_F": 0.059827997044861414,
+          "D_L_minus_D_F": 0.011793018881058881,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_74",
+          "new_sample_id": "slake_149",
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "question": "Is/Are there abnormalities in the patient's right lung?",
+          "answer": "yes",
+          "qid": 2092,
+          "ordered_boxes": [
+            [
+              351.0,
+              747.0,
+              35.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9956247054985343,
+          "legacy_random": 0.9761479281835376,
+          "foreground_control_draws": [
+            0.9995151197393835,
+            0.9922153692016735,
+            0.995675428912905,
+            0.9980726962830229,
+            0.9995170041757973
+          ],
+          "D_L": -0.01947677731499675,
+          "D_F": 0.001374418164022062,
+          "D_L_minus_D_F": -0.020851195479018814,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_308",
+          "new_sample_id": "slake_169",
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 2221,
+          "ordered_boxes": [
+            [
+              787.0,
+              469.0,
+              69.0,
+              146.0
+            ],
+            [
+              299.0,
+              383.0,
+              98.0,
+              109.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9871468029028644,
+          "legacy_random": 0.9932023902857919,
+          "foreground_control_draws": [
+            0.9989592315793953,
+            0.9999311524223716,
+            0.9997298107868519,
+            0.9997298107868519,
+            0.9977435937472855
+          ],
+          "D_L": 0.006055587382927552,
+          "D_F": 0.012071916961686857,
+          "D_L_minus_D_F": -0.006016329578759305,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_322",
+          "new_sample_id": "slake_71",
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "question": "Is this a study of the abdomen?",
+          "answer": "no",
+          "qid": 2234,
+          "ordered_boxes": [
+            [
+              543.0,
+              584.0,
+              221.0,
+              288.0
+            ],
+            [
+              270.0,
+              132.0,
+              88.0,
+              28.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.99999533755059,
+          "legacy_random": 0.9999694659698686,
+          "foreground_control_draws": [
+            0.9999913315634676,
+            0.9999694659698686,
+            0.999985822165511,
+            0.999944326551435,
+            0.999985822165511
+          ],
+          "D_L": -2.5871580721426035e-05,
+          "D_F": -1.9983867431294655e-05,
+          "D_L_minus_D_F": -5.88771329013138e-06,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_182",
+          "new_sample_id": "slake_255",
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "question": "Can pneumothorax be observed on the upper left lung in this picture?",
+          "answer": "no",
+          "qid": 2313,
+          "ordered_boxes": [
+            [
+              147.0,
+              93.0,
+              380.0,
+              568.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9692580586243023,
+          "legacy_random": 0.9980525822675695,
+          "foreground_control_draws": [
+            0.9956246966770209,
+            0.9922354990179006,
+            0.9980475105346269,
+            0.9995119570651418,
+            0.9956246966770209
+          ],
+          "D_L": 0.02879452364326729,
+          "D_F": 0.026950813370040128,
+          "D_L_minus_D_F": 0.0018437102732271615,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_180",
+          "new_sample_id": "slake_159",
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "question": "Is the lung normal appearing?",
+          "answer": "no",
+          "qid": 2444,
+          "ordered_boxes": [
+            [
+              115.0,
+              612.0,
+              222.0,
+              94.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9949491354099833,
+          "legacy_random": 0.9939235717497737,
+          "foreground_control_draws": [
+            0.9992793956117222,
+            0.9869734641450912,
+            0.9780906220045265,
+            0.9811520151545154,
+            0.9957112306508824
+          ],
+          "D_L": -0.0010255636602095608,
+          "D_F": -0.006707789896635785,
+          "D_L_minus_D_F": 0.005682226236426224,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_57",
+          "new_sample_id": "slake_110",
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "question": "Is this a study of the chest?",
+          "answer": "yes",
+          "qid": 2457,
+          "ordered_boxes": [
+            [
+              402.0,
+              356.0,
+              372.0,
+              346.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999496633538607,
+          "legacy_random": 0.9999496633538607,
+          "foreground_control_draws": [
+            0.9999309850132724,
+            0.9999647361726002,
+            0.9999309850132724,
+            0.9999857094695428,
+            0.9999766269564334
+          ],
+          "D_L": 0.0,
+          "D_F": 8.145171163542742e-06,
+          "D_L_minus_D_F": -8.145171163542742e-06,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_11",
+          "new_sample_id": "slake_49",
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "question": "Is this a coronal plane?",
+          "answer": "yes",
+          "qid": 2494,
+          "ordered_boxes": [
+            [
+              644.0,
+              308.0,
+              185.0,
+              354.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9951108812659548,
+          "legacy_random": 0.9901992533782096,
+          "foreground_control_draws": [
+            0.9943042906436719,
+            0.997603028204771,
+            0.9934150667356177,
+            0.9924381251159528,
+            0.9807495453431699
+          ],
+          "D_L": -0.00491162788774524,
+          "D_F": -0.0034088700573182695,
+          "D_L_minus_D_F": -0.0015027578304269706,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_342",
+          "new_sample_id": "slake_394",
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "question": "Are there organs in the picture that can perceive things?",
+          "answer": "no",
+          "qid": 3170,
+          "ordered_boxes": [
+            [
+              221.0,
+              187.0,
+              33.0,
+              31.0
+            ],
+            [
+              230.0,
+              246.0,
+              18.0,
+              10.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9857929391800178,
+          "legacy_random": 0.9963507164585574,
+          "foreground_control_draws": [
+            0.998310736993318,
+            0.9892144282291422,
+            0.9931442547600521,
+            0.9843667409489489,
+            0.9931442547600521
+          ],
+          "D_L": 0.010557777278539682,
+          "D_F": 0.00584314395828478,
+          "D_L_minus_D_F": 0.004714633320254902,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_346",
+          "new_sample_id": "slake_164",
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "question": "Is this an MRI?",
+          "answer": "no",
+          "qid": 3228,
+          "ordered_boxes": [
+            [
+              228.0,
+              194.0,
+              20.0,
+              21.0
+            ],
+            [
+              228.0,
+              213.0,
+              19.0,
+              15.0
+            ],
+            [
+              232.0,
+              252.0,
+              15.0,
+              15.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9986632720203606,
+          "legacy_random": 0.9996697270373532,
+          "foreground_control_draws": [
+            0.9318628278944613,
+            0.9763807480544715,
+            0.9257701644083702,
+            0.9945285713283967,
+            0.9596132396535032
+          ],
+          "D_L": 0.0010064550169925912,
+          "D_F": -0.04103216175252,
+          "D_L_minus_D_F": 0.04203861676951259,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_86",
+          "new_sample_id": "slake_234",
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "question": "Do the organs in the image exist in the chest?",
+          "answer": "no",
+          "qid": 3288,
+          "ordered_boxes": [
+            [
+              121.0,
+              56.0,
+              40.0,
+              57.0
+            ],
+            [
+              131.0,
+              71.0,
+              29.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9993842921063423,
+          "legacy_random": 0.7737057158396461,
+          "foreground_control_draws": [
+            0.90391858337691,
+            0.9259728999545446,
+            0.9539637580107045,
+            0.9307252317037165,
+            0.7157297719639345
+          ],
+          "D_L": -0.22567857626669618,
+          "D_F": -0.11332224310438022,
+          "D_L_minus_D_F": -0.11235633316231597,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_65",
+          "new_sample_id": "slake_80",
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "question": "Is this image taken via CT?",
+          "answer": "no",
+          "qid": 3382,
+          "ordered_boxes": [
+            [
+              126.0,
+              90.0,
+              35.0,
+              43.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.8101714993385523,
+          "legacy_random": 0.9061317025220033,
+          "foreground_control_draws": [
+            0.9436269424700757,
+            0.970305379607956,
+            0.9932875506480721,
+            0.995416729220386,
+            0.9061317025220033
+          ],
+          "D_L": 0.095960203183451,
+          "D_F": 0.15158216155514626,
+          "D_L_minus_D_F": -0.05562195837169526,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_270",
+          "new_sample_id": "slake_308",
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "question": "Is the brain normal appearing?",
+          "answer": "no",
+          "qid": 3583,
+          "ordered_boxes": [
+            [
+              68.0,
+              68.0,
+              58.0,
+              56.0
+            ],
+            [
+              78.0,
+              78.0,
+              32.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.8185657689020424,
+          "legacy_random": 0.9980525822675695,
+          "foreground_control_draws": [
+            0.4781173168784094,
+            0.0,
+            0.502597389088775,
+            0.7055406672262393,
+            0.502597389088775
+          ],
+          "D_L": 0.1794868133655272,
+          "D_F": -0.38079521644560255,
+          "D_L_minus_D_F": 0.5602820298111297,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_318",
+          "new_sample_id": "slake_307",
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "question": "Does the brain look abnormal?",
+          "answer": "yes",
+          "qid": 3659,
+          "ordered_boxes": [
+            [
+              117.0,
+              143.0,
+              45.0,
+              59.0
+            ],
+            [
+              138.0,
+              159.0,
+              8.0,
+              7.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9718661783008177,
+          "legacy_random": 0.9808438184152724,
+          "foreground_control_draws": [
+            0.6869567774067511,
+            0.9892144282291422,
+            0.7965724450948076,
+            0.6869567774067511,
+            0.9545201175618377
+          ],
+          "D_L": 0.008977640114454677,
+          "D_F": -0.14902206916095972,
+          "D_L_minus_D_F": 0.1579997092754144,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_30",
+          "new_sample_id": "slake_374",
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "question": "Does the picture contain colon?",
+          "answer": "yes",
+          "qid": 4609,
+          "ordered_boxes": [
+            [
+              187.0,
+              197.0,
+              142.0,
+              57.0
+            ],
+            [
+              181.0,
+              216.0,
+              35.0,
+              46.0
+            ],
+            [
+              212.0,
+              246.0,
+              29.0,
+              42.0
+            ],
+            [
+              157.0,
+              210.0,
+              46.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.8794153168057381,
+          "legacy_random": 0.9976477203809303,
+          "foreground_control_draws": [
+            0.959707637682465,
+            0.8669599329730775,
+            0.9463790117339838,
+            0.9217833779732605,
+            0.9463790117339838
+          ],
+          "D_L": 0.11823240357519216,
+          "D_F": 0.048826477613616026,
+          "D_L_minus_D_F": 0.06940592596157613,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_111",
+          "new_sample_id": "slake_129",
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 4793,
+          "ordered_boxes": [
+            [
+              118.0,
+              236.0,
+              16.0,
+              18.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 1.0,
+          "legacy_random": 0.993640626548877,
+          "foreground_control_draws": [
+            0.9993981636390116,
+            0.998814902488907,
+            0.9998621795475825,
+            0.9961477779241164,
+            0.998814902488907
+          ],
+          "D_L": -0.006359373451123029,
+          "D_F": -0.001392414782295126,
+          "D_L_minus_D_F": -0.004966958668827903,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_246",
+          "new_sample_id": "slake_98",
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 4839,
+          "ordered_boxes": [
+            [
+              323.0,
+              175.0,
+              19.0,
+              20.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9978716949045218,
+          "legacy_random": 0.9999048746578912,
+          "foreground_control_draws": [
+            0.9930364680641088,
+            0.9860371402722773,
+            0.9511848650495528,
+            0.9992053164377539,
+            1.0
+          ],
+          "D_L": 0.002033179753369474,
+          "D_F": -0.011978936939783247,
+          "D_L_minus_D_F": 0.01401211669315272,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_136",
+          "new_sample_id": "slake_154",
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "question": "Does the picture contain heart?",
+          "answer": "yes",
+          "qid": 4886,
+          "ordered_boxes": [
+            [
+              118.0,
+              206.0,
+              33.0,
+              29.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.971682997618481,
+          "legacy_random": 0.9996123187516,
+          "foreground_control_draws": [
+            0.9654286637768268,
+            0.9513314710533141,
+            0.9966453343767993,
+            0.9654286637768268,
+            0.9654286637768268
+          ],
+          "D_L": 0.027929321133118967,
+          "D_F": -0.0028304382663623118,
+          "D_L_minus_D_F": 0.03075975939948128,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        }
+      ]
+    },
+    "qwen2vl7b": {
+      "old_receipt_sha256": "2cabfc4d337207a6a7daee1397584c604efce0e8002f1c720e2be30a680b6abc",
+      "foreground_receipt_sha256": "ef3c90205b225a3b66c07751d0be879219483b457dbe1f03ee771aa0c8328603",
+      "n_qa": 34,
+      "n_images": 33,
+      "estimates": {
+        "D_L": {
+          "qa_weighted_mean": 0.0031586614770431442,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.0072422416660673835,
+            0.013044247155274514
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.010209665529470826,
+            0.01590880828535139
+          ]
+        },
+        "D_F": {
+          "qa_weighted_mean": -0.0030381256080420247,
+          "cluster_bootstrap_95_percentile_ci": [
+            -0.01719844666578184,
+            0.008360428973538218
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            -0.0216496118860594,
+            0.011380966378756368
+          ]
+        },
+        "D_L_minus_D_F": {
+          "qa_weighted_mean": 0.0061967870850851686,
+          "cluster_bootstrap_95_percentile_ci": [
+            0.0025748281457057647,
+            0.010986948530263793
+          ],
+          "cluster_bootstrap_bonferroni_98_75_percentile_ci": [
+            0.0019554080719950593,
+            0.01264588598372185
+          ]
+        }
+      },
+      "legacy_half_tie_win_fraction": 0.6470588235294118,
+      "foreground_half_tie_win_fraction": 0.49117647058823527,
+      "image_contributions": [
+        {
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.010955507558784161
+        },
+        {
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0019417475315856025
+        },
+        {
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.001354005118372803
+        },
+        {
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.01844973042943665
+        },
+        {
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 2.1488530355884272e-05
+        },
+        {
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.703747415180093e-05
+        },
+        {
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.606820130326206e-05
+        },
+        {
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.004808466816627277
+        },
+        {
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0002491483932963723
+        },
+        {
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 8.752704165670977e-06
+        },
+        {
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.001508413178458734
+        },
+        {
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0015373838797225758
+        },
+        {
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "n_qa": 2,
+          "mean_D_L_minus_D_F": 0.0006894536268356455
+        },
+        {
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.005222105991592563
+        },
+        {
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 2.7148402809373806e-05
+        },
+        {
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0006656368150812497
+        },
+        {
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 6.41593965330367e-05
+        },
+        {
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.00020777093148893755
+        },
+        {
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0025842045610386943
+        },
+        {
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0004382026413395357
+        },
+        {
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.01930347660568099
+        },
+        {
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 9.727705196915792e-07
+        },
+        {
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0003261503854840031
+        },
+        {
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.00938948014821972
+        },
+        {
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.03387465340596918
+        },
+        {
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.06325438732204014
+        },
+        {
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.008069082329154376
+        },
+        {
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.02190319351464598
+        },
+        {
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.005381258160021329
+        },
+        {
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 4.481744222162298e-05
+        },
+        {
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": -0.0012369543958838936
+        },
+        {
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.0004178814805065878
+        },
+        {
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "n_qa": 1,
+          "mean_D_L_minus_D_F": 0.001721997461287983
+        }
+      ],
+      "qa_contributions": [
+        {
+          "old_sample_id": "slake_42",
+          "new_sample_id": "slake_86",
+          "image_ref": "xmlab109/source.jpg",
+          "image_sha256": "b5fe4641fe63d21c2709c4ae79da3c634fc3d51d823ccf296834cec88ff384ca",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 57,
+          "ordered_boxes": [
+            [
+              306.0,
+              349.0,
+              46.0,
+              42.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9982043360131252,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9835031841478596,
+            0.9927386979701199,
+            0.9927386979701199,
+            0.9927386979701199,
+            0.9835031841478596
+          ],
+          "D_L": 0.001795663986874807,
+          "D_F": -0.009159843571909354,
+          "D_L_minus_D_F": 0.010955507558784161,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_337",
+          "new_sample_id": "slake_283",
+          "image_ref": "xmlab113/source.jpg",
+          "image_sha256": "eadebfffb1b26c3ae98a188060a863ac195a3da66009ac8c6010535c56e0f9d2",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 96,
+          "ordered_boxes": [
+            [
+              111.0,
+              323.0,
+              29.0,
+              37.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9980882183497516,
+          "legacy_random": 0.9980683219509421,
+          "foreground_control_draws": [
+            0.9980683219509421,
+            1.0,
+            0.9922481140974488,
+            0.9980683219509421,
+            0.9922481140974488
+          ],
+          "D_L": -1.9896398809504667e-05,
+          "D_F": -0.001961643930395107,
+          "D_L_minus_D_F": 0.0019417475315856025,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_354",
+          "new_sample_id": "slake_41",
+          "image_ref": "xmlab125/source.jpg",
+          "image_sha256": "5d9c6b77b2f45dd66935d11140fe2cba5d11eec22fccc9b90e42006e582c3f69",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 179,
+          "ordered_boxes": [
+            [
+              741.0,
+              687.0,
+              52.0,
+              48.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.99991973515468,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9996967415519751,
+            0.999922740235025,
+            0.9993303414386365,
+            0.996814388193966,
+            0.9974657629885328
+          ],
+          "D_L": 8.026484531997724e-05,
+          "D_F": -0.0012737402730528258,
+          "D_L_minus_D_F": 0.001354005118372803,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_335",
+          "new_sample_id": "slake_167",
+          "image_ref": "xmlab157/source.jpg",
+          "image_sha256": "c2617d8af7610196627cd91fcecd7960c579429659f0c5d07d7da5403457d041",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 363,
+          "ordered_boxes": [
+            [
+              113.0,
+              200.0,
+              227.0,
+              381.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.993740701716129,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9813810225735901,
+            0.9984060219665187,
+            0.9480387164977884,
+            0.993740701716129,
+            0.9861848850987911
+          ],
+          "D_L": 0.006259298283870951,
+          "D_F": -0.0121904321455657,
+          "D_L_minus_D_F": 0.01844973042943665,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_95",
+          "new_sample_id": "slake_218",
+          "image_ref": "xmlab163/source.jpg",
+          "image_sha256": "868d991d02547fefbd4702de48607ad49b2d590598400f14a567203a99836130",
+          "question": "Are there abnormalities in this image?",
+          "answer": "yes",
+          "qid": 401,
+          "ordered_boxes": [
+            [
+              540.0,
+              106.0,
+              333.0,
+              483.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999490975272163,
+          "legacy_random": 0.9996101434597636,
+          "foreground_control_draws": [
+            0.9994794914585629,
+            0.9994794914585629,
+            0.9989962520760406,
+            1.0,
+            0.9999880396538722
+          ],
+          "D_L": -0.000338954067452657,
+          "D_F": -0.00036044259780854127,
+          "D_L_minus_D_F": 2.1488530355884272e-05,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_199",
+          "new_sample_id": "slake_275",
+          "image_ref": "xmlab181/source.jpg",
+          "image_sha256": "bd46aa30d1e00c2b0309fbc3377b9b9a2481258a8dbb1536bb8d613cb3852c31",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 518,
+          "ordered_boxes": [
+            [
+              436.0,
+              273.0,
+              43.0,
+              44.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999906598245384,
+          "legacy_random": 0.9999602417395049,
+          "foreground_control_draws": [
+            0.9999086318934232,
+            0.9999192698596968,
+            0.9999902664046907,
+            0.99996339083397,
+            0.9997844623349852
+          ],
+          "D_L": -3.0418085033456777e-05,
+          "D_F": -7.74555591852577e-05,
+          "D_L_minus_D_F": 4.703747415180093e-05,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_9",
+          "new_sample_id": "slake_195",
+          "image_ref": "xmlab187/source.jpg",
+          "image_sha256": "64da8f026675b2d9998fcb31677ab4f2eeb572df99701af196f0af88e9ba595f",
+          "question": "Does this image look abnormal?",
+          "answer": "yes",
+          "qid": 561,
+          "ordered_boxes": [
+            [
+              325.0,
+              330.0,
+              123.0,
+              157.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999538171213448,
+          "legacy_random": 0.999981505200377,
+          "foreground_control_draws": [
+            0.9999161144552592,
+            0.9999538171213448,
+            0.9998911389635048,
+            0.9999161144552592,
+            1.0
+          ],
+          "D_L": 2.768807903219539e-05,
+          "D_F": -1.8380122271066668e-05,
+          "D_L_minus_D_F": 4.606820130326206e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_6",
+          "new_sample_id": "slake_10",
+          "image_ref": "xmlab195/source.jpg",
+          "image_sha256": "b37c482f724817855cec7a196f9745efdc0d02950ea562234234d5c3163768da",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 642,
+          "ordered_boxes": [
+            [
+              620.0,
+              339.0,
+              248.0,
+              399.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.897740940198206,
+          "legacy_random": 0.9998107757032482,
+          "foreground_control_draws": [
+            0.9984049165468314,
+            0.9939235717497737,
+            0.9992793956117222,
+            0.9841730685530647,
+            0.9992305919717124
+          ],
+          "D_L": 0.10206983550504212,
+          "D_F": 0.09726136868841484,
+          "D_L_minus_D_F": 0.004808466816627277,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_186",
+          "new_sample_id": "slake_368",
+          "image_ref": "xmlab216/source.jpg",
+          "image_sha256": "c145872e3693c0c2840d69d7db21b2235d64b0649cc7655b5f8beb7b7eee1435",
+          "question": "Does the picture contain kidney?",
+          "answer": "no",
+          "qid": 877,
+          "ordered_boxes": [
+            [
+              54.0,
+              122.0,
+              211.0,
+              233.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9988858186411435,
+          "legacy_random": 0.9988858186411435,
+          "foreground_control_draws": [
+            0.9990304733290825,
+            0.9990304733290825,
+            0.997933888981228,
+            0.9981580422707592,
+            0.9990304733290825
+          ],
+          "D_L": 0.0,
+          "D_F": -0.0002491483932963723,
+          "D_L_minus_D_F": 0.0002491483932963723,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_183",
+          "new_sample_id": "slake_220",
+          "image_ref": "xmlab227/source.jpg",
+          "image_sha256": "36fda60cfd2a0d688707ad3fdbcfd0a1b35ad154fcb98740ba76240ba5e75201",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1004,
+          "ordered_boxes": [
+            [
+              114.0,
+              71.0,
+              19.0,
+              9.0
+            ],
+            [
+              47.0,
+              82.0,
+              117.0,
+              221.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9981151686023879,
+          "legacy_random": 0.9999467223915424,
+          "foreground_control_draws": [
+            0.9999622677929246,
+            0.9999316111041677,
+            0.9999288791254418,
+            0.9999622677929246,
+            0.9999048226214249
+          ],
+          "D_L": 0.0018315537891544498,
+          "D_F": 0.0018228010849887788,
+          "D_L_minus_D_F": 8.752704165670977e-06,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_287",
+          "new_sample_id": "slake_261",
+          "image_ref": "xmlab237/source.jpg",
+          "image_sha256": "713a790e8952fd1dd5bcfdf31cef478b5b20340badc75eafb9e3374d6209697b",
+          "question": "Does the picture contain spleen?",
+          "answer": "yes",
+          "qid": 1105,
+          "ordered_boxes": [
+            [
+              104.0,
+              176.0,
+              112.0,
+              111.0
+            ],
+            [
+              123.0,
+              247.0,
+              62.0,
+              49.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9322541709268246,
+          "legacy_random": 0.9991803419409956,
+          "foreground_control_draws": [
+            0.9903101505618704,
+            0.9997560534333692,
+            0.9991130978764493,
+            0.9991803419409956,
+            1.0
+          ],
+          "D_L": 0.06692617101417098,
+          "D_F": 0.06541775783571224,
+          "D_L_minus_D_F": 0.001508413178458734,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_206",
+          "new_sample_id": "slake_12",
+          "image_ref": "xmlab241/source.jpg",
+          "image_sha256": "0e33406efcf356628ea3b9b6db53ff29094b4a4b69d0365be46900dd324a486a",
+          "question": "Does the picture contain lung?",
+          "answer": "no",
+          "qid": 1146,
+          "ordered_boxes": [
+            [
+              117.0,
+              194.0,
+              8.0,
+              16.0
+            ],
+            [
+              118.0,
+              243.0,
+              39.0,
+              41.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 1.0,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9980882183497516,
+            0.9980882183497516,
+            0.9980683219509421,
+            0.9980683219509421,
+            1.0
+          ],
+          "D_L": 0.0,
+          "D_F": -0.0015373838797225758,
+          "D_L_minus_D_F": 0.0015373838797225758,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.1
+        },
+        {
+          "old_sample_id": "slake_283",
+          "new_sample_id": "slake_205",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1473,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9997437825171935,
+          "legacy_random": 0.9997437825171935,
+          "foreground_control_draws": [
+            0.999125260207214,
+            0.999125260207214,
+            0.9996592912075569,
+            0.9992126306990339,
+            0.9989288837809994
+          ],
+          "D_L": 0.0,
+          "D_F": -0.0005335172967897428,
+          "D_L_minus_D_F": 0.0005335172967897428,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_52",
+          "new_sample_id": "slake_13",
+          "image_ref": "xmlab271/source.jpg",
+          "image_sha256": "fdfe16313a0a64228042d6990b2c3fefad7fdd9a5a3ef4c93a6599b59ae0823e",
+          "question": "Does the picture contain liver?",
+          "answer": "yes",
+          "qid": 1472,
+          "ordered_boxes": [
+            [
+              58.0,
+              177.0,
+              86.0,
+              155.0
+            ],
+            [
+              86.0,
+              265.0,
+              31.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9995003543671493,
+          "legacy_random": 0.9999751103519842,
+          "foreground_control_draws": [
+            0.9979927177557597,
+            0.9997178916259766,
+            0.9979927177557597,
+            0.9999490075174278,
+            0.9999962673205892
+          ],
+          "D_L": 0.0004747559848348182,
+          "D_F": -0.00037063397204673,
+          "D_L_minus_D_F": 0.0008453899568815482,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_134",
+          "new_sample_id": "slake_72",
+          "image_ref": "xmlab276/source.jpg",
+          "image_sha256": "2b090c3b5b65a31494654415339de6440a4650e692d3b81013a429c7dab74810",
+          "question": "Does the picture contain heart?",
+          "answer": "no",
+          "qid": 1537,
+          "ordered_boxes": [
+            [
+              86.0,
+              183.0,
+              35.0,
+              93.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9985240753715824,
+          "legacy_random": 0.9985854282614671,
+          "foreground_control_draws": [
+            1.0,
+            0.9939768085262547,
+            1.0,
+            0.9939768085262547,
+            0.9788629942968633
+          ],
+          "D_L": 6.135288988473597e-05,
+          "D_F": -0.005160753101707827,
+          "D_L_minus_D_F": 0.005222105991592563,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_132",
+          "new_sample_id": "slake_2",
+          "image_ref": "xmlab279/source.jpg",
+          "image_sha256": "056de2c9996b766c46a2ed285188e55b4926421c3e1434cb52cd556e6a71fa57",
+          "question": "Does the picture contain kidney?",
+          "answer": "yes",
+          "qid": 1583,
+          "ordered_boxes": [
+            [
+              75.0,
+              214.0,
+              26.0,
+              78.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999933166690134,
+          "legacy_random": 0.9999924274394363,
+          "foreground_control_draws": [
+            0.9998516573165723,
+            0.9999967055515679,
+            0.999978032314995,
+            1.0,
+            1.0
+          ],
+          "D_L": -8.892295770834835e-07,
+          "D_F": -2.803763238645729e-05,
+          "D_L_minus_D_F": 2.7148402809373806e-05,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_390",
+          "new_sample_id": "slake_350",
+          "image_ref": "xmlab313/source.jpg",
+          "image_sha256": "a1670c0819753831b69a9392fa42a393d01091f6cbc47eff9480c13051f382d8",
+          "question": "Is the lung abnormal?",
+          "answer": "yes",
+          "qid": 1991,
+          "ordered_boxes": [
+            [
+              166.0,
+              527.0,
+              109.0,
+              101.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9991000503810211,
+          "legacy_random": 0.9977890546458317,
+          "foreground_control_draws": [
+            0.9998647020115408,
+            0.9997246011890353,
+            0.9951121480975713,
+            0.9989604210508187,
+            0.9986115849555987
+          ],
+          "D_L": -0.0013109957351894463,
+          "D_F": -0.0006453589201081966,
+          "D_L_minus_D_F": -0.0006656368150812497,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_74",
+          "new_sample_id": "slake_149",
+          "image_ref": "xmlab321/source.jpg",
+          "image_sha256": "c9d943f3dab84340537bdeafe3bb63d51fb5ffa41b5ddf7eec1dffb03051adb9",
+          "question": "Is/Are there abnormalities in the patient's right lung?",
+          "answer": "yes",
+          "qid": 2092,
+          "ordered_boxes": [
+            [
+              351.0,
+              747.0,
+              35.0,
+              33.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 1.0,
+          "legacy_random": 0.9995808200890622,
+          "foreground_control_draws": [
+            0.9998174404241912,
+            0.9987867824361392,
+            0.9995808200890622,
+            0.9998174404241912,
+            0.9995808200890622
+          ],
+          "D_L": -0.0004191799109377614,
+          "D_F": -0.0004833393074707981,
+          "D_L_minus_D_F": 6.41593965330367e-05,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_308",
+          "new_sample_id": "slake_169",
+          "image_ref": "xmlab333/source.jpg",
+          "image_sha256": "616f354d10ff83c1eb6b0e00aaabb7de0c32bb4df01fbe3fca611146c052b432",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 2221,
+          "ordered_boxes": [
+            [
+              787.0,
+              469.0,
+              69.0,
+              146.0
+            ],
+            [
+              299.0,
+              383.0,
+              98.0,
+              109.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9992331327489639,
+          "legacy_random": 0.9994787882769615,
+          "foreground_control_draws": [
+            0.9994787882769615,
+            0.9996734598442003,
+            0.9999816001362504,
+            0.9994787882769615,
+            0.999820159507878
+          ],
+          "D_L": 0.0002456555279976014,
+          "D_F": 0.0004534264594865389,
+          "D_L_minus_D_F": -0.00020777093148893755,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_322",
+          "new_sample_id": "slake_71",
+          "image_ref": "xmlab334/source.jpg",
+          "image_sha256": "4e9c72be2230cf9c80a541e7a46604f80fd15402c3803d14e34e03da931aa8ef",
+          "question": "Is this a study of the abdomen?",
+          "answer": "no",
+          "qid": 2234,
+          "ordered_boxes": [
+            [
+              543.0,
+              584.0,
+              221.0,
+              288.0
+            ],
+            [
+              270.0,
+              132.0,
+              88.0,
+              28.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9924065609202494,
+          "legacy_random": 0.9825241967295237,
+          "foreground_control_draws": [
+            0.9701566642070351,
+            0.9980683219509421,
+            0.9689117495571637,
+            0.9701566642070351,
+            0.9924065609202494
+          ],
+          "D_L": -0.009882364190725634,
+          "D_F": -0.012466568751764329,
+          "D_L_minus_D_F": 0.0025842045610386943,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_182",
+          "new_sample_id": "slake_255",
+          "image_ref": "xmlab340/source.jpg",
+          "image_sha256": "18c5308e7e83feb9e1a4bfd5d55be28d5ea431cc0e3b0423c1ea534a368d3386",
+          "question": "Can pneumothorax be observed on the upper left lung in this picture?",
+          "answer": "no",
+          "qid": 2313,
+          "ordered_boxes": [
+            [
+              147.0,
+              93.0,
+              380.0,
+              568.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9960424874486041,
+          "legacy_random": 0.999321546958234,
+          "foreground_control_draws": [
+            0.9999792029421343,
+            0.9999783379304941,
+            0.9995196601670052,
+            1.0,
+            0.999321546958234
+          ],
+          "D_L": 0.0032790595096299224,
+          "D_F": 0.003717262150969458,
+          "D_L_minus_D_F": -0.0004382026413395357,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_180",
+          "new_sample_id": "slake_159",
+          "image_ref": "xmlab355/source.jpg",
+          "image_sha256": "6a62130a8ca225ed1dd6bbd1ecaf6c46a462091ff45b78c6c7f3b45dc35a6364",
+          "question": "Is the lung normal appearing?",
+          "answer": "no",
+          "qid": 2444,
+          "ordered_boxes": [
+            [
+              115.0,
+              612.0,
+              222.0,
+              94.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9966927776392853,
+          "legacy_random": 0.9946072413366691,
+          "foreground_control_draws": [
+            1.0,
+            0.9658998825231094,
+            0.9966927776392853,
+            0.9236529753474211,
+            0.9902731881451247
+          ],
+          "D_L": -0.002085536302616209,
+          "D_F": -0.0213890129082972,
+          "D_L_minus_D_F": 0.01930347660568099,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.3
+        },
+        {
+          "old_sample_id": "slake_57",
+          "new_sample_id": "slake_110",
+          "image_ref": "xmlab356/source.jpg",
+          "image_sha256": "6742efead02db255b7506227cc1e4522838da16c6b4a537f1fd3ca4b5ff7fd91",
+          "question": "Is this a study of the chest?",
+          "answer": "yes",
+          "qid": 2457,
+          "ordered_boxes": [
+            [
+              402.0,
+              356.0,
+              372.0,
+              346.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9999923135874673,
+          "legacy_random": 0.9999992169957269,
+          "foreground_control_draws": [
+            0.999998200174015,
+            0.9999992169957269,
+            0.9999992169957269,
+            0.9999947786137398,
+            0.9999998083468278
+          ],
+          "D_L": 6.903408259595345e-06,
+          "D_F": 5.930637739903766e-06,
+          "D_L_minus_D_F": 9.727705196915792e-07,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 1.0
+        },
+        {
+          "old_sample_id": "slake_11",
+          "new_sample_id": "slake_49",
+          "image_ref": "xmlab362/source.jpg",
+          "image_sha256": "26c2f2a0b86c658945e841a7e496481d5489ab40b9283b73ab6140e11e529caf",
+          "question": "Is this a coronal plane?",
+          "answer": "yes",
+          "qid": 2494,
+          "ordered_boxes": [
+            [
+              644.0,
+              308.0,
+              185.0,
+              354.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9997277739370982,
+          "legacy_random": 0.9988959152649006,
+          "foreground_control_draws": [
+            1.0,
+            0.9989559270855933,
+            0.999735278271517,
+            0.999735278271517,
+            0.9976838446232961
+          ],
+          "D_L": -0.000831858672197594,
+          "D_F": -0.0005057082867135909,
+          "D_L_minus_D_F": -0.0003261503854840031,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_342",
+          "new_sample_id": "slake_394",
+          "image_ref": "xmlab425/source.jpg",
+          "image_sha256": "9baeb951a070f2b2674fea8082e462519410cb980c54ee32e51f690882c299b7",
+          "question": "Are there organs in the picture that can perceive things?",
+          "answer": "no",
+          "qid": 3170,
+          "ordered_boxes": [
+            [
+              221.0,
+              187.0,
+              33.0,
+              31.0
+            ],
+            [
+              230.0,
+              246.0,
+              18.0,
+              10.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9942246231311695,
+          "legacy_random": 0.9975223647427376,
+          "foreground_control_draws": [
+            0.9919986190794312,
+            0.9743112609460791,
+            0.996059667748123,
+            0.9862962561195249,
+            0.9919986190794312
+          ],
+          "D_L": 0.003297741611568039,
+          "D_F": -0.006091738536651681,
+          "D_L_minus_D_F": 0.00938948014821972,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.2
+        },
+        {
+          "old_sample_id": "slake_346",
+          "new_sample_id": "slake_164",
+          "image_ref": "xmlab434/source.jpg",
+          "image_sha256": "35d1e47be20c94bcd2d37e08242c7756ad36f1eba798c8b67662233c773f877e",
+          "question": "Is this an MRI?",
+          "answer": "no",
+          "qid": 3228,
+          "ordered_boxes": [
+            [
+              228.0,
+              194.0,
+              20.0,
+              21.0
+            ],
+            [
+              228.0,
+              213.0,
+              19.0,
+              15.0
+            ],
+            [
+              232.0,
+              252.0,
+              15.0,
+              15.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.98248977683848,
+          "legacy_random": 0.9996197108114223,
+          "foreground_control_draws": [
+            0.971682997618481,
+            0.9869960029030753,
+            0.8875565096672291,
+            0.98248977683848,
+            1.0
+          ],
+          "D_L": 0.01712993397294227,
+          "D_F": -0.01674471943302691,
+          "D_L_minus_D_F": 0.03387465340596918,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.5
+        },
+        {
+          "old_sample_id": "slake_86",
+          "new_sample_id": "slake_234",
+          "image_ref": "xmlab440/source.jpg",
+          "image_sha256": "461613288ee94f8c307df62204503f2e48ff4e6daccbef324ae7e8ebb8106745",
+          "question": "Do the organs in the image exist in the chest?",
+          "answer": "no",
+          "qid": 3288,
+          "ordered_boxes": [
+            [
+              121.0,
+              56.0,
+              40.0,
+              57.0
+            ],
+            [
+              131.0,
+              71.0,
+              29.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9968521881756678,
+          "legacy_random": 0.8757058190009778,
+          "foreground_control_draws": [
+            0.8323694476989589,
+            0.7605880962395414,
+            0.923242844345516,
+            0.7730283850553362,
+            0.7730283850553362
+          ],
+          "D_L": -0.12114636917469002,
+          "D_F": -0.18440075649673016,
+          "D_L_minus_D_F": 0.06325438732204014,
+          "legacy_half_tie_win": 0.0,
+          "foreground_half_tie_win": 0.0
+        },
+        {
+          "old_sample_id": "slake_65",
+          "new_sample_id": "slake_80",
+          "image_ref": "xmlab453/source.jpg",
+          "image_sha256": "79397d9023c1ff03727f3a8be28244d936b4178831c5aa660d5a60f0de246eea",
+          "question": "Is this image taken via CT?",
+          "answer": "no",
+          "qid": 3382,
+          "ordered_boxes": [
+            [
+              126.0,
+              90.0,
+              35.0,
+              43.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9782198354116601,
+          "legacy_random": 0.9825571081303811,
+          "foreground_control_draws": [
+            1.0,
+            0.995399764035903,
+            0.9442335860625913,
+            0.9374070148717363,
+            0.995399764035903
+          ],
+          "D_L": 0.004337272718720975,
+          "D_F": -0.003731809610433401,
+          "D_L_minus_D_F": 0.008069082329154376,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_270",
+          "new_sample_id": "slake_308",
+          "image_ref": "xmlab489/source.jpg",
+          "image_sha256": "b708ae8b5b14ce56d599e087ce708acb49d85b84da4577bc1101e1cd9a4713f2",
+          "question": "Is the brain normal appearing?",
+          "answer": "no",
+          "qid": 3583,
+          "ordered_boxes": [
+            [
+              68.0,
+              68.0,
+              58.0,
+              56.0
+            ],
+            [
+              78.0,
+              78.0,
+              32.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9745884065910275,
+          "legacy_random": 0.9968827435683644,
+          "foreground_control_draws": [
+            0.9745884065910275,
+            0.9455059612585711,
+            0.9803342598185596,
+            0.987234561300217,
+            0.987234561300217
+          ],
+          "D_L": 0.02229433697733685,
+          "D_F": 0.0003911434626908683,
+          "D_L_minus_D_F": 0.02190319351464598,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.7
+        },
+        {
+          "old_sample_id": "slake_318",
+          "new_sample_id": "slake_307",
+          "image_ref": "xmlab50/source.jpg",
+          "image_sha256": "71b8c6662d6301ff0db3e8fc44d3eb847ed458cdfb08e9c5ff6b067aeb68a21e",
+          "question": "Does the brain look abnormal?",
+          "answer": "yes",
+          "qid": 3659,
+          "ordered_boxes": [
+            [
+              117.0,
+              143.0,
+              45.0,
+              59.0
+            ],
+            [
+              138.0,
+              159.0,
+              8.0,
+              7.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9949022708197602,
+          "legacy_random": 0.9994994415756542,
+          "foreground_control_draws": [
+            0.9992242145910283,
+            0.9983191538021794,
+            0.9816037094543024,
+            0.9935723132539647,
+            0.9978715259766893
+          ],
+          "D_L": 0.004597170755893942,
+          "D_F": -0.0007840874041273871,
+          "D_L_minus_D_F": 0.005381258160021329,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.6
+        },
+        {
+          "old_sample_id": "slake_30",
+          "new_sample_id": "slake_374",
+          "image_ref": "xmlab633/source.jpg",
+          "image_sha256": "faf80d8fb7d37c4d80bfeeb84ad161f22973031e56cc87218e57b8df6dd49611",
+          "question": "Does the picture contain colon?",
+          "answer": "yes",
+          "qid": 4609,
+          "ordered_boxes": [
+            [
+              187.0,
+              197.0,
+              142.0,
+              57.0
+            ],
+            [
+              181.0,
+              216.0,
+              35.0,
+              46.0
+            ],
+            [
+              212.0,
+              246.0,
+              29.0,
+              42.0
+            ],
+            [
+              157.0,
+              210.0,
+              46.0,
+              34.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9998877751481754,
+          "legacy_random": 0.9999984945611939,
+          "foreground_control_draws": [
+            0.9999984945611939,
+            0.9998877751481754,
+            0.9998877751481754,
+            1.0,
+            0.9999943407373165
+          ],
+          "D_L": 0.00011071941301854515,
+          "D_F": 6.590197079692217e-05,
+          "D_L_minus_D_F": 4.481744222162298e-05,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.8
+        },
+        {
+          "old_sample_id": "slake_111",
+          "new_sample_id": "slake_129",
+          "image_ref": "xmlab81/source.jpg",
+          "image_sha256": "16a970b2f4b3f452fb0aefeb13f1af3bbeefa3c34489dfc8cb9ce95d3e97d610",
+          "question": "Is the lung healthy?",
+          "answer": "no",
+          "qid": 4793,
+          "ordered_boxes": [
+            [
+              118.0,
+              236.0,
+              16.0,
+              18.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.983954727589826,
+          "legacy_random": 0.9905096809621865,
+          "foreground_control_draws": [
+            0.9923732927087555,
+            0.983954727589826,
+            0.9884792925509516,
+            0.9998654726857643,
+            0.9940603912550543
+          ],
+          "D_L": 0.00655495337236045,
+          "D_F": 0.007791907768244344,
+          "D_L_minus_D_F": -0.0012369543958838936,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.9
+        },
+        {
+          "old_sample_id": "slake_246",
+          "new_sample_id": "slake_98",
+          "image_ref": "xmlab89/source.jpg",
+          "image_sha256": "0d6c49d1dedd85e446b39e48547505be4a738773cb399cc4bc6dc15a9f2c1edb",
+          "question": "Does the picture contain liver?",
+          "answer": "no",
+          "qid": 4839,
+          "ordered_boxes": [
+            [
+              323.0,
+              175.0,
+              19.0,
+              20.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.9981296049540233,
+          "legacy_random": 0.9981296049540233,
+          "foreground_control_draws": [
+            0.9981005192667224,
+            0.9981005192667224,
+            0.9923575788341382,
+            1.0,
+            1.0
+          ],
+          "D_L": 0.0,
+          "D_F": -0.0004178814805065878,
+          "D_L_minus_D_F": 0.0004178814805065878,
+          "legacy_half_tie_win": 0.5,
+          "foreground_half_tie_win": 0.4
+        },
+        {
+          "old_sample_id": "slake_136",
+          "new_sample_id": "slake_154",
+          "image_ref": "xmlab96/source.jpg",
+          "image_sha256": "b34ac6992cf16e4ec338ed54c3f9c972e17ff95a67327046a5805e296e78a246",
+          "question": "Does the picture contain heart?",
+          "answer": "yes",
+          "qid": 4886,
+          "ordered_boxes": [
+            [
+              118.0,
+              206.0,
+              33.0,
+              29.0
+            ]
+          ],
+          "cipe_relevant_equals_organ": 0.997919379659217,
+          "legacy_random": 1.0,
+          "foreground_control_draws": [
+            0.9997407860110953,
+            0.9990216143402372,
+            0.997919379659217,
+            0.9993074178382808,
+            0.9954008148447302
+          ],
+          "D_L": 0.002080620340783046,
+          "D_F": 0.000358622879495063,
+          "D_L_minus_D_F": 0.001721997461287983,
+          "legacy_half_tie_win": 1.0,
+          "foreground_half_tie_win": 0.7
+        }
+      ]
+    }
+  }
+}
